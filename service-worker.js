@@ -1,0 +1,143 @@
+/**
+ * Service Worker para Villa Casana Turismo PWA
+ * Diseñado para funcionamiento 100% fluido y navegación offline
+ * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
+ */
+
+const CACHE_NAME = 'casana360-pwa-v1';
+
+// Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './styles.css',
+  './app.js',
+  './manifest.json',
+  './icon.svg',
+  './icon-192.png',
+  './icon-512.png',
+  './images/LEEME_FOTOS.txt'
+];
+
+// Librerías CDN críticas para el mapa y estilos offline
+const CDN_ASSETS = [
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+  'https://cdn.tailwindcss.com'
+];
+
+// 1. INSTALACIÓN: Precaching del App Shell
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(async (cache) => {
+      // Primero cacheamos los recursos locales esenciales de forma garantizada
+      try {
+        await cache.addAll(CORE_ASSETS);
+      } catch (err) {
+        console.warn('Advertencia precacheando assets locales:', err);
+      }
+
+      // Intentamos cachear los CDN de forma tolerante a fallos
+      await Promise.allSettled(
+        CDN_ASSETS.map((url) =>
+          fetch(url, { mode: 'cors' })
+            .then((res) => {
+              if (res.ok) return cache.put(url, res);
+            })
+            .catch((err) => console.log('CDN offline durante install:', url, err))
+        )
+      );
+    })
+  );
+  // Activa el nuevo Service Worker inmediatamente sin esperar que cierren pestañas
+  self.skipWaiting();
+});
+
+// 2. ACTIVACIÓN: Limpieza de versiones antiguas de caché
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.map((key) => {
+          if (key !== CACHE_NAME) {
+            console.log('Eliminando caché antigua:', key);
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+  // Reclama el control de todos los clientes abiertos de inmediato
+  self.clients.claim();
+});
+
+// 3. FETCH: Estrategia de respuesta rápida y respaldo offline
+self.addEventListener('fetch', (event) => {
+  const request = event.request;
+
+  // Solo manejamos peticiones GET
+  if (request.method !== 'GET') return;
+
+  const url = new URL(request.url);
+
+  // A. Peticiones de navegación (cuando el usuario entra o recarga cualquier página)
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((networkResponse) => {
+          // Si hay red, actualizamos el index en caché
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put('./index.html', copy));
+          }
+          return networkResponse;
+        })
+        .catch(async () => {
+          // Si no hay señal (modo avión o sierra profunda), servimos la app offline
+          const cachedPage = await caches.match('./index.html');
+          return cachedPage || caches.match('./');
+        })
+    );
+    return;
+  }
+
+  // B. Recursos estáticos locales y librerías CDN (Cache-First para máxima velocidad)
+  event.respondWith(
+    caches.match(request).then((cachedResponse) => {
+      if (cachedResponse) {
+        // En segundo plano intentamos actualizar la caché si estamos online (Stale-While-Revalidate selectivo)
+        if (navigator.onLine && (url.origin === location.origin)) {
+          fetch(request).then((freshResponse) => {
+            if (freshResponse && freshResponse.status === 200) {
+              caches.open(CACHE_NAME).then((cache) => cache.put(request, freshResponse));
+            }
+          }).catch(() => {});
+        }
+        return cachedResponse;
+      }
+
+      // Si no estaba en caché, vamos a la red y guardamos una copia (ej. imágenes, azulejos de mapa Leaflet)
+      return fetch(request)
+        .then((networkResponse) => {
+          if (
+            networkResponse &&
+            (networkResponse.status === 200 || networkResponse.type === 'opaque')
+          ) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, responseClone);
+            });
+          }
+          return networkResponse;
+        })
+        .catch(async () => {
+          // Si falla una imagen y estamos offline, devolvemos el icono SVG de respaldo si aplica
+          if (request.destination === 'image') {
+            return (await caches.match('./icon.svg')) || (await caches.match('./icon-192.png'));
+          }
+          // Para todo lo demás, devolver fallback de página si era un documento
+          return caches.match('./index.html');
+        });
+    })
+  );
+});

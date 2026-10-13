@@ -1,14 +1,32 @@
 {
-  "name": "Villa Casana Turismo",
+  "name": "Villa Casana Turismo - La Rioja",
   "short_name": "Villa Casana",
-  "description": "Guía turística oficial de Villa Casana, La Rioja: Naturaleza, Circuitos 4x4, Cerro Espeche y Astroturismo",
+  "description": "Guía turística y PWA offline de Villa Casana: Cerro Espeche, Circuitos 4x4, Rutas GPX y Astroturismo.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#090d16",
   "theme_color": "#d97706",
+  "lang": "es",
+  "categories": [
+    "travel",
+    "navigation",
+    "outdoors"
+  ],
   "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "./icon.svg",
       "sizes": "192x192 512x512",

@@ -1178,8 +1178,14 @@ function initPwaInstall() {
 
   // Register service worker if supported
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(err => {
-      console.log('SW registration note:', err);
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(reg => {
+          console.log('Service Worker registrado correctamente (PWA offline lista):', reg.scope);
+        })
+        .catch(err => {
+          navigator.serviceWorker.register('./sw.js').catch(e => console.log('SW registration note:', e));
+        });
     });
   }
 }

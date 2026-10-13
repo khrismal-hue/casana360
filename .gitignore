@@ -1,0 +1,17 @@
+# Archivos de sistema operativo y temporales
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+.DS_Store
+
+# IDEs y editores de texto
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs y dependencias (si se agregan a futuro)
+*.log
+node_modules/

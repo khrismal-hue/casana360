@@ -1,0 +1,218 @@
+/* Villa Casana Turismo - Custom Styles & Astronomical Effects */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700&display=swap');
+
+:root {
+  --primary-earth: #c25e1a;
+  --secondary-ochre: #d97706;
+  --bg-dark: #0a0f1d;
+  --card-dark: #131b2e;
+  --text-main: #f1f5f9;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(19, 27, 46, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(26, 36, 61, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 119, 6, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(217, 119, 6, 0.15);
+}
+
+/* Astrotourism Red Night Mode (Visión Nocturna para Astrónomos) */
+body.astro-red-mode {
+  background-color: #0b0203 !important;
+  color: #ff5566 !important;
+}
+
+body.astro-red-mode .glass-panel,
+body.astro-red-mode .glass-card,
+body.astro-red-mode .bg-slate-900,
+body.astro-red-mode .bg-slate-800,
+body.astro-red-mode .bg-slate-950,
+body.astro-red-mode .bg-stone-900,
+body.astro-red-mode nav,
+body.astro-red-mode header {
+  background: rgba(25, 4, 7, 0.92) !important;
+  border-color: rgba(255, 60, 80, 0.25) !important;
+  color: #ff6b7a !important;
+}
+
+body.astro-red-mode h1, 
+body.astro-red-mode h2, 
+body.astro-red-mode h3, 
+body.astro-red-mode h4,
+body.astro-red-mode span, 
+body.astro-red-mode p,
+body.astro-red-mode li {
+  color: #ff6677 !important;
+}
+
+body.astro-red-mode .text-amber-400,
+body.astro-red-mode .text-amber-500,
+body.astro-red-mode .text-emerald-400,
+body.astro-red-mode .text-cyan-400,
+body.astro-red-mode .text-orange-400 {
+  color: #ff334b !important;
+}
+
+body.astro-red-mode .bg-amber-600,
+body.astro-red-mode .bg-amber-500,
+body.astro-red-mode .bg-orange-600 {
+  background-color: #8f1020 !important;
+  color: #ffccd0 !important;
+}
+
+body.astro-red-mode .leaflet-container {
+  filter: invert(100%) hue-rotate(180deg) saturate(200%) brightness(0.6) contrast(1.2) sepia(100%) hue-rotate(300deg);
+}
+
+/* Hero Canvas Background */
+#sky-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Astrotourism Interactive Planetarium Canvas */
+#planetarium-canvas {
+  touch-action: none;
+  cursor: grab;
+}
+#planetarium-canvas:active {
+  cursor: grabbing;
+}
+
+/* Pulsing Badge for Astroturismo & Live status */
+@keyframes starPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.star-twinkle {
+  animation: starPulse 2.4s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #25334d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Leaflet Map overrides for dark theme */
+.leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #374151 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+.leaflet-popup-tip {
+  background: #111827 !important;
+}
+.leaflet-container {
+  font-family: inherit !important;
+  border-radius: 1rem;
+}
+
+/* Bottom Nav bar active indicator */
+.nav-tab.active {
+  color: #fbbf24;
+}
+.nav-tab.active svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
+}
+
+/* Print/Clean media queries */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .no-print {
+    display: none;
+  }
+}
+
+/* Offline GPS Satellite Compass & Navigation Styles */
+.compass-ring {
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.95) 0%, rgba(9, 13, 22, 0.98) 100%);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+#gps-compass-needle {
+  transform-origin: center center;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+#gps-compass-dial {
+  transform-origin: center center;
+  transition: transform 0.2s linear;
+}
+
+/* Live GPS radar beacon */
+.gps-live-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes radarPing {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.radar-ping {
+  animation: radarPing 1.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* SVG Vector Croquis Hover effects */
+#vector-croquis-canvas-container svg {
+  max-height: 580px;
+}
+
+#vector-croquis-canvas-container circle,
+#vector-croquis-canvas-container path {
+  transition: all 0.2s ease-in-out;
+}
+
+#vector-croquis-canvas-container g.cursor-pointer:hover circle {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #f59e0b);
+}
+

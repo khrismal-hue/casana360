@@ -1,0 +1,19 @@
+# Carpeta de Imágenes de Villa Casana
+
+Coloca aquí tus fotografías reales tomadas en Villa Casana.
+La aplicación está configurada para buscar estas fotos primero:
+
+- `casa_de_piedra.jpg` -> Foto de la Casa de Piedra (petroglifos, cueva o morteros olongastas)
+- `capilla_del_carmen.jpg` -> Foto de la Capilla Nuestra Señora del Carmen o procesión
+- `plaza_carmen.jpg` -> Foto de la Plaza Virgen del Carmen y sus palmeras
+- `escuela_rural.jpg` -> Foto de la histórica escuela rural de Villa Casana
+- `cerro_espeche.jpg` -> Foto del Cerro Espeche y senderos
+- `circuito_4x4.jpg` -> Foto de vehículos en huellas de tierra, ríos secos o hacia Tuani
+- `pozos_arroyos.jpg` -> Foto de la Cascada del Sur o pozos serranos
+- `cicloturismo.jpg` -> Foto de ciclistas en el camino rural
+- `pan_casero.jpg` -> Foto del horno de barro, pan o tortas fritas
+- `chivito.jpg` -> Foto de asado criollo o majadas
+- `cielo_nocturno.jpg` -> Foto de la Vía Láctea o estrellas sobre las sierras
+- `pueblo.jpg` -> Foto general de las calles o vida de campo
+
+*Si no colocas una foto, la aplicación mostrará automáticamente una imagen de alta definición alusiva.*

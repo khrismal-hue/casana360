@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Villa Casana Turismo - La Rioja | Naturaleza, 4x4 y Astroturismo</title>
+  
+  <meta name="description" content="Guía turística de Villa Casana, departamento Rosario Vera Peñaloza, La Rioja. Descubre el Cerro Espeche, circuitos 4x4, cielos estrellados de clase Bortle 1 y auténtica vida rural.">
+  <meta name="theme-color" content="#d97706">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="manifest" href="./manifest.json">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            earth: {
+              50: '#fdf8f4',
+              100: '#fbf0e8',
+              500: '#c25e1a',
+              600: '#a34812',
+              800: '#6d2e0e',
+              900: '#431b07',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Leaflet CSS & JS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-slate-950 pb-20 md:pb-0">
+
+  <!-- TOP HEADER / NAVBAR -->
+  <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('explorar')">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-600/30 text-slate-950 font-black text-xl">
+          VC
+        </div>
+        <div>
+          <span class="text-lg font-black tracking-tight bg-gradient-to-r from-amber-400 via-amber-200 to-orange-400 bg-clip-text text-transparent">
+            Villa Casana
+          </span>
+          <span class="block text-[11px] font-semibold text-amber-300/90 tracking-wide -mt-0.5">
+            Donde el tiempo todavía saluda por el nombre
+          </span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav Tabs -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold">
+        <button data-tab="explorar" class="nav-tab-btn px-3 py-2 rounded-lg text-amber-500 border-b-2 border-amber-500 transition-all flex items-center gap-1.5">
+          <span>🌄</span> Atractivos
+        </button>
+        <button data-tab="mapa" class="nav-tab-btn px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 transition-all flex items-center gap-1.5 border-b-2 border-transparent">
+          <span>🧭</span> Rutas & Mapa Offline
+        </button>
+        <button data-tab="astroturismo" class="nav-tab-btn px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 transition-all flex items-center gap-1.5 border-b-2 border-transparent">
+          <span>✨</span> Astroturismo
+        </button>
+        <button data-tab="planificador" class="nav-tab-btn px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 transition-all flex items-center gap-1.5 border-b-2 border-transparent">
+          <span>🎒</span> Planificador
+        </button>
+        <button data-tab="cultura" class="nav-tab-btn px-3 py-2 rounded-lg text-slate-400 hover:text-amber-400 transition-all flex items-center gap-1.5 border-b-2 border-transparent">
+          <span>🏺</span> Tradición & Servicios
+        </button>
+      </nav>
+
+      <!-- Action Buttons (Astro Red Mode & PWA) -->
+      <div class="flex items-center gap-2">
+        <!-- Red Vision Mode Button (Astronomers' Dark Adaptation) -->
+        <button id="toggle-red-mode" title="Modo Linterna Roja (Para observar estrellas sin perder visión nocturna)" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/60 hover:border-rose-500/80 text-xs font-semibold text-slate-300 hover:text-rose-400 transition-all">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block animate-pulse"></span>
+          <span class="hidden sm:inline">Modo Nocturno</span>
+        </button>
+
+        <!-- Install PWA Button (Hidden by default, shown if supported) -->
+        <button id="pwa-install-btn" class="hidden px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-xs transition-all shadow-md">
+          Instalar App
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN APP CONTAINER -->
+  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ========================================== -->
+    <!-- TAB 1: EXPLORAR ATRACTIVOS & CIRCUITOS    -->
+    <!-- ========================================== -->
+    <section id="tab-explorar" class="tab-panel space-y-10">
+
+      <!-- Hero Section with Canvas Starry Background -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 p-6 sm:p-12 shadow-2xl">
+        <canvas id="sky-canvas"></canvas>
+        
+        <div class="relative z-10 max-w-3xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            Interior Riojano • Dpto. Rosario Vera Peñaloza
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-50 tracking-tight leading-tight">
+            Descubre <span class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-500 bg-clip-text text-transparent">Villa Casana</span>
+            <span class="block text-xl sm:text-2xl font-serif italic text-amber-200/90 font-normal mt-1">«Donde el tiempo todavía saluda por el nombre»</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Un remanso de paz en las sierras del sur riojano donde el tiempo camina despacio. Descubre el pasado olongasta en la milenaria 
+            <strong class="text-amber-300">Casa de Piedra</strong>, senderismo hacia el imponente 
+            <strong class="text-amber-300">Cerro Espeche</strong>, la fe comunitaria en la <strong class="text-amber-300">Capilla Ntra. Sra. del Carmen</strong>, travesías <strong class="text-amber-300">4x4 y cicloturismo</strong> por huellas del monte, 
+            el aroma a pan casero en horno de barro y uno de los <strong class="text-amber-300">cielos más limpios del planeta</strong>.
+          </p>
+
+          <!-- Quick Metrics Bar -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="glass-card p-3 rounded-xl">
+              <span class="text-xs text-slate-400 block">Distancia</span>
+              <span class="text-base font-bold text-amber-400">40 km de Chepes</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl">
+              <span class="text-xs text-slate-400 block">Calidad de Cielo</span>
+              <span class="text-base font-bold text-amber-400">Bortle Clase 1</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl">
+              <span class="text-xs text-slate-400 block">Altitud Media</span>
+              <span class="text-base font-bold text-amber-400">~680 m.s.n.m.</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl">
+              <span class="text-xs text-slate-400 block">Experiencia</span>
+              <span class="text-base font-bold text-amber-400">100% Auténtica</span>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-wrap gap-3">
+            <button onclick="switchTab('mapa')" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-600/25 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              Cómo llegar desde Chepes
+            </button>
+            <button onclick="switchTab('astroturismo')" class="bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-500/40 font-semibold px-5 py-2.5 rounded-xl transition-all flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+              Modo Cielos Limpios
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-100">Circuitos y Experiencias</h2>
+            <p class="text-sm text-slate-400">Selecciona una categoría para explorar los puntos clave de la villa</p>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-2">
+            <button onclick="setFilter('todos')" data-cat="todos" class="filter-pill bg-amber-600 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shadow">
+              Todos
+            </button>
+            <button onclick="setFilter('naturaleza')" data-cat="naturaleza" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
+              ⛰️ Naturaleza & Trekking
+            </button>
+            <button onclick="setFilter('aventura')" data-cat="aventura" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
+              🚙 4x4 y Cicloturismo
+            </button>
+            <button onclick="setFilter('astronomia')" data-cat="astronomia" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
+              ✨ Astroturismo
+            </button>
+            <button onclick="setFilter('cultura')" data-cat="cultura" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
+              🏛️ Olongastas, Historia & Sabores
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Attractions Grid -->
+        <div id="attractions-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+
+      <!-- Rural Life Quote Banner from Orion FM Chepes -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl border-l-4 border-amber-500 flex flex-col sm:flex-row items-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-3xl">
+          🌾
+        </div>
+        <div class="space-y-1 text-center sm:text-left">
+          <h3 class="text-lg font-bold text-slate-100 italic">"Donde el mate se comparte sin mirar la hora y el saludo es obligatorio"</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Entre caminos de tierra, amaneceres pintados de naranja y el aroma del pan recién horneado a leña, Villa Casana conserva la magia 
+            de los pueblos donde todos se conocen. Silencios que abrazan, burros caminando tranquilos por las calles, huertas familiares que 
+            alimentan con verduras frescas cultivadas por manos locales y cielos capaces de emocionar.
+          </p>
+          <span class="text-[11px] text-amber-400 font-semibold block pt-1">— Crónica especial de Orion FM Chepes</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 2: MAPA INTERACTIVO & RUTAS OFFLINE   -->
+    <!-- ========================================== -->
+    <section id="tab-mapa" class="tab-panel hidden space-y-8">
+      
+      <!-- Offline Navigation Hero Banner -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border-amber-500/30 relative overflow-hidden space-y-4">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-500/40">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 100% Offline (Sin Señal Celular)
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 text-xs font-medium border border-blue-500/20">
+            🛰️ Conexión Satelital Directa
+          </span>
+        </div>
+
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="space-y-2 max-w-2xl">
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-100 tracking-tight">
+              Rutas & Navegación Satelital
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              En la mayor parte del recorrido entre Chepes y Villa Casana <strong>no hay cobertura telefónica ni internet</strong>. 
+              El chip GPS de tu celular se conecta directamente con los satélites en el espacio. Esta aplicación funciona 
+              de forma autónoma en modo avión.
+            </p>
+          </div>
+
+          <!-- Offline Download & Quick Actions -->
+          <div class="flex items-center flex-wrap gap-2.5 shrink-0">
+            <button onclick="downloadGpxRoute()" class="px-4 py-2.5 bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold rounded-xl flex items-center gap-2 shadow-lg transition-all hover:scale-105" title="Para OsmAnd, Maps.me, Garmin, Gaia GPS">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Descargar GPX (Offline)
+            </button>
+            <button onclick="downloadKmlRoute()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl flex items-center gap-2 border border-slate-700 transition-all" title="Para Google Earth">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
+              Descargar KML
+            </button>
+            <a href="https://maps.google.com/?q=-31.0667,-66.5833" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 bg-slate-900/90 hover:bg-slate-800 text-slate-300 text-xs font-semibold rounded-xl flex items-center gap-2 border border-slate-700 transition-all">
+              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Google Maps Web
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live GPS Satellite Dashboard & Digital Compass Card -->
+      <div class="glass-panel p-6 rounded-3xl border border-slate-800 space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800/80">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0 border border-amber-500/30">
+              🧭
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 class="text-lg font-bold text-slate-100">Panel de Posicionamiento GPS Satelital</h3>
+                <span id="gps-status-badge" class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full text-xs font-semibold bg-slate-800 text-slate-400 border border-slate-700">
+                  <span class="w-2 h-2 rounded-full bg-slate-500 inline-block"></span> GPS en Pausa
+                </span>
+              </div>
+              <p id="gps-status-text" class="text-xs text-slate-400 mt-0.5">Activa el rastreador para calcular distancia, azimut y orientación en tiempo real hacia Villa Casana.</p>
+            </div>
+          </div>
+
+          <button id="gps-toggle-btn" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 transition-all flex items-center gap-2 self-start sm:self-center shadow-lg">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Iniciar Navegación Satelital GPS
+          </button>
+        </div>
+
+        <!-- Telemetry Metrics & Compass Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
+          
+          <!-- Animated Compass Widget -->
+          <div class="flex flex-col items-center justify-center p-4 bg-slate-900/80 rounded-2xl border border-slate-800">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">Rumbo a Villa Casana</span>
+            <div class="relative w-36 h-36 rounded-full compass-ring flex items-center justify-center border-2 border-slate-700">
+              <!-- Dial with cardinal points -->
+              <div id="gps-compass-dial" class="absolute inset-0 flex items-center justify-center text-[10px] font-bold font-mono">
+                <span class="absolute top-1 text-rose-500">N</span>
+                <span class="absolute bottom-1 text-slate-400">S</span>
+                <span class="absolute right-2 text-slate-400">E</span>
+                <span class="absolute left-2 text-slate-400">O</span>
+              </div>
+              <!-- Needle -->
+              <div id="gps-compass-needle" class="w-full h-full absolute inset-0 flex items-center justify-center pointer-events-none">
+                <svg viewBox="0 0 100 100" class="w-24 h-24">
+                  <!-- Red North Point -->
+                  <polygon points="50,15 44,50 56,50" fill="#ef4444" />
+                  <!-- Silver South Point -->
+                  <polygon points="50,85 44,50 56,50" fill="#94a3b8" />
+                  <!-- Center pivot ring -->
+                  <circle cx="50" cy="50" r="5" fill="#f59e0b" stroke="#1e293b" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+            <span id="gps-bearing-display" class="text-xs font-mono font-bold text-amber-400 mt-3">356° (NNO)</span>
+          </div>
+
+          <!-- Metrics 3-column Grid -->
+          <div class="lg:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <span class="text-slate-400 text-xs block font-semibold">Distancia a Villa Casana</span>
+              <span id="gps-distance-display" class="text-2xl font-black text-amber-400 mt-1 block font-mono">-- km</span>
+              <span class="text-[10px] text-slate-500 mt-0.5 block">Desde tu posición GPS</span>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <span class="text-slate-400 text-xs block font-semibold">Tus Coordenadas</span>
+              <span id="gps-coords-display" class="text-xs font-bold text-slate-200 mt-2 block font-mono">Esperando GPS...</span>
+              <span class="text-[10px] text-emerald-400 mt-1 block">Chip GPS satelital</span>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <span class="text-slate-400 text-xs block font-semibold">Velocidad Actual</span>
+              <span id="gps-speed-display" class="text-2xl font-black text-blue-400 mt-1 block font-mono">0 km/h</span>
+              <span class="text-[10px] text-slate-500 mt-0.5 block">Cálculo en movimiento</span>
+            </div>
+
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+              <span class="text-slate-400 text-xs block font-semibold">Altitud Aprox.</span>
+              <span id="gps-altitude-display" class="text-2xl font-black text-purple-400 mt-1 block font-mono">650 m</span>
+              <span class="text-[10px] text-slate-500 mt-0.5 block">msnm (barómetro/sat.)</span>
+            </div>
+
+            <!-- Next Waypoint Banner Span across 4 cols -->
+            <div class="col-span-2 sm:col-span-4 bg-slate-900/90 p-3.5 rounded-xl border border-amber-500/30 flex items-center justify-between gap-3 flex-wrap">
+              <div class="flex items-center gap-2">
+                <span class="text-amber-400 text-base">🏁</span>
+                <span class="text-xs text-slate-300 font-semibold">Próximo Hito en Ruta:</span>
+                <span id="gps-next-waypoint-display" class="text-xs text-amber-300">
+                  <span class="font-bold text-amber-400">Salida Chepes (Km 0.0)</span>
+                </span>
+              </div>
+              <span class="text-[11px] font-mono text-slate-400">Objetivo: Villa Casana (Km 40.0)</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Map Display Mode Switcher (Leaflet vs Vector Croquis) -->
+      <div class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h3 class="text-xl font-bold text-slate-100">Visor Cartográfico</h3>
+            <p class="text-xs text-slate-400">Elige la vista según la disponibilidad de conexión o memoria del navegador</p>
+          </div>
+          <div class="flex items-center gap-2 bg-slate-900/90 p-1 rounded-2xl border border-slate-800">
+            <button id="btn-mode-leaflet" class="px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 text-white shadow-lg transition-all flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              Mapa Web Satelital
+            </button>
+            <button id="btn-mode-vector" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white border border-slate-700 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              Croquis Vectorial (100% Offline)
+            </button>
+          </div>
+        </div>
+
+        <!-- 1. Leaflet Map Wrapper -->
+        <div id="leaflet-map-wrapper" class="glass-panel p-2 rounded-2xl overflow-hidden shadow-2xl relative">
+          <div id="map" class="w-full h-[450px] sm:h-[550px] rounded-xl z-10"></div>
+          <div class="absolute bottom-5 left-5 z-20 bg-slate-950/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-slate-700 text-xs text-slate-300 shadow-xl pointer-events-none">
+            <span class="font-bold text-amber-400">Coordenadas Casana:</span> 31°04'00"S 66°35'00"O
+          </div>
+        </div>
+
+        <!-- 2. Vector Topographic Croquis Wrapper (Hidden by default, switched via mode) -->
+        <div id="vector-croquis-wrapper" class="hidden space-y-3">
+          <div class="p-3 bg-emerald-950/30 border border-emerald-500/30 rounded-xl text-xs text-emerald-300 flex items-center gap-2">
+            <span>🛡️</span>
+            <span><strong>Modo Vectorial Activo:</strong> Este croquis se genera con gráficos vectoriales puros. Funciona siempre, incluso sin internet y sin imágenes cargadas en el celular.</span>
+          </div>
+          <div id="vector-croquis-canvas-container" class="rounded-2xl overflow-hidden shadow-2xl">
+            <!-- Rendered dynamically via initVectorCroquis() -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Step-by-Step Rutómetro (Roadbook Km a Km) -->
+      <div class="space-y-4 pt-4">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">Hoja de Ruta Detallada</span>
+            <h3 class="text-2xl font-black text-slate-100 mt-1">Rutómetro Paso a Paso (Km 0 a Km 54)</h3>
+            <p class="text-slate-400 text-xs mt-1">Hitos geográficos, badenes, puntos de agua, bifurcaciones y alertas de conducción en el monte.</p>
+          </div>
+          <div class="text-xs font-mono text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-800">
+            11 Puntos de Control Registrados
+          </div>
+        </div>
+
+        <!-- Rutómetro Cards Timeline -->
+        <div id="rutometro-cards" class="space-y-4">
+          <!-- Populated dynamically via renderRutometro() in app.js -->
+        </div>
+      </div>
+
+      <!-- Offline Navigation Guide / Tutorial Box -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl shrink-0 border border-purple-500/30">
+            📲
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-slate-100">¿Cómo usar las rutas offline en tu celular?</h4>
+            <p class="text-xs text-slate-400">Guía práctica para navegar sin temor a perderte en el campo</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          
+          <div class="bg-slate-900/70 p-4 rounded-2xl border border-slate-800/80 space-y-2">
+            <div class="text-amber-400 font-bold text-xs">Paso 1: Descargar el archivo GPX</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Haz clic arriba en <strong>"Descargar GPX"</strong> antes de salir de Chepes mientras tengas señal WiFi o 4G. El archivo se guardará en las descargas de tu celular.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/70 p-4 rounded-2xl border border-slate-800/80 space-y-2">
+            <div class="text-amber-400 font-bold text-xs">Paso 2: Abrir en OsmAnd o Maps.me</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Abre una app de mapas sin internet (recomendamos <strong>OsmAnd</strong>, <strong>Organic Maps</strong> o <strong>Maps.me</strong>) e importa el archivo GPX. Verás la huella completa marcada en el mapa.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/70 p-4 rounded-2xl border border-slate-800/80 space-y-2">
+            <div class="text-amber-400 font-bold text-xs">Paso 3: Activar GPS del Teléfono</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Mantén encendida la ubicación de tu celular (Ubicación / GPS). No consume datos y los satélites te guiarán con precisión métrica aún en <strong>Modo Avión</strong>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Practical Driving & Road Guidelines -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-lg">
+            📍
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">Cómo llegar desde Chepes</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Desde la ciudad de <strong>Chepes</strong> (cruce de Ruta Nac. 141), se toma la salida norte hacia la zona rural. 
+            Son aproximadamente <strong>40 kilómetros</strong> transitando por camino vecinal de tierra y ripio consolidado.
+          </p>
+          <div class="text-[11px] font-mono text-amber-400 bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+            Tiempo estimado en auto: 50 a 60 minutos a velocidad precavida (40-50 km/h).
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-lg">
+            ⚠️
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">Estado del Camino</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            El camino es transitable todo el año con vehículos estándar en condiciones normales. 
+            Sin embargo, durante la <strong>época de lluvias estivales</strong> (diciembre a marzo), 
+            los badenes de arena y pasos de agua pueden cargarse.
+          </p>
+          <div class="text-[11px] font-mono text-amber-300 bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+            Recomendación: Consultar en Chepes o a vecinos antes de emprender viaje en días lluviosos.
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+            ⛽
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">Aprovisionamiento en Chepes</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            En Villa Casana <strong>no hay estaciones de servicio</strong> ni entidades bancarias. 
+            Es imprescindible llenar el tanque de combustible y retirar dinero en efectivo antes de salir de Chepes.
+          </p>
+          <div class="text-[11px] font-mono text-emerald-300 bg-slate-900/80 p-2.5 rounded-lg border border-slate-800">
+            Chepes cuenta con estaciones YPF, comercios, farmacias y hospital distrital.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Distance Table to Key Regional Hubs -->
+      <div class="glass-panel p-6 rounded-2xl space-y-4">
+        <h4 class="text-base font-bold text-slate-100 flex items-center gap-2">
+          <span>📏</span> Distancias de Referencia
+        </h4>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800">
+            <span class="text-slate-400 text-xs block">Chepes</span>
+            <span class="text-lg font-bold text-amber-400">40 km</span>
+          </div>
+          <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800">
+            <span class="text-slate-400 text-xs block">Malanzán</span>
+            <span class="text-lg font-bold text-amber-400">~75 km</span>
+          </div>
+          <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800">
+            <span class="text-slate-400 text-xs block">San Juan Capital</span>
+            <span class="text-lg font-bold text-amber-400">~180 km</span>
+          </div>
+          <div class="bg-slate-900/70 p-3 rounded-xl border border-slate-800">
+            <span class="text-slate-400 text-xs block">La Rioja Capital</span>
+            <span class="text-lg font-bold text-amber-400">~290 km</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 3: ASTROTURISMO & CIELOS LIMPIOS      -->
+    <!-- ========================================== -->
+    <section id="tab-astroturismo" class="tab-panel hidden space-y-8">
+      
+      <!-- Astro Header Banner -->
+      <div class="glass-panel p-6 sm:p-10 rounded-3xl relative overflow-hidden space-y-4 border-amber-500/20">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-bold uppercase tracking-wider">
+          🔭 Ventana al Cosmos en Los Llanos
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-50 tracking-tight">
+          Cielos Prístinos de Villa Casana
+        </h2>
+        <p class="text-slate-300 max-w-2xl text-base leading-relaxed">
+          Gracias a su aislamiento geográfico, baja humedad y escasa densidad demográfica, Villa Casana cuenta con un 
+          cielo de <strong>Escala Bortle 1 a 2</strong>. Es uno de los puntos privilegiados del país para observar la 
+          Vía Láctea en su plenitud, capturar astrofotografía de larga exposición y maravillarse con las constelaciones del sur.
+        </p>
+
+        <!-- Moon Phase & Seeing Widget -->
+        <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+          <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl flex items-center gap-4">
+            <div id="moon-phase-status" class="text-3xl shrink-0">🌑</div>
+            <div>
+              <span class="text-xs text-slate-400 block font-semibold uppercase">Fase Lunar Estimada</span>
+              <span id="moon-phase-tip" class="text-xs text-amber-300 mt-0.5 block">Calculando condiciones...</span>
+            </div>
+          </div>
+          <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl flex items-center gap-4">
+            <div class="text-3xl shrink-0">🌌</div>
+            <div>
+              <span class="text-xs text-slate-400 block font-semibold uppercase">Contaminación Lumínica</span>
+              <span class="text-xs text-emerald-400 font-bold mt-0.5 block">Nivel Nulo / Cielo Oscuro Prístino</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Planetarium Canvas -->
+      <div class="glass-panel p-6 rounded-3xl space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+              <span>🌠</span> Simulador del Domo Celeste Austral
+            </h3>
+            <p class="text-xs text-slate-400">Proyección interactiva de la Cruz del Sur, los Punteros y la banda de la Vía Láctea.</p>
+          </div>
+          <span class="text-[11px] font-mono text-amber-400 bg-amber-950/40 px-3 py-1 rounded-full border border-amber-800/40">
+            Vista Hemisferio Sur • Lat -31° S
+          </span>
+        </div>
+
+        <div class="w-full h-80 sm:h-96 rounded-2xl overflow-hidden relative border border-slate-800 shadow-inner bg-black">
+          <canvas id="planetarium-canvas" class="w-full h-full"></canvas>
+          <div class="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700/60 text-[11px] text-slate-300">
+            ✨ Pasa el cursor o toca para explorar el firmamento
+          </div>
+        </div>
+
+        <!-- Guía de cómo encontrar el Polo Sur Celeste -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 space-y-2">
+          <h4 class="text-sm font-bold text-amber-400 flex items-center gap-2">
+            🧭 ¿Cómo orientarse de noche con la Cruz del Sur?
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Proyecta <strong>4 veces y media</strong> el brazo mayor de la Cruz del Sur (desde Gacrux pasando por Acrux hacia el vacío). 
+            Ese punto imaginario es el <strong>Polo Sur Celeste</strong>. Si bajas la vista en línea recta perpendicular hacia el horizonte, 
+            hallarás el <strong>Sur geográfico exacto</strong> sin necesidad de brújula ni GPS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Catalog of Celestial Objects to Observe -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-slate-100">Tesoros visibles en el cielo de Villa Casana</h3>
+        <div id="stars-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populated from APP_DATA.stars via app.js -->
+        </div>
+      </div>
+
+      <!-- Astrophotography Tips -->
+      <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-4 border-l-4 border-indigo-500">
+        <h4 class="text-lg font-bold text-indigo-300 flex items-center gap-2">
+          📸 Parámetros recomendados para Astrofotografía de Paisaje
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-300">
+          <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+            <span class="font-bold text-slate-100 block mb-1">Trípode & Enfoque</span>
+            Usa trípode firme. Enfoque 100% manual puesto a infinito apuntando a una estrella brillante con aumento en Live View.
+          </div>
+          <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+            <span class="font-bold text-slate-100 block mb-1">Apertura & Tiempo</span>
+            Diafragma lo más abierto posible (f/1.8 a f/2.8). Tiempo de exposición: 15 a 25 segundos (Regla de los 500 para evitar trazas).
+          </div>
+          <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+            <span class="font-bold text-slate-100 block mb-1">Sensibilidad ISO</span>
+            ISO entre 3200 y 6400 según tu sensor. Disparar siempre en formato RAW y con temporizador de 2 segundos.
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 4: PLANIFICADOR & CHECKLIST DE VIAJE   -->
+    <!-- ========================================== -->
+    <section id="tab-planificador" class="tab-panel hidden space-y-8">
+      
+      <div>
+        <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">Preparación & Seguridad</span>
+        <h2 class="text-3xl font-black text-slate-100 mt-1">Planificador de Viaje</h2>
+        <p class="text-slate-400 text-sm mt-1">Guarda tu progreso para asegurarte de tener todo listo antes de partir al interior riojano.</p>
+      </div>
+
+      <!-- Interactive Checklist with LocalStorage -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <div>
+            <h3 class="text-lg font-bold text-slate-100">Checklist Esencial de Expedición</h3>
+            <p class="text-xs text-slate-400">Marca los elementos que ya tienes listos</p>
+          </div>
+          <span id="checklist-progress-text" class="text-xs font-bold text-amber-400 bg-amber-950/60 px-3 py-1.5 rounded-lg border border-amber-800/40">
+            0 de 8 listos (0%)
+          </span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-900 h-2.5 rounded-full overflow-hidden border border-slate-800">
+          <div id="checklist-progress-bar" class="bg-gradient-to-r from-amber-600 to-amber-400 h-full w-0 transition-all duration-300"></div>
+        </div>
+
+        <div id="checklist-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <!-- Populated from APP_DATA.checklistItems via app.js -->
+        </div>
+      </div>
+
+      <!-- Climate & Best Time to Visit -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
+            ☀️
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">Clima en Los Llanos Riojanos</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Clima semiárido continental. Días soleados durante más de 300 días al año. 
+            En <strong>verano</strong> las temperaturas diurnas son altas (30°C - 38°C), refrescando notablemente al atardecer por la brisa serrana.
+            En <strong>invierno</strong> los días son muy templados y agradables (18°C - 24°C), con noches frías cercanas a los 0°C.
+          </p>
+          <div class="text-xs text-amber-400 font-semibold">
+            Época ideal para trekking y 4x4: De abril a octubre.
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+            🌱
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">Código de Convivencia y Respeto Rural</h3>
+          <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+            <li><strong>Cerrar siempre las tranqueras:</strong> Si abres una tranquera para pasar, vuelve a dejarla exactamente como la encontraste para evitar escape de ganado.</li>
+            <li><strong>Cero residuos:</strong> Trae de regreso toda tu basura a la ciudad de Chepes.</li>
+            <li><strong>Fuego cero:</strong> El monte riojano es sumamente combustible por la sequedad de los pastos. Prohibido encender fogatas en zonas no delimitadas.</li>
+            <li><strong>Respetar la tranquilidad:</strong> No poner música a alto volumen; el mayor patrimonio de Villa Casana es su silencio.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 5: CULTURA, TRADICIONES & SERVICIOS    -->
+    <!-- ========================================== -->
+    <section id="tab-cultura" class="tab-panel hidden space-y-8">
+      
+      <div>
+        <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">Identidad y Comunidad</span>
+        <h2 class="text-3xl font-black text-slate-100 mt-1">Tradición Criolla & Directorio Útil</h2>
+        <p class="text-slate-400 text-sm mt-1">Conoce las costumbres campesinas y los contactos clave para tu estadía.</p>
+      </div>
+
+      <!-- Gastronomy & Craftsmanship Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="text-3xl">🍞</div>
+          <h3 class="text-lg font-bold text-slate-100">Panificación en Horno de Barro</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Hornos de adobe calentados con leña de quebracho y jarilla. 
+            El pan casero con grasa criolla, las tortas fritas doradas al disco y las tortitas al rescoldo son símbolos del pueblo.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="text-3xl">🐐</div>
+          <h3 class="text-lg font-bold text-slate-100">Chivito Riojano y Quesillos</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Criados en pastoreo libre en el monte, alimentados de algarroba y pastos aromáticos, el chivito de los llanos es reconocido a nivel nacional por su ternura y sabor inigualable.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl space-y-3">
+          <div class="text-3xl">🧶</div>
+          <h3 class="text-lg font-bold text-slate-100">Tejidos y Artesanías Criollas</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Hilado artesanal en rueca y tejidos en telar criollo (mantas, ponchos, peleros). 
+            También destacan trabajos en cuero crudo sobado y madera tallada de algarrobo.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- LOCAL CONTACTS & BAQUEANOS DIRECTORY WITH WHATSAPP -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+              <span>🤝</span> Pobladores, Guías y Productores Locales
+            </h3>
+            <p class="text-xs text-slate-400">Comunícate directamente por WhatsApp o llamada con los anfitriones y baqueanos de Villa Casana.</p>
+          </div>
+          <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-800/40 px-3 py-1 rounded-full flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            WhatsApp Directo Habilitado
+          </span>
+        </div>
+
+        <div id="contacts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Populated from APP_DATA.localContacts via app.js -->
+        </div>
+      </div>
+
+      <!-- HISTORY, IDENTITY AND MOUNTAIN LEGENDS -->
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+            <span>📜</span> Historia, Identidad y Leyendas de Villa Casana
+          </h3>
+          <p class="text-xs text-slate-400">Relatos transmitidos de generación en generación en Los Llanos riojanos.</p>
+        </div>
+
+        <div id="history-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Populated from APP_DATA.historyAndLegends via app.js -->
+        </div>
+      </div>
+
+      <!-- Useful Contacts & Emergency Directory -->
+      <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+        <h3 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+          <span>📞</span> Directorio de Emergencias y Servicios (Zona Chepes / Dpto. R.V. Peñaloza)
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-1">
+            <span class="text-xs font-semibold text-amber-400 block">Policía de la Provincia</span>
+            <h4 class="text-sm font-bold text-slate-100">Comisaría Chepes</h4>
+            <p class="text-xs text-slate-400">Tel: 101 / (03821) 420015</p>
+          </div>
+
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-1">
+            <span class="text-xs font-semibold text-rose-400 block">Salud & Emergencias</span>
+            <h4 class="text-sm font-bold text-slate-100">Hospital Distrital Chepes</h4>
+            <p class="text-xs text-slate-400">Tel: 107 / (03821) 420020</p>
+          </div>
+
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-1">
+            <span class="text-xs font-semibold text-orange-400 block">Bomberos Voluntarios</span>
+            <h4 class="text-sm font-bold text-slate-100">Cuartel Chepes</h4>
+            <p class="text-xs text-slate-400">Tel: 100 / Emergencias</p>
+          </div>
+
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-1">
+            <span class="text-xs font-semibold text-emerald-400 block">Información Turística</span>
+            <h4 class="text-sm font-bold text-slate-100">Turismo Dptal. Peñaloza</h4>
+            <p class="text-xs text-slate-400">Chepes, La Rioja</p>
+          </div>
+
+          <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl space-y-1">
+            <span class="text-xs font-semibold text-amber-300 block">Medio de Comunicación</span>
+            <h4 class="text-sm font-bold text-slate-100">Radio Orion FM 98.7</h4>
+            <p class="text-xs text-slate-400">La voz de Los Llanos</p>
+            <a href="https://orionfmchepes.com.ar" target="_blank" rel="noopener noreferrer" class="text-[11px] text-amber-400 hover:underline block pt-0.5">orionfmchepes.com.ar &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL FOR ATTRACTION DETAILS -->
+  <div id="item-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden transition-opacity">
+    <div id="item-modal-content" class="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <!-- Injected dynamically via openAttractionModal(id) -->
+    </div>
+  </div>
+
+  <!-- MOBILE BOTTOM NAVIGATION BAR -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-lg border-t border-slate-800/80 px-2 py-2 flex items-center justify-around">
+    
+    <button data-tab="explorar" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-amber-400 text-[10px] font-semibold">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <span>Atractivos</span>
+    </button>
+
+    <button data-tab="mapa" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-slate-400 text-[10px] font-semibold">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+      <span>Rutas GPS</span>
+    </button>
+
+    <button data-tab="astroturismo" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-slate-400 text-[10px] font-semibold">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      <span>Cielos</span>
+    </button>
+
+    <button data-tab="planificador" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-slate-400 text-[10px] font-semibold">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+      <span>Equipaje</span>
+    </button>
+
+    <button data-tab="cultura" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-slate-400 text-[10px] font-semibold">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+      <span>Tradición</span>
+    </button>
+
+  </nav>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500 space-y-2">
+    <div class="flex items-center justify-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+      <span class="font-bold text-slate-400">Villa Casana • Departamento Rosario Vera Peñaloza • La Rioja</span>
+    </div>
+    <p>Turismo Rural Comunitario, Circuitos Serranos y Conservación de Cielos Nocturnos.</p>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="./app.js"></script>
+</body>
+</html>

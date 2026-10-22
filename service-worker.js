@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v1';
+const CACHE_NAME = 'casana360-pwa-v2';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -16,7 +16,21 @@ const CORE_ASSETS = [
   './icon.svg',
   './icon-192.png',
   './icon-512.png',
-  './images/LEEME_FOTOS.txt'
+  './images/LEEME_FOTOS.txt',
+  './images/cerro_espeche.jpg',
+  './images/circuito_4x4.jpg',
+  './images/cicloturismo.jpg',
+  './images/cielo_nocturno.jpg',
+  './images/pan_casero.jpg',
+  './images/pozos_arroyos.jpg',
+  './images/plaza_carmen.jpg',
+  './images/capilla_del_carmen.jpg',
+  './images/escuela_rural.jpg',
+  './images/pueblo.jpg',
+  './images/bienvenidos.jpg',
+  './images/sabores_casana.jpg',
+  './images/rosa_oropel.jpg',
+  './images/mural_escuela.jpg'
 ];
 
 // Librerías CDN críticas para el mapa y estilos offline

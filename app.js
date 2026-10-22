@@ -222,30 +222,34 @@ const APP_DATA = {
       title: "Historia de la Educación Rural: 35 Años de Vocación",
       category: "Educación & Comunidad",
       icon: "📖",
-      summary: "Los inicios de la enseñanza en casas de familia y la histórica maestra que educó a 60 alumnos en su propio hogar.",
-      content: "La educación en Villa Casana nació del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. Una emblemática maestra rural consagró más de 35 años de su vida a la enseñanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban allí hasta el séptimo grado antes de continuar sus estudios en otras localidades."
+      image: "./images/rosa_oropel.jpg",
+      summary: "Los inicios de la enseñanza en casas de familia y la histórica maestra Rosa Oropel de Tapia, quien educó a generaciones.",
+      content: "La educación en Villa Casana nació del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. La recordada maestra rural Rosa Oropel de Tapia consagró más de 35 años de su vida a la enseñanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban allí hasta el séptimo grado antes de continuar sus estudios en otras localidades. Hoy la Escuela Nº 35 lleva con honor su nombre."
     },
     {
       id: "capilla_carmen",
       title: "Capilla Nuestra Señora del Carmen y Fiestas Patronales",
       category: "Fe, Identidad y Fiestas",
       icon: "⛪",
+      image: "./images/capilla_del_carmen.jpg",
       summary: "El centro de la devoción religiosa local y núcleo de encuentro de toda la comarca serrana.",
-      content: "La Capilla Nuestra Señora del Carmen representa el pilar espiritual y social de Villa Casana. Es el escenario central de las fiestas patronales que cada año reúnen a familias radicadas en el pueblo y a aquellos que regresan desde distintas provincias. Las celebraciones combinan misas, procesiones por las calles del pueblo, destrezas gauchas, asados criollos y música popular."
+      content: "La Capilla Nuestra Señora del Carmen representa el pilar espiritual y social de Villa Casana. Es el escenario central de las fiestas patronales que cada año reúnen a familias radicadas en el pueblo y a aquellos que regresan desde distintas provincias. Las celebraciones combinan misas, procesiones por las calles del pueblo con banderines festivos, destrezas gauchas, asados criollos y música popular."
     },
     {
       id: "vida_rural_monte",
-      title: "Tradición y Vida en el Monte Nativo",
+      title: "Tradición y Sabores de Villa Casana",
       category: "Costumbres y Oficios Criollos",
       icon: "🍞",
-      summary: "Huertas familiares, cría de animales y el aroma del pan casero horneado a leña de generación en generación.",
-      content: "Villa Casana conserva con orgullo la esencia de la vida rural riojana. Los pobladores sostienen huertas familiares al pie de las sierras, cuidan animales en pastoreo libre y mantienen encendidos los tradicionales hornos de barro donde se amasa y hornea el pan casero y las tortas fritas, transmitiendo recetas y saberes de padres a hijos."
+      image: "./images/sabores_casana.jpg",
+      summary: "Dulces, arropes artesanales de chañar, higos, quesillos y el pan casero horneado a leña en horno de barro.",
+      content: "Villa Casana conserva con orgullo la esencia de la vida rural riojana: 'Revalorizar nuestros sabores es preservar nuestra identidad'. Los pobladores elaboran arropes tradicionales, dulces de membrillo e higo, miel de monte, cuidan majadas caprinas y mantienen encendidos los tradicionales hornos de barro donde se hornea el pan casero y las tortas fritas criollas."
     },
     {
       id: "cronica_expedicion",
       title: "Crónica de Expedición: Entre Sierras y Hospitalidad",
       category: "Bitácora de Viajeros (Lodelpampa)",
       icon: "🚙",
+      image: "./images/circuito_4x4.jpg",
       summary: "El testimonio de aventureros 4x4 que recorrieron las huellas entre Tuani y Casana, descubriendo la cascada secreta y la amabilidad local.",
       content: "Expedicionarios 4x4 en travesías por el sur riojano documentaron la experiencia única de ingresar a Villa Casana: un poblado prolijo y apacible custodiado por palmeras en su plaza, donde maestros y alumnos de la escuela reciben a los viajeros con genuina cordialidad, y los baqueanos guían hacia el modesto salto de agua del sur que brota milagroso entre las rocas del monte."
     },
@@ -254,6 +258,7 @@ const APP_DATA = {
       title: "Donde el Tiempo Todavía Saluda por el Nombre",
       category: "Identidad & Alma de Pueblo (Orion FM)",
       icon: "🌅",
+      image: "./images/bienvenidos.jpg",
       summary: "La magia de un rincón riojano donde la modernidad no borró la sencillez, la cercanía y el mate compartido sin apuro.",
       content: "Como describe la crónica de Orion FM Chepes, quien llega a Villa Casana descubre mucho más que un destino: descubre silencios que abrazan, niños jugando libres, vecinos conversando en la vereda y amaneceres anaranjados sobre las sierras. Un pueblo nacido al calor del trabajo rural y la solidaridad donde cada saludo lleva el nombre de quien lo recibe, recordándonos que el interior del interior late vivo, auténtico y con el corazón abierto."
     }
@@ -607,16 +612,30 @@ function renderHistoryAndLegends() {
   if (!container) return;
 
   container.innerHTML = APP_DATA.historyAndLegends.map(h => `
-    <div class="glass-card p-6 rounded-2xl space-y-3 border-l-4 border-amber-500">
-      <div class="flex items-center justify-between">
-        <span class="text-2xl">${h.icon}</span>
-        <span class="text-[11px] font-mono uppercase bg-slate-900/80 text-amber-400 px-2.5 py-0.5 rounded border border-slate-800">
-          ${h.category}
-        </span>
+    <div class="glass-card rounded-2xl overflow-hidden border-l-4 border-amber-500 flex flex-col group">
+      ${h.image ? `
+        <div class="h-44 sm:h-52 w-full overflow-hidden bg-slate-900 relative">
+          <img 
+            src="${h.image}" 
+            alt="${h.title}" 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+            loading="lazy" 
+          />
+        </div>
+      ` : ''}
+      <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-2xl">${h.icon}</span>
+            <span class="text-[11px] font-mono uppercase bg-slate-900/80 text-amber-400 px-2.5 py-0.5 rounded border border-slate-800">
+              ${h.category}
+            </span>
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">${h.title}</h3>
+          <p class="text-xs text-amber-300/90 font-medium mt-1">${h.summary}</p>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed pt-2 border-t border-slate-800/60">${h.content}</p>
       </div>
-      <h3 class="text-lg font-bold text-slate-100">${h.title}</h3>
-      <p class="text-xs text-amber-300/90 font-medium">${h.summary}</p>
-      <p class="text-xs text-slate-300 leading-relaxed pt-1 border-t border-slate-800/60">${h.content}</p>
     </div>
   `).join('');
 }

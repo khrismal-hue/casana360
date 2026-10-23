@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v2';
+const CACHE_NAME = 'casana360-pwa-v3';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -16,7 +16,7 @@ const CORE_ASSETS = [
   './icon.svg',
   './icon-192.png',
   './icon-512.png',
-  './images/LEEME_FOTOS.txt',
+  // Imágenes originales
   './images/cerro_espeche.jpg',
   './images/circuito_4x4.jpg',
   './images/cicloturismo.jpg',
@@ -30,7 +30,28 @@ const CORE_ASSETS = [
   './images/bienvenidos.jpg',
   './images/sabores_casana.jpg',
   './images/rosa_oropel.jpg',
-  './images/mural_escuela.jpg'
+  './images/mural_escuela.jpg',
+  // Fotografías reales — Casa de Piedra
+  './images/casa_de_piedra.jpg',
+  './images/casa_de_piedra_interior.jpg',
+  // Fotografías reales — Plaza Villa Casana
+  './images/plaza_villa_casana.jpg',
+  // Fotografías reales — Escuela Rural
+  './images/escuela_frente.jpg',
+  './images/escuela_comunidad.jpg',
+  './images/escuela_patio.jpg',
+  './images/huerta_escolar.jpg',
+  // Fotografías reales — Circuito 4x4 y Casas Viejas
+  './images/casas_viejas_4x4.jpg',
+  './images/casas_viejas_panoramica.jpg',
+  './images/cartel_casas_viejas.jpg',
+  // Fotografías reales — Quebrada de Vallecito
+  './images/quebrada_vallecito.jpg',
+  './images/quebrada_vallecito_2.jpg',
+  './images/quebrada_vallecito_3.jpg',
+  // Fotografías reales — Río La Junta
+  './images/rio_la_junta.jpg',
+  './images/rio_la_junta_2.jpg',
 ];
 
 // Librerías CDN críticas para el mapa y estilos offline

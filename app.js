@@ -13,7 +13,7 @@ const APP_DATA = {
       categoryLabel: "Naturaleza & Trekking",
       tag: "Imperdible",
       localImage: "./images/cerro_espeche.jpg",
-      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+      image: "./images/cerro_espeche.jpg",
       description: "El centinela pétreo que domina la geografía de Villa Casana. Ofrece un ascenso accesible para senderistas de nivel medio con una vista panorámica inigualable de 360 grados sobre los llanos riojanos.",
       difficulty: "Media (2 a 3 hs de ascenso)",
       highlight: "Vistas panorámicas, avistamiento de aves rapaces (águilas moras y jotes), formaciones geológicas autóctonas.",
@@ -26,8 +26,13 @@ const APP_DATA = {
       category: "aventura",
       categoryLabel: "Aventura 4x4 / Off-Road",
       tag: "Adrenalina & Monte",
-      localImage: "./images/circuito_4x4.jpg",
-      image: "https://www.blog.lodelpampa.com.ar/wp-content/uploads/2023/09/DSCN3922.jpg",
+      localImage: "./images/casas_viejas_4x4.jpg",
+      image: "./images/casas_viejas_4x4.jpg",
+      gallery: [
+        "./images/casas_viejas_4x4.jpg",
+        "./images/circuito_4x4.jpg",
+        "./images/casas_viejas_panoramica.jpg"
+      ],
       description: "Travesías por huellas serranas, lechos de ríos secos de arena y pedregales que conectan parajes históricos, las crestas hacia Tuani y cañadones agrestes del interior riojano con vadeos de arroyos cristalinos.",
       difficulty: "Moderada a Alta para vehículos todo terreno",
       highlight: "Paisajes vírgenes, cruces de badenes de arena, arroyos que dan vida a la zona y puestos campesinos aislados donde se crían chivos.",
@@ -41,7 +46,7 @@ const APP_DATA = {
       categoryLabel: "Cicloturismo & MTB",
       tag: "Deporte Rural",
       localImage: "./images/cicloturismo.jpg",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+      image: "./images/cicloturismo.jpg",
       description: "Una ruta muy elegida por ciclistas de montaña de la región: 40 km de desafío sobre camino de tierra con suaves ondulaciones y aire puro de monte.",
       difficulty: "Intermedia / Avanzada (40 km por tramo)",
       highlight: "Silencio total, cruce con majadas y fauna silvestre (liebres, perdices, zorros grises).",
@@ -55,7 +60,7 @@ const APP_DATA = {
       categoryLabel: "Astroturismo & Estrellas",
       tag: "Cielo Prístino Bortle 1",
       localImage: "./images/cielo_nocturno.jpg",
-      image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
+      image: "./images/cielo_nocturno.jpg",
       description: "Lejos de cualquier contaminación lumínica urbana, Villa Casana posee uno de los cielos más puros del Cono Sur, donde la Vía Láctea se proyecta con textura y sombras en el suelo.",
       difficulty: "Baja (Acceso vehicular directo)",
       highlight: "Visibilidad a simple vista de las Nubes de Magallanes, Nebulosa de Orión, Carina y cúmulos globulares.",
@@ -68,8 +73,8 @@ const APP_DATA = {
       category: "cultura",
       categoryLabel: "Cultura & Gastronomía",
       tag: "Auténtico Criollo",
-      localImage: "./images/pan_casero.jpg",
-      image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
+      localImage: "./images/sabores_casana.jpg",
+      image: "./images/sabores_casana.jpg",
       description: "El corazón de Villa Casana está en la hospitalidad de su gente: el aroma inconfundible a pan casero recién horneado a leña, tortas fritas, quesillos de cabra y chivito riojano al asador.",
       difficulty: "Para toda la familia",
       highlight: "Encuentro directo con artesanos y familias productoras de arropes de chañar y dulces regionales.",
@@ -83,7 +88,7 @@ const APP_DATA = {
       categoryLabel: "Naturaleza & Aguas Serranas",
       tag: "Oasis Oculto",
       localImage: "./images/pozos_arroyos.jpg",
-      image: "https://www.blog.lodelpampa.com.ar/wp-content/uploads/2023/09/DSCN4001.jpg",
+      image: "./images/pozos_arroyos.jpg",
       description: "Rincón singular ubicado al sur de Villa Casana: un modesto y preciado salto de agua que brota entre formaciones rocosas. En una región árida como Los Llanos, este hilo de agua fresca representa un verdadero tesoro natural celebrado por los pobladores.",
       difficulty: "Caminata corta (4x4 + senderismo)",
       highlight: "Vegetación serrana, rumor de agua entre piedras y descanso reparador en pleno monte.",
@@ -97,7 +102,13 @@ const APP_DATA = {
       categoryLabel: "Arqueología & Pasado Olongasta",
       tag: "Sitio Sagrado Milenario",
       localImage: "./images/casa_de_piedra.jpg",
-      image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80",
+      image: "./images/casa_de_piedra.jpg",
+      gallery: [
+        "./images/casa_de_piedra.jpg",
+        "./images/casa_de_piedra_interior.jpg",
+        "./images/casa de piedra1.jpg",
+        "./images/casa de piedra 2.jpg"
+      ],
       description: "Impresionante formación rocosa y cueva natural de unos 4 metros de altura por 8 metros de diámetro. En su interior se conservan valiosos petroglifos, arte rupestre y morteros ceremoniales olongastas donde se realizaban rituales sagrados dedicados al sol y a la luna, además de servir como refugio y silo natural para resguardo de víveres.",
       difficulty: "Caminata accesible (1.5 km)",
       highlight: "Petroglifos ancestrales, morteros comunales tallados en la roca madre y cosmovisión de los pueblos originarios de Los Llanos.",
@@ -110,8 +121,14 @@ const APP_DATA = {
       category: "cultura",
       categoryLabel: "Casco Urbano & Encuentro",
       tag: "Corazón del Pueblo",
-      localImage: "./images/plaza_carmen.jpg",
-      image: "https://www.blog.lodelpampa.com.ar/wp-content/uploads/2023/09/DSCN3992.jpg",
+      localImage: "./images/plaza_villa_casana.jpg",
+      image: "./images/plaza_villa_casana.jpg",
+      gallery: [
+        "./images/plaza_villa_casana.jpg",
+        "./images/plaza villa casana.jpg",
+        "./images/plaza_carmen.jpg",
+        "./images/pueblo.jpg"
+      ],
       description: "El prolijo y apacible centro neurálgico de Villa Casana. Resaltan sus características palmeras en medio del paisaje agreste riojano, sus bancos de descanso a la sombra y el espíritu donde el tiempo transcurre sin apuro.",
       difficulty: "Fácil / Para toda la familia",
       highlight: "Palmeras de la plaza, entorno cuidado por los vecinos, proximidad a la capilla y la escuela.",
@@ -125,7 +142,7 @@ const APP_DATA = {
       categoryLabel: "Patrimonio Religioso & Fiestas",
       tag: "Devoción Rural",
       localImage: "./images/capilla_del_carmen.jpg",
-      image: "https://images.unsplash.com/photo-1548625361-195fe57876a4?auto=format&fit=crop&w=800&q=80",
+      image: "./images/capilla_del_carmen.jpg",
       description: "El templo de fe de Villa Casana y epicentro de la comunidad. Custodia la imagen de Nuestra Señora del Carmen, patrona del pueblo, convocando cada año a familias campesinas y fieles de toda la región para sus tradicionales fiestas patronales, misas y procesiones gauchas.",
       difficulty: "Fácil (Frente a la plaza)",
       highlight: "Arquitectura criolla rural, campana histórica de bronce y cálida atmósfera comunitaria.",
@@ -138,13 +155,85 @@ const APP_DATA = {
       category: "cultura",
       categoryLabel: "Memoria & Pioneros Docentes",
       tag: "Hospitalidad Rural",
-      localImage: "./images/escuela_rural.jpg",
-      image: "https://www.blog.lodelpampa.com.ar/wp-content/uploads/2023/09/DSCN3987.jpg",
+      localImage: "./images/escuela_frente.jpg",
+      image: "./images/escuela_frente.jpg",
+      gallery: [
+        "./images/escuela_frente.jpg",
+        "./images/escuela villa casana frente.jpg",
+        "./images/escuela_patio.jpg",
+        "./images/escuela_comunidad.jpg",
+        "./images/huerta_escolar.jpg",
+        "./images/mural_escuela.jpg"
+      ],
       description: "Edificio escolar que continúa el noble legado de la educación en Los Llanos. Heredera de aquella histórica maestra que durante 35 años educó a generaciones en su casa, hoy docentes y alumnos continúan recibiendo a los visitantes con una calidez inolvidable.",
       difficulty: "Paseo por el casco del pueblo",
       highlight: "Encuentro cordial con la comunidad educativa, orgullo por la enseñanza pública de frontera rural.",
       tips: "Si visitas en día de clases, acercarse con respeto para conocer las actividades que desarrollan los chicos del pueblo.",
       coords: [-31.0664, -66.5840]
+    },
+    {
+      id: "quebrada_vallecito",
+      title: "Quebrada de Vallecito",
+      category: "naturaleza",
+      categoryLabel: "Naturaleza & Quebradas",
+      tag: "Paisaje Serrano",
+      localImage: "./images/quebrada_vallecito.jpg",
+      image: "./images/quebrada_vallecito.jpg",
+      gallery: [
+        "./images/quebrada_vallecito.jpg",
+        "./images/quebrada_vallecito_2.jpg",
+        "./images/quebrada_vallecito_3.jpg",
+        "./images/quebrada de vallecito.jpg",
+        "./images/quebrada de vallecito 2.jpeg",
+        "./images/quebrada de vallecito 3.jpeg"
+      ],
+      description: "Un cañadón serrano de singular belleza que se abre entre las sierras de Los Llanos. Sus paredes de roca ocre y rojiza encauzan el viento fresco del monte, ofreciendo un sendero de sombra y silencio rodeado de vegetación nativa.",
+      difficulty: "Caminata accesible (4x4 + sendero)",
+      highlight: "Formaciones rocosas, vegetación autóctona, flora medicinal y fauna silvestre de los cañadones serranos.",
+      tips: "Recorrer a primera hora de la mañana para aprovechar la sombra natural del cañadón. Ideal para fotografía de paisaje.",
+      coords: [-31.0700, -66.5950]
+    },
+    {
+      id: "rio_la_junta",
+      title: "Río La Junta",
+      category: "naturaleza",
+      categoryLabel: "Naturaleza & Ríos Serranos",
+      tag: "Oasis del Monte",
+      localImage: "./images/rio_la_junta.jpg",
+      image: "./images/rio_la_junta.jpg",
+      gallery: [
+        "./images/rio_la_junta.jpg",
+        "./images/rio_la_junta_2.jpg",
+        "./images/rio la junta.jpg",
+        "./images/rio la junta 2.jpg"
+      ],
+      description: "El Río La Junta representa el pulso hídrico de la zona. Sus aguas cristalinas nacen de las sierras y alimentan el monte ribereño, creando un corredor de vida verde en medio del paisaje árido de Los Llanos riojanos.",
+      difficulty: "Acceso vehicular + caminata corta",
+      highlight: "Vegetación de ribera, pozas naturales, avistamiento de aves acuáticas y el sonido del agua entre piedras.",
+      tips: "En época estival (enero-febrero) puede tener caudal elevado. Consultar a los lugareños el estado del cauce antes de cruzar.",
+      coords: [-31.0750, -66.5800]
+    },
+    {
+      id: "casas_viejas",
+      title: "Casas Viejas — Ruinas y Patrimonio Rural",
+      category: "cultura",
+      categoryLabel: "Patrimonio & Historia Rural",
+      tag: "Arqueología Criolla",
+      localImage: "./images/cartel_casas_viejas.jpg",
+      image: "./images/cartel_casas_viejas.jpg",
+      gallery: [
+        "./images/cartel_casas_viejas.jpg",
+        "./images/casas_viejas_panoramica.jpg",
+        "./images/casas viejas.jpeg",
+        "./images/casas viejas 3.jpg",
+        "./images/casas viejas 4.jpg",
+        "./images/casas_viejas_4x4.jpg"
+      ],
+      description: "Un sitio histórico que guarda la memoria de los primeros pobladores de la región. Las ruinas de adobe y piedra de antiguas viviendas criollas narran silenciosamente décadas de vida rural, trabajo en el monte y comunidad serrana.",
+      difficulty: "Paseo accesible en vehículo 4x4",
+      highlight: "Arquitectura vernácula de barro y piedra, muros centenarios, objetos abandonados y el paisaje abierto de Los Llanos.",
+      tips: "No remover ni llevarse objetos del sitio. Fotografiar con respeto el legado patrimonial de los primeros pobladores de la zona.",
+      coords: [-31.0800, -66.5700]
     }
   ],
 
@@ -214,6 +303,7 @@ const APP_DATA = {
       title: "El Pasado Olongasta y el Santuario de la Casa de Piedra",
       category: "Pueblos Originarios & Arqueología",
       icon: "🪨",
+      image: "./images/casa_de_piedra.jpg",
       summary: "La huella milenaria de los olongastas en una cueva natural de 4 metros de altura por 8 metros de diámetro.",
       content: "La región de Villa Casana estuvo habitada originalmente por los olongastas, pueblo originario de Los Llanos riojanos. Su legado perdura en la 'Casa de Piedra', una imponente cueva natural donde se conservan petroglifos, arte rupestre y morteros ceremoniales. En su interior realizaban rituales sagrados dedicados al sol, la luna y sus deidades, además de utilizarla como refugio seguro y silo para el resguardo de víveres y frutos del monte."
     },
@@ -222,7 +312,7 @@ const APP_DATA = {
       title: "Historia de la Educación Rural: 35 Años de Vocación",
       category: "Educación & Comunidad",
       icon: "📖",
-      image: "./images/rosa_oropel.jpg",
+      image: "./images/escuela_frente.jpg",
       summary: "Los inicios de la enseñanza en casas de familia y la histórica maestra Rosa Oropel de Tapia, quien educó a generaciones.",
       content: "La educación en Villa Casana nació del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. La recordada maestra rural Rosa Oropel de Tapia consagró más de 35 años de su vida a la enseñanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban allí hasta el séptimo grado antes de continuar sus estudios en otras localidades. Hoy la Escuela Nº 35 lleva con honor su nombre."
     },
@@ -668,6 +758,7 @@ function openAttractionModal(id) {
         onerror="handleImageError(this, '${item.image}')"
         alt="${item.title}" 
         class="w-full h-64 sm:h-80 object-cover rounded-t-2xl"
+        id="modal-main-img"
       />
       <button onclick="closeAttractionModal()" class="absolute top-4 right-4 bg-slate-900/80 hover:bg-slate-900 text-slate-200 p-2 rounded-full backdrop-blur-md transition-all">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -681,6 +772,19 @@ function openAttractionModal(id) {
         </span>
       </div>
     </div>
+    ${item.gallery && item.gallery.length > 1 ? `
+    <div class="px-4 pt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-thin">
+      ${item.gallery.map((src, i) => `
+        <img 
+          src="${src}" 
+          alt="${item.title} - foto ${i+1}"
+          class="h-16 w-24 object-cover rounded-lg cursor-pointer opacity-70 hover:opacity-100 transition-opacity shrink-0 border-2 ${i===0 ? 'border-amber-500' : 'border-transparent'}"
+          onclick="document.getElementById('modal-main-img').src='${src}'; this.parentElement.querySelectorAll('img').forEach(el=>el.classList.remove('opacity-100','border-amber-500')); this.classList.add('opacity-100','border-amber-500');"
+          loading="lazy"
+        />
+      `).join('')}
+    </div>
+    ` : ''}
     <div class="p-6 sm:p-8 space-y-5">
       <div>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-100">${item.title}</h2>

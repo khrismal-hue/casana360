@@ -16,6 +16,17 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Ensure proper orientation and rendering for all images */
+img {
+  image-orientation: from-image;
+}
+
+/* Clean vertical/horizontal image rendering */
+.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Glassmorphism Classes */
 .glass-panel {
   background: rgba(19, 27, 46, 0.75);

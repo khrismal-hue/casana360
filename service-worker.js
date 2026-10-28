@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v3';
+const CACHE_NAME = 'casana360-pwa-v4';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -16,8 +16,9 @@ const CORE_ASSETS = [
   './icon.svg',
   './icon-192.png',
   './icon-512.png',
-  // Imágenes originales
+  // Imágenes
   './images/cerro_espeche.jpg',
+  './images/cerro espeche 1.jpg',
   './images/circuito_4x4.jpg',
   './images/cicloturismo.jpg',
   './images/cielo_nocturno.jpg',
@@ -25,6 +26,9 @@ const CORE_ASSETS = [
   './images/pozos_arroyos.jpg',
   './images/plaza_carmen.jpg',
   './images/capilla_del_carmen.jpg',
+  './images/iglesia del carmen.jpg',
+  './images/fiesta de virgen del carmen.jpg',
+  './images/capilla Sra. del Carmen Villa Casana.webp',
   './images/escuela_rural.jpg',
   './images/pueblo.jpg',
   './images/bienvenidos.jpg',
@@ -34,24 +38,50 @@ const CORE_ASSETS = [
   // Fotografías reales — Casa de Piedra
   './images/casa_de_piedra.jpg',
   './images/casa_de_piedra_interior.jpg',
-  // Fotografías reales — Plaza Villa Casana
-  './images/plaza_villa_casana.jpg',
+  './images/casa de piedra1.jpg',
+  './images/casa de piedra 3.jpg',
   // Fotografías reales — Escuela Rural
   './images/escuela_frente.jpg',
-  './images/escuela_comunidad.jpg',
+  './images/escuela villa casana frente.jpg',
+  './images/escuela villa casana.jpg',
+  './images/escuela villa casana 3.jpg',
   './images/escuela_patio.jpg',
   './images/huerta_escolar.jpg',
   // Fotografías reales — Circuito 4x4 y Casas Viejas
   './images/casas_viejas_4x4.jpg',
   './images/casas_viejas_panoramica.jpg',
   './images/cartel_casas_viejas.jpg',
+  './images/casas viejas 1.jpeg',
+  './images/casas viejas 2.jpeg',
+  './images/casas viejas 3.jpeg',
+  './images/casas viejas 4.jpeg',
+  './images/casas viejas.jpeg',
+  './images/casas viejas 3.jpg',
+  './images/casas viejas 4.jpg',
   // Fotografías reales — Quebrada de Vallecito
-  './images/quebrada_vallecito.jpg',
+  './images/quebrada de vallecito.jpg',
+  './images/quebrada de vallecito 1.jpeg',
+  './images/quebrada de vallecito 2.jpeg',
+  './images/quebrada de vallecito 3.jpeg',
+  './images/quebrada de vallecito 4.jpeg',
   './images/quebrada_vallecito_2.jpg',
   './images/quebrada_vallecito_3.jpg',
   // Fotografías reales — Río La Junta
   './images/rio_la_junta.jpg',
   './images/rio_la_junta_2.jpg',
+  './images/la junta 1.jpeg',
+  './images/la junta 2.jpeg',
+  './images/la junta 3.jpeg',
+  './images/la junta 4.jpeg',
+  './images/la junta 5.jpeg',
+  './images/la junta 6.jpeg',
+  './images/la junta 7.jpeg',
+  './images/la junta 8.jpeg',
+  './images/la junta 9.jpeg',
+  // Fotografías reales — La Batea
+  './images/la batea 1.jpeg',
+  './images/la batea 2.jpeg',
+  './images/la batea 3.jpeg'
 ];
 
 // Librerías CDN críticas para el mapa y estilos offline

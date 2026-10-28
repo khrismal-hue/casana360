@@ -14,6 +14,10 @@ const APP_DATA = {
       tag: "Imperdible",
       localImage: "./images/cerro_espeche.jpg",
       image: "./images/cerro_espeche.jpg",
+      gallery: [
+        "./images/cerro_espeche.jpg",
+        "./images/cerro espeche 1.jpg"
+      ],
       description: "El centinela pétreo que domina la geografía de Villa Casana. Ofrece un ascenso accesible para senderistas de nivel medio con una vista panorámica inigualable de 360 grados sobre los llanos riojanos.",
       difficulty: "Media (2 a 3 hs de ascenso)",
       highlight: "Vistas panorámicas, avistamiento de aves rapaces (águilas moras y jotes), formaciones geológicas autóctonas.",
@@ -33,11 +37,12 @@ const APP_DATA = {
         "./images/circuito_4x4.jpg",
         "./images/casas_viejas_panoramica.jpg"
       ],
-      description: "Travesías por huellas serranas, lechos de ríos secos de arena y pedregales que conectan parajes históricos, las crestas hacia Tuani y cañadones agrestes del interior riojano con vadeos de arroyos cristalinos.",
+      description: "Travesías por huellas serranas, lechos de ríos secos de arena y pedregales que conectan parajes históricos, las crestas hacia Tuani y cañadones agrestes del interior riojano con vadeos de arroyos cristalinos. Incluye track GPS en Wikiloc para todoterreno.",
       difficulty: "Moderada a Alta para vehículos todo terreno",
       highlight: "Paisajes vírgenes, cruces de badenes de arena, arroyos que dan vida a la zona y puestos campesinos aislados donde se crían chivos.",
       tips: "Bajar ligeramente la presión de los neumáticos en tramos de arena pesada. Consultar siempre con pobladores sobre las tranqueras y el estado de los vadeos.",
-      coords: [-31.0820, -66.5710]
+      coords: [-31.0820, -66.5710],
+      wikilocUrl: "https://es.wikiloc.com/rutas-todo-terreno/casa-de-piedra-villa-casana-15673850"
     },
     {
       id: "cicloturismo",
@@ -75,7 +80,11 @@ const APP_DATA = {
       tag: "Auténtico Criollo",
       localImage: "./images/sabores_casana.jpg",
       image: "./images/sabores_casana.jpg",
-      description: "El corazón de Villa Casana está en la hospitalidad de su gente: el aroma inconfundible a pan casero recién horneado a leña, tortas fritas, quesillos de cabra y chivito riojano al asador.",
+      gallery: [
+        "./images/sabores_casana.jpg",
+        "./images/pan_casero.jpg"
+      ],
+      description: "El corazón de Villa Casana está en la hospitalidad de su gente: el aroma inconfundible a pan casero recién horneado a leña, tortas fritas, quesillos de cabra y chivito riojano al asador. Contacta a Estefanía Ávila (3821495845) para encargar cosas dulces, saladas o productos regionales.",
       difficulty: "Para toda la familia",
       highlight: "Encuentro directo con artesanos y familias productoras de arropes de chañar y dulces regionales.",
       tips: "Preguntar a los vecinos del pueblo quién hornea pan el día de tu visita para conseguirlo tibio y crujiente.",
@@ -107,13 +116,14 @@ const APP_DATA = {
         "./images/casa_de_piedra.jpg",
         "./images/casa_de_piedra_interior.jpg",
         "./images/casa de piedra1.jpg",
-        "./images/casa de piedra 2.jpg"
+        "./images/casa de piedra 3.jpg"
       ],
       description: "Impresionante formación rocosa y cueva natural de unos 4 metros de altura por 8 metros de diámetro. En su interior se conservan valiosos petroglifos, arte rupestre y morteros ceremoniales olongastas donde se realizaban rituales sagrados dedicados al sol y a la luna, además de servir como refugio y silo natural para resguardo de víveres.",
       difficulty: "Caminata accesible (1.5 km)",
       highlight: "Petroglifos ancestrales, morteros comunales tallados en la roca madre y cosmovisión de los pueblos originarios de Los Llanos.",
       tips: "Ingresar con sumo respeto: no tocar las inscripciones rupestres ni encender fuego. Llevar linterna para observar con claridad los detalles del alero.",
-      coords: [-31.0580, -66.5890]
+      coords: [-31.0580, -66.5890],
+      wikilocUrl: "https://es.wikiloc.com/rutas-todo-terreno/casa-de-piedra-villa-casana-15673850"
     },
     {
       id: "plaza_del_carmen",
@@ -121,11 +131,9 @@ const APP_DATA = {
       category: "cultura",
       categoryLabel: "Casco Urbano & Encuentro",
       tag: "Corazón del Pueblo",
-      localImage: "./images/plaza_villa_casana.jpg",
-      image: "./images/plaza_villa_casana.jpg",
+      localImage: "./images/plaza_carmen.jpg",
+      image: "./images/plaza_carmen.jpg",
       gallery: [
-        "./images/plaza_villa_casana.jpg",
-        "./images/plaza villa casana.jpg",
         "./images/plaza_carmen.jpg",
         "./images/pueblo.jpg"
       ],
@@ -143,6 +151,12 @@ const APP_DATA = {
       tag: "Devoción Rural",
       localImage: "./images/capilla_del_carmen.jpg",
       image: "./images/capilla_del_carmen.jpg",
+      gallery: [
+        "./images/capilla_del_carmen.jpg",
+        "./images/iglesia del carmen.jpg",
+        "./images/fiesta de virgen del carmen.jpg",
+        "./images/capilla Sra. del Carmen Villa Casana.webp"
+      ],
       description: "El templo de fe de Villa Casana y epicentro de la comunidad. Custodia la imagen de Nuestra Señora del Carmen, patrona del pueblo, convocando cada año a familias campesinas y fieles de toda la región para sus tradicionales fiestas patronales, misas y procesiones gauchas.",
       difficulty: "Fácil (Frente a la plaza)",
       highlight: "Arquitectura criolla rural, campana histórica de bronce y cálida atmósfera comunitaria.",
@@ -160,8 +174,10 @@ const APP_DATA = {
       gallery: [
         "./images/escuela_frente.jpg",
         "./images/escuela villa casana frente.jpg",
+        "./images/escuela villa casana.jpg",
+        "./images/escuela villa casana 3.jpg",
         "./images/escuela_patio.jpg",
-        "./images/escuela_comunidad.jpg",
+        "./images/escuela_rural.jpg",
         "./images/huerta_escolar.jpg",
         "./images/mural_escuela.jpg"
       ],
@@ -177,15 +193,16 @@ const APP_DATA = {
       category: "naturaleza",
       categoryLabel: "Naturaleza & Quebradas",
       tag: "Paisaje Serrano",
-      localImage: "./images/quebrada_vallecito.jpg",
-      image: "./images/quebrada_vallecito.jpg",
+      localImage: "./images/quebrada de vallecito.jpg",
+      image: "./images/quebrada de vallecito.jpg",
       gallery: [
-        "./images/quebrada_vallecito.jpg",
-        "./images/quebrada_vallecito_2.jpg",
-        "./images/quebrada_vallecito_3.jpg",
         "./images/quebrada de vallecito.jpg",
+        "./images/quebrada de vallecito 1.jpeg",
         "./images/quebrada de vallecito 2.jpeg",
-        "./images/quebrada de vallecito 3.jpeg"
+        "./images/quebrada de vallecito 3.jpeg",
+        "./images/quebrada de vallecito 4.jpeg",
+        "./images/quebrada_vallecito_2.jpg",
+        "./images/quebrada_vallecito_3.jpg"
       ],
       description: "Un cañadón serrano de singular belleza que se abre entre las sierras de Los Llanos. Sus paredes de roca ocre y rojiza encauzan el viento fresco del monte, ofreciendo un sendero de sombra y silencio rodeado de vegetación nativa.",
       difficulty: "Caminata accesible (4x4 + sendero)",
@@ -204,8 +221,15 @@ const APP_DATA = {
       gallery: [
         "./images/rio_la_junta.jpg",
         "./images/rio_la_junta_2.jpg",
-        "./images/rio la junta.jpg",
-        "./images/rio la junta 2.jpg"
+        "./images/la junta 1.jpeg",
+        "./images/la junta 2.jpeg",
+        "./images/la junta 3.jpeg",
+        "./images/la junta 4.jpeg",
+        "./images/la junta 5.jpeg",
+        "./images/la junta 6.jpeg",
+        "./images/la junta 7.jpeg",
+        "./images/la junta 8.jpeg",
+        "./images/la junta 9.jpeg"
       ],
       description: "El Río La Junta representa el pulso hídrico de la zona. Sus aguas cristalinas nacen de las sierras y alimentan el monte ribereño, creando un corredor de vida verde en medio del paisaje árido de Los Llanos riojanos.",
       difficulty: "Acceso vehicular + caminata corta",
@@ -223,6 +247,10 @@ const APP_DATA = {
       image: "./images/cartel_casas_viejas.jpg",
       gallery: [
         "./images/cartel_casas_viejas.jpg",
+        "./images/casas viejas 1.jpeg",
+        "./images/casas viejas 2.jpeg",
+        "./images/casas viejas 3.jpeg",
+        "./images/casas viejas 4.jpeg",
         "./images/casas_viejas_panoramica.jpg",
         "./images/casas viejas.jpeg",
         "./images/casas viejas 3.jpg",
@@ -234,11 +262,41 @@ const APP_DATA = {
       highlight: "Arquitectura vernácula de barro y piedra, muros centenarios, objetos abandonados y el paisaje abierto de Los Llanos.",
       tips: "No remover ni llevarse objetos del sitio. Fotografiar con respeto el legado patrimonial de los primeros pobladores de la zona.",
       coords: [-31.0800, -66.5700]
+    },
+    {
+      id: "la_batea",
+      title: "La Batea — Formaciones y Pozas Serranas",
+      category: "naturaleza",
+      categoryLabel: "Naturaleza & Pozas de Piedra",
+      tag: "Rincón Secreto",
+      localImage: "./images/la batea 1.jpeg",
+      image: "./images/la batea 1.jpeg",
+      gallery: [
+        "./images/la batea 1.jpeg",
+        "./images/la batea 2.jpeg",
+        "./images/la batea 3.jpeg"
+      ],
+      description: "Singulares piletones y piletones de roca labrados pacientemente por el agua y el tiempo en las estribaciones de las sierras. Un refugio natural de serenidad, rocas esculpidas y monte riojano en estado puro.",
+      difficulty: "Caminata y huella de monte",
+      highlight: "Ollas de piedra naturales, formaciones geológicas pulidas por agua y fauna serrana.",
+      tips: "Llevar calzado con suela antideslizante para caminar con seguridad sobre las piedras. Respetar y mantener limpio el lugar.",
+      coords: [-31.0520, -66.5850]
     }
   ],
 
   // Directorio de Pobladores, Guías y Productores Locales con WhatsApp Directo
   localContacts: [
+    {
+      id: "ventas_estefania",
+      name: "Estefanía Ávila",
+      role: "Venta de Cosas Dulces, Saladas y Productos Regionales",
+      badge: "Ventas & Sabores",
+      badgeColor: "bg-amber-600/90 text-white",
+      description: "Elaboración casera y venta de cosas dulces y saladas: pan casero, tortas fritas, repostería criolla, empanadas y productos típicos de Villa Casana.",
+      phoneDisplay: "3821495845",
+      whatsappNumber: "5493821495845",
+      whatsappMsg: "¡Hola Estefanía! Te contacto desde la app turística de Villa Casana para consultar por cosas dulces, saladas y productos disponibles para encargar."
+    },
     {
       id: "guia_espeche",
       name: "Guía Baqueano - Cerro Espeche",
@@ -251,26 +309,15 @@ const APP_DATA = {
       whatsappMsg: "¡Hola! Vi su contacto en la app turística de Villa Casana. Quisiera consultar disponibilidad y tarifas para realizar una excursión guiada al Cerro Espeche."
     },
     {
-      id: "pan_horno",
-      name: "Horno de Barro Tradicional",
-      role: "Pan Casero & Tortas Fritas Criollas",
-      badge: "Gastronomía",
-      badgeColor: "bg-amber-600/90 text-white",
-      description: "Elaboración diaria con leña de jarilla y monte. Pan amasado a mano con grasa criolla, tortillas y empanadas por encargo.",
-      phoneDisplay: "+54 9 3821 45-5678",
-      whatsappNumber: "5493821455678",
-      whatsappMsg: "¡Hola! Encontré su contacto en la app de Villa Casana. Me gustaría saber qué días hornean pan casero o si es posible encargar empanadas para nuestra visita."
-    },
-    {
       id: "chivito_riojano",
       name: "Puesto Criollo - Chivito y Quesillos",
       role: "Carnes de Monte & Dulces Caseros",
       badge: "Sabores de los Llanos",
       badgeColor: "bg-orange-600/90 text-white",
       description: "Venta de chivito lechal de pastoreo libre en el monte, quesillos frescos de cabra y arropes tradicionales de chañar e higo.",
-      phoneDisplay: "+54 9 3821 42-9012",
-      whatsappNumber: "5493821429012",
-      whatsappMsg: "¡Hola! Vi su número en la app de Villa Casana. Quisiera consultar por chivito riojano o quesillos artesanales para encargar."
+      phoneDisplay: "3821495845",
+      whatsappNumber: "5493821495845",
+      whatsappMsg: "¡Hola Estefanía! Te contacto desde la app de Villa Casana para consultar y encargar chivito riojano, quesillos o productos de monte."
     },
     {
       id: "auxilio_4x4",
@@ -312,7 +359,7 @@ const APP_DATA = {
       title: "Historia de la Educación Rural: 35 Años de Vocación",
       category: "Educación & Comunidad",
       icon: "📖",
-      image: "./images/escuela_frente.jpg",
+      image: "./images/rosa_oropel.jpg",
       summary: "Los inicios de la enseñanza en casas de familia y la histórica maestra Rosa Oropel de Tapia, quien educó a generaciones.",
       content: "La educación en Villa Casana nació del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. La recordada maestra rural Rosa Oropel de Tapia consagró más de 35 años de su vida a la enseñanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban allí hasta el séptimo grado antes de continuar sus estudios en otras localidades. Hoy la Escuela Nº 35 lleva con honor su nombre."
     },
@@ -685,7 +732,7 @@ function renderLocalContacts() {
           Enviar WhatsApp
         </a>
         <a 
-          href="tel:${c.phoneDisplay.replace(/[^0-9+]/g, '')}" 
+          href="tel:${c.phoneDisplay.replace(/[^0-9]/g, '')}" 
           class="bg-slate-800 hover:bg-slate-700 text-slate-200 p-2 rounded-xl transition-all"
           title="Llamar directamente"
         >
@@ -807,6 +854,15 @@ function openAttractionModal(id) {
         </h4>
         <p class="text-amber-100 text-sm">${item.tips}</p>
       </div>
+
+      ${item.wikilocUrl ? `
+        <div class="pt-1">
+          <a href="${item.wikilocUrl}" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-700/30">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            Ver Ruta 4x4 en Wikiloc (Track GPS)
+          </a>
+        </div>
+      ` : ''}
 
       <div class="flex flex-col sm:flex-row gap-3 pt-2">
         <button onclick="goToOnMap([${item.coords.join(',')}], '${item.title}'); closeAttractionModal();" class="flex-1 bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-3 px-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-600/30">

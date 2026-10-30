@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cabrito-asado",
+    "nombre": "Cabrito Asado a la Estaca / a la Parrilla",
+    "categoria": "Plato principal",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/cabrito-asado.jpg",
+    "descripcion": "El plato insignia de la región de Los Llanos Riojanos: carne tierna de cabrito lechón alimentado con pasturas naturales y cocinado lentamente a las brasas o a la estaca."
+  },
+  {
+    "id": "empanadas-riojanas",
+    "nombre": "Empanadas Riojanas",
+    "categoria": "Entrada",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/empanadas-riojanas.jpg",
+    "descripcion": "Clásicas empanadas jugosas de carne cortada a cuchillo, sazonadas con comino, ají molido, huevo duro, cebolla de verdeo y aceitunas de la región."
+  },
+  {
+    "id": "locro-criollo",
+    "nombre": "Locro Criollo",
+    "categoria": "Guiso",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/locro-criollo.jpg",
+    "descripcion": "Guiso tradicional a base de maíz blanco, porotos, zapallo anco, falda y embutidos, ideal para celebraciones y jornadas de campo."
+  },
+  {
+    "id": "humita-en-chala",
+    "nombre": "Humita en Chala / en Olla",
+    "categoria": "Plato regional",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/humita-en-chala.jpg",
+    "descripcion": "Preparación a base de choclo fresco rallado, zapallo, queso cremoso y un refrito de cebolla y pimentón, servida tradicionalmente en la propia chala del choclo."
+  },
+  {
+    "id": "pan-casero-chicharrones",
+    "nombre": "Pan Casero con Chicharrones y Tortas Fritas",
+    "categoria": "Panadería y merienda",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/pan-casero.jpg",
+    "descripcion": "Elaboración artesanal en horno de barro, ideal para acompañar el mate a la tarde."
+  },
+  {
+    "id": "quesillo-arrope",
+    "nombre": "Dulces Artesanales (Higo, Zapallo, Quesillo con Arrope)",
+    "categoria": "Postre",
+    "ubicacion": "Chepes - Villa Casana",
+    "imagen": "./images/dulces-artesanales.jpg",
+    "descripcion": "Postres tradicionales riojanos a base de frutas regionales en almíbar, acompañados de quesillo de cabra y arrope de chañar o tuna."
+  }
+]

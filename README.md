@@ -48,14 +48,19 @@ Diseñada para turistas, aventureros, senderistas y amantes de la naturaleza y e
 ## 🛠️ Cómo Personalizar con Fotos y Contactos Reales
 
 ### 📸 1. Agregar tus Fotos Reales
-La aplicación busca automáticamente fotos dentro de la carpeta `images/`. Si una foto no existe, utiliza una imagen alternativa de alta calidad en internet.
-Para colocar tus fotos reales, solo cópialas dentro de `images/` con estos nombres:
-* `cerro_espeche.jpg` -> Foto del cerro
-* `circuito_4x4.jpg` -> Foto de camionetas en el camino de tierra o río seco
+La aplicación busca automáticamente fotos dentro de la carpeta `images/`.
+Los nombres usan minúsculas y guiones, sin espacios ni acentos. Para reemplazar
+una foto, copiala dentro de `images/` con el mismo nombre del archivo actual:
+* `cerro-espeche-nuevo.jpg` -> Foto del cerro
+* `circuito-4x4.jpg` -> Foto de camionetas en el camino de tierra o río seco
 * `cicloturismo.jpg` -> Foto de ciclistas
-* `pan_casero.jpg` -> Foto del horno de barro o tortas fritas
-* `pozos_arroyos.jpg` -> Foto de las vertientes o quebradas
-* `cielo_nocturno.jpg` -> Foto del cielo estrellado
+* `pan-casero.jpg` -> Foto del horno de barro, pan casero o tortas fritas
+* `pozos-arroyos.jpg` -> Foto de las vertientes o quebradas
+* `cielo-nocturno.jpg` -> Foto del cielo estrellado
+
+Si una foto falta, la app usa una imagen local de respaldo (no depende de
+internet). Los créditos y licencias de las fotos de gastronomía están en
+[images/CREDITOS.md](images/CREDITOS.md).
 
 ### 📱 2. Cambiar Teléfonos y Números de WhatsApp
 Abre el archivo [app.js](file:///c:/Users/khris/Desktop/proyecto%20turismo/app.js) en tu editor y busca la sección `localContacts`:
@@ -100,12 +105,15 @@ En [app.js](file:///c:/Users/khris/Desktop/proyecto%20turismo/app.js), en la sec
 
 ```
 proyecto turismo/
-├── images/          # Carpeta para colocar tus fotos reales (.jpg)
-│   └── LEEME_FOTOS.txt
+├── images/          # Fotografías optimizadas de Villa Casana y gastronomía
+│   ├── LEEME_FOTOS.txt
+│   └── CREDITOS.md  # Atribución y licencias de las fotos de comida
+├── data/
+│   └── gastronomia.json  # Fichas de comidas típicas (nombre, categoría, imagen, descripción)
 ├── index.html       # Estructura principal y pestañas interactivas
 ├── styles.css       # Estilos visuales, modo nocturno rojo y efectos
 ├── app.js           # Base de datos local (atractivos, contactos WhatsApp, historias)
 ├── manifest.json    # Manifiesto para instalación como App PWA
-├── sw.js            # Service worker para funcionamiento offline
+├── service-worker.js # Service worker para funcionamiento offline
 └── README.md        # Esta guía de uso y personalización
 ```

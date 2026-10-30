@@ -1,3 +1,4 @@
+
 /**
  * Villa Casana Turismo - Interactive Web Application
  * Departamento Rosario Vera Peñaloza, La Rioja, Argentina
@@ -12,16 +13,16 @@ const APP_DATA = {
       category: "naturaleza",
       categoryLabel: "Naturaleza & Trekking",
       tag: "Imperdible",
-      localImage: "./images/cerro_espeche.jpg",
-      image: "./images/cerro_espeche.jpg",
+      localImage: "./images/cerro-espeche-nuevo.jpg",
+      image: "./images/cerro-espeche-nuevo.jpg",
       gallery: [
-        "./images/cerro_espeche.jpg",
-        "./images/cerro espeche 1.jpg"
+        "./images/cerro-espeche-nuevo.jpg",
+        "./images/cerro-espeche-2.jpg"
       ],
-      description: "El centinela pétreo que domina la geografía de Villa Casana. Ofrece un ascenso accesible para senderistas de nivel medio con una vista panorámica inigualable de 360 grados sobre los llanos riojanos.",
+      description: "El centinela petreo que domina la geografia de Villa Casana. Ofrece un ascenso accesible para senderistas de nivel medio con una vista panoramica inigualable de 360 grados sobre los llanos riojanos.",
       difficulty: "Media (2 a 3 hs de ascenso)",
-      highlight: "Vistas panorámicas, avistamiento de aves rapaces (águilas moras y jotes), formaciones geológicas autóctonas.",
-      tips: "Iniciar la caminata a primera hora de la mañana para evitar las horas de mayor insolación. Llevar calzado con suela de tracción y 2 litros de agua.",
+      highlight: "Vistas panoramicas, avistamiento de aves rapaces (aguilas moras y jotes), formaciones geologicas autoctonas.",
+      tips: "Iniciar la caminata a primera hora de la manana para evitar las horas de mayor insolacion. Llevar calzado con suela de traccion y 2 litros de agua.",
       coords: [-31.0450, -66.5920]
     },
     {
@@ -30,17 +31,16 @@ const APP_DATA = {
       category: "aventura",
       categoryLabel: "Aventura 4x4 / Off-Road",
       tag: "Adrenalina & Monte",
-      localImage: "./images/casas_viejas_4x4.jpg",
-      image: "./images/casas_viejas_4x4.jpg",
+      localImage: "./images/circuito-4x4.jpg",
+      image: "./images/circuito-4x4.jpg",
       gallery: [
-        "./images/casas_viejas_4x4.jpg",
-        "./images/circuito_4x4.jpg",
-        "./images/casas_viejas_panoramica.jpg"
+        "./images/circuito-4x4.jpg",
+        "./images/cerro-espeche-panoramica.jpg"
       ],
-      description: "Travesías por huellas serranas, lechos de ríos secos de arena y pedregales que conectan parajes históricos, las crestas hacia Tuani y cañadones agrestes del interior riojano con vadeos de arroyos cristalinos. Incluye track GPS en Wikiloc para todoterreno.",
-      difficulty: "Moderada a Alta para vehículos todo terreno",
-      highlight: "Paisajes vírgenes, cruces de badenes de arena, arroyos que dan vida a la zona y puestos campesinos aislados donde se crían chivos.",
-      tips: "Bajar ligeramente la presión de los neumáticos en tramos de arena pesada. Consultar siempre con pobladores sobre las tranqueras y el estado de los vadeos.",
+      description: "Travesias por huellas serranas, lechos de rios secos de arena y pedregales que conectan parajes historicos, las crestas hacia Tuani y canadones agrestes del interior riojano con vadeos de arroyos cristalinos. Incluye track GPS en Wikiloc para todoterreno.",
+      difficulty: "Moderada a Alta para vehiculos todo terreno",
+      highlight: "Paisajes virgenes, cruces de badenes de arena, arroyos que dan vida a la zona y puestos campesinos aislados donde se crian chivos.",
+      tips: "Bajar ligeramente la presion de los neumaticos en tramos de arena pesada. Consultar siempre con pobladores sobre las tranqueras y el estado de los vadeos.",
       coords: [-31.0820, -66.5710],
       wikilocUrl: "https://es.wikiloc.com/rutas-todo-terreno/casa-de-piedra-villa-casana-15673850"
     },
@@ -50,12 +50,18 @@ const APP_DATA = {
       category: "aventura",
       categoryLabel: "Cicloturismo & MTB",
       tag: "Deporte Rural",
-      localImage: "./images/cicloturismo.jpg",
-      image: "./images/cicloturismo.jpg",
-      description: "Una ruta muy elegida por ciclistas de montaña de la región: 40 km de desafío sobre camino de tierra con suaves ondulaciones y aire puro de monte.",
+      localImage: "./images/bike-y-mountainbike.jpg",
+      image: "./images/bike-y-mountainbike.jpg",
+      gallery: [
+        "./images/bike-y-mountainbike.jpg",
+        "./images/mountain-bike-1.jpg",
+        "./images/mountain-bike-2.jpg",
+        "./images/cicloturismo.jpg"
+      ],
+      description: "Una ruta muy elegida por ciclistas de montana de la region: 40 km de desafio sobre camino de tierra con suaves ondulaciones y aire puro de monte.",
       difficulty: "Intermedia / Avanzada (40 km por tramo)",
       highlight: "Silencio total, cruce con majadas y fauna silvestre (liebres, perdices, zorros grises).",
-      tips: "Llevar kit antipinchazos reforzado con líquido sellador debido a las espinas de espinillo y tusca en los laterales.",
+      tips: "Llevar kit antipinchazos reforzado con liquido sellador debido a las espinas de espinillo y tusca en los laterales.",
       coords: [-31.1200, -66.6000]
     },
     {
@@ -63,32 +69,14 @@ const APP_DATA = {
       title: "Mirador de Astroturismo Pampa Limpia",
       category: "astronomia",
       categoryLabel: "Astroturismo & Estrellas",
-      tag: "Cielo Prístino Bortle 1",
-      localImage: "./images/cielo_nocturno.jpg",
-      image: "./images/cielo_nocturno.jpg",
-      description: "Lejos de cualquier contaminación lumínica urbana, Villa Casana posee uno de los cielos más puros del Cono Sur, donde la Vía Láctea se proyecta con textura y sombras en el suelo.",
+      tag: "Cielo Pristino Bortle 1",
+      localImage: "./images/cielo-nocturno.jpg",
+      image: "./images/cielo-nocturno.jpg",
+      description: "Lejos de cualquier contaminacion luminica urbana, Villa Casana posee uno de los cielos mas puros del Cono Sur, donde la Via Lactea se proyecta con textura y sombras en el suelo.",
       difficulty: "Baja (Acceso vehicular directo)",
-      highlight: "Visibilidad a simple vista de las Nubes de Magallanes, Nebulosa de Orión, Carina y cúmulos globulares.",
-      tips: "Utilizar siempre luz roja para no perder la adaptación nocturna de los ojos. Abrigo térmico aún en noches de verano.",
+      highlight: "Visibilidad a simple vista de las Nubes de Magallanes, Nebulosa de Orion, Carina y cumulos globulares.",
+      tips: "Utilizar siempre luz roja para no perder la adaptacion nocturna de los ojos. Abrigo termico aun en noches de verano.",
       coords: [-31.0600, -66.5750]
-    },
-    {
-      id: "tradicion_gastronomia",
-      title: "Sabores Campestres y Hornos de Barro",
-      category: "cultura",
-      categoryLabel: "Cultura & Gastronomía",
-      tag: "Auténtico Criollo",
-      localImage: "./images/sabores_casana.jpg",
-      image: "./images/sabores_casana.jpg",
-      gallery: [
-        "./images/sabores_casana.jpg",
-        "./images/pan_casero.jpg"
-      ],
-      description: "El corazón de Villa Casana está en la hospitalidad de su gente: el aroma inconfundible a pan casero recién horneado a leña, tortas fritas, quesillos de cabra y chivito riojano al asador. Contacta a Estefanía Ávila (3821495845) para encargar cosas dulces, saladas o productos regionales.",
-      difficulty: "Para toda la familia",
-      highlight: "Encuentro directo con artesanos y familias productoras de arropes de chañar y dulces regionales.",
-      tips: "Preguntar a los vecinos del pueblo quién hornea pan el día de tu visita para conseguirlo tibio y crujiente.",
-      coords: [-31.0667, -66.5833]
     },
     {
       id: "pozos_arroyos",
@@ -96,95 +84,94 @@ const APP_DATA = {
       category: "naturaleza",
       categoryLabel: "Naturaleza & Aguas Serranas",
       tag: "Oasis Oculto",
-      localImage: "./images/pozos_arroyos.jpg",
-      image: "./images/pozos_arroyos.jpg",
-      description: "Rincón singular ubicado al sur de Villa Casana: un modesto y preciado salto de agua que brota entre formaciones rocosas. En una región árida como Los Llanos, este hilo de agua fresca representa un verdadero tesoro natural celebrado por los pobladores.",
+      localImage: "./images/pozos-arroyos.jpg",
+      image: "./images/pozos-arroyos.jpg",
+      description: "Rincon singular ubicado al sur de Villa Casana: un modesto y preciado salto de agua que brota entre formaciones rocosas. En una region arida como Los Llanos, este hilo de agua fresca representa un verdadero tesoro natural celebrado por los pobladores.",
       difficulty: "Caminata corta (4x4 + senderismo)",
-      highlight: "Vegetación serrana, rumor de agua entre piedras y descanso reparador en pleno monte.",
-      tips: "Caminar con precaución por el cauce rocoso. Cuidar celosamente la limpieza de las fuentes de agua.",
+      highlight: "Vegetacion serrana, rumor de agua entre piedras y descanso reparador en pleno monte.",
+      tips: "Caminar con precaucion por el cauce rocoso. Cuidar celosamente la limpieza de las fuentes de agua.",
       coords: [-31.0500, -66.5790]
     },
     {
       id: "casa_de_piedra",
       title: "La Casa de Piedra y Aleros Olongastas",
       category: "cultura",
-      categoryLabel: "Arqueología & Pasado Olongasta",
+      categoryLabel: "Arqueologia & Pasado Olongasta",
       tag: "Sitio Sagrado Milenario",
-      localImage: "./images/casa_de_piedra.jpg",
-      image: "./images/casa_de_piedra.jpg",
+      localImage: "./images/casa-de-piedra.jpg",
+      image: "./images/casa-de-piedra.jpg",
       gallery: [
-        "./images/casa_de_piedra.jpg",
-        "./images/casa_de_piedra_interior.jpg",
-        "./images/casa de piedra1.jpg",
-        "./images/casa de piedra 3.jpg"
+        "./images/casa-de-piedra.jpg",
+        "./images/casa-de-piedra-interior.jpg",
+        "./images/casa-de-piedra-3.jpg"
       ],
-      description: "Impresionante formación rocosa y cueva natural de unos 4 metros de altura por 8 metros de diámetro. En su interior se conservan valiosos petroglifos, arte rupestre y morteros ceremoniales olongastas donde se realizaban rituales sagrados dedicados al sol y a la luna, además de servir como refugio y silo natural para resguardo de víveres.",
+      description: "Impresionante formacion rocosa y cueva natural de unos 4 metros de altura por 8 metros de diametro. En su interior se conservan valiosos petroglifos, arte rupestre y morteros ceremoniales olongastas donde se realizaban rituales sagrados dedicados al sol y a la luna, ademas de servir como refugio y silo natural para resguardo de viveres.",
       difficulty: "Caminata accesible (1.5 km)",
-      highlight: "Petroglifos ancestrales, morteros comunales tallados en la roca madre y cosmovisión de los pueblos originarios de Los Llanos.",
+      highlight: "Petroglifos ancestrales, morteros comunales tallados en la roca madre y cosmovision de los pueblos originarios de Los Llanos.",
       tips: "Ingresar con sumo respeto: no tocar las inscripciones rupestres ni encender fuego. Llevar linterna para observar con claridad los detalles del alero.",
       coords: [-31.0580, -66.5890],
       wikilocUrl: "https://es.wikiloc.com/rutas-todo-terreno/casa-de-piedra-villa-casana-15673850"
     },
     {
       id: "plaza_del_carmen",
-      title: "Plaza Virgen del Carmen y Palmeras Históricas",
+      title: "Plaza Virgen del Carmen y Palmeras Historicas",
       category: "cultura",
       categoryLabel: "Casco Urbano & Encuentro",
-      tag: "Corazón del Pueblo",
-      localImage: "./images/plaza_carmen.jpg",
-      image: "./images/plaza_carmen.jpg",
+      tag: "Corazon del Pueblo",
+      localImage: "./images/plaza-nueva-1.jpg",
+      image: "./images/plaza-nueva-1.jpg",
       gallery: [
-        "./images/plaza_carmen.jpg",
+        "./images/plaza-nueva-1.jpg",
+        "./images/plaza-nueva-2.jpg",
+        "./images/plaza-carmen.jpg",
         "./images/pueblo.jpg"
       ],
-      description: "El prolijo y apacible centro neurálgico de Villa Casana. Resaltan sus características palmeras en medio del paisaje agreste riojano, sus bancos de descanso a la sombra y el espíritu donde el tiempo transcurre sin apuro.",
-      difficulty: "Fácil / Para toda la familia",
+      description: "El prolijo y apacible centro neuralgico de Villa Casana. Resaltan sus caracteristicas palmeras en medio del paisaje agreste riojano, sus bancos de descanso a la sombra y el espiritu donde el tiempo transcurre sin apuro.",
+      difficulty: "Facil / Para toda la familia",
       highlight: "Palmeras de la plaza, entorno cuidado por los vecinos, proximidad a la capilla y la escuela.",
-      tips: "Sentarse en sus bancos al atardecer para contemplar la serenidad del pueblo y charlar con los lugareños.",
+      tips: "Sentarse en sus bancos al atardecer para contemplar la serenidad del pueblo y charlar con los lugarenos.",
       coords: [-31.0665, -66.5830]
     },
     {
       id: "capilla_del_carmen",
-      title: "Capilla Nuestra Señora del Carmen",
+      title: "Capilla Nuestra Senora del Carmen",
       category: "cultura",
       categoryLabel: "Patrimonio Religioso & Fiestas",
-      tag: "Devoción Rural",
-      localImage: "./images/capilla_del_carmen.jpg",
-      image: "./images/capilla_del_carmen.jpg",
+      tag: "Devocion Rural",
+      localImage: "./images/iglesia-capilla.jpg",
+      image: "./images/iglesia-capilla.jpg",
       gallery: [
-        "./images/capilla_del_carmen.jpg",
-        "./images/iglesia del carmen.jpg",
-        "./images/fiesta de virgen del carmen.jpg",
-        "./images/capilla Sra. del Carmen Villa Casana.webp"
+        "./images/iglesia-capilla.jpg",
+        "./images/capilla-del-carmen.jpg",
+        "./images/capilla-sra-del-carmen-villa-casana.webp",
+        "./images/iglesia-del-carmen.jpg",
+        "./images/fiesta-virgen-del-carmen.jpg"
       ],
-      description: "El templo de fe de Villa Casana y epicentro de la comunidad. Custodia la imagen de Nuestra Señora del Carmen, patrona del pueblo, convocando cada año a familias campesinas y fieles de toda la región para sus tradicionales fiestas patronales, misas y procesiones gauchas.",
-      difficulty: "Fácil (Frente a la plaza)",
-      highlight: "Arquitectura criolla rural, campana histórica de bronce y cálida atmósfera comunitaria.",
-      tips: "Visitar en época de novena patronal (julio) para presenciar el colorido desfile gaucho y degustar los platos típicos comunitarios.",
+      description: "El templo de fe de Villa Casana y epicentro de la comunidad. Custodia la imagen de Nuestra Senora del Carmen, patrona del pueblo, convocando cada ano a familias campesinas y fieles de toda la region para sus tradicionales fiestas patronales, misas y procesiones gauchas.",
+      difficulty: "Facil (Frente a la plaza)",
+      highlight: "Arquitectura criolla rural, campana historica de bronce y calida atmosfera comunitaria.",
+      tips: "Visitar en epoca de novena patronal (julio) para presenciar el colorido desfile gaucho y degustar los platos tipicos comunitarios.",
       coords: [-31.0660, -66.5828]
     },
     {
       id: "escuela_rural",
-      title: "Cuna de la Educación Rural (Escuela de Villa Casana)",
+      title: "Cuna de la Educacion Rural (Escuela de Villa Casana)",
       category: "cultura",
       categoryLabel: "Memoria & Pioneros Docentes",
       tag: "Hospitalidad Rural",
-      localImage: "./images/escuela_frente.jpg",
-      image: "./images/escuela_frente.jpg",
+      localImage: "./images/escuela-frente.jpg",
+      image: "./images/escuela-frente.jpg",
       gallery: [
-        "./images/escuela_frente.jpg",
-        "./images/escuela villa casana frente.jpg",
-        "./images/escuela villa casana.jpg",
-        "./images/escuela villa casana 3.jpg",
-        "./images/escuela_patio.jpg",
-        "./images/escuela_rural.jpg",
-        "./images/huerta_escolar.jpg",
-        "./images/mural_escuela.jpg"
+        "./images/escuela-frente.jpg",
+        "./images/escuela-villa-casana.jpg",
+        "./images/escuela-patio.jpg",
+        "./images/huerta-escolar.jpg",
+        "./images/mural-escuela.jpg"
       ],
-      description: "Edificio escolar que continúa el noble legado de la educación en Los Llanos. Heredera de aquella histórica maestra que durante 35 años educó a generaciones en su casa, hoy docentes y alumnos continúan recibiendo a los visitantes con una calidez inolvidable.",
+      description: "Edificio escolar que continua el noble legado de la educacion en Los Llanos. Heredera de aquella historica maestra que durante 35 anos educo a generaciones en su casa, hoy docentes y alumnos continuan recibiendo a los visitantes con una calidez inolvidable.",
       difficulty: "Paseo por el casco del pueblo",
-      highlight: "Encuentro cordial con la comunidad educativa, orgullo por la enseñanza pública de frontera rural.",
-      tips: "Si visitas en día de clases, acercarse con respeto para conocer las actividades que desarrollan los chicos del pueblo.",
+      highlight: "Encuentro cordial con la comunidad educativa, orgullo por la ensenanza publica de frontera rural.",
+      tips: "Si visitas en dia de clases, acercarse con respeto para conocer las actividades que desarrollan los chicos del pueblo.",
       coords: [-31.0664, -66.5840]
     },
     {
@@ -193,120 +180,115 @@ const APP_DATA = {
       category: "naturaleza",
       categoryLabel: "Naturaleza & Quebradas",
       tag: "Paisaje Serrano",
-      localImage: "./images/quebrada de vallecito.jpg",
-      image: "./images/quebrada de vallecito.jpg",
+      localImage: "./images/pozos-arroyos.jpg",
+      image: "./images/pozos-arroyos.jpg",
       gallery: [
-        "./images/quebrada de vallecito.jpg",
-        "./images/quebrada de vallecito 1.jpeg",
-        "./images/quebrada de vallecito 2.jpeg",
-        "./images/quebrada de vallecito 3.jpeg",
-        "./images/quebrada de vallecito 4.jpeg",
-        "./images/quebrada_vallecito_2.jpg",
-        "./images/quebrada_vallecito_3.jpg"
+        "./images/pozos-arroyos.jpg",
+        "./images/quebrada-vallecito-1.jpg",
+        "./images/quebrada-vallecito-2.jpg",
+        "./images/quebrada-vallecito-3.jpg",
+        "./images/quebrada-vallecito-4.jpg",
+        "./images/quebrada-vallecito-5.jpg",
+        "./images/quebrada-vallecito-6.jpg"
       ],
-      description: "Un cañadón serrano de singular belleza que se abre entre las sierras de Los Llanos. Sus paredes de roca ocre y rojiza encauzan el viento fresco del monte, ofreciendo un sendero de sombra y silencio rodeado de vegetación nativa.",
+      description: "Un canadon serrano de singular belleza que se abre entre las sierras de Los Llanos. Sus paredes de roca ocre y rojiza encauzan el viento fresco del monte, ofreciendo un sendero de sombra y silencio rodeado de vegetacion nativa.",
       difficulty: "Caminata accesible (4x4 + sendero)",
-      highlight: "Formaciones rocosas, vegetación autóctona, flora medicinal y fauna silvestre de los cañadones serranos.",
-      tips: "Recorrer a primera hora de la mañana para aprovechar la sombra natural del cañadón. Ideal para fotografía de paisaje.",
+      highlight: "Formaciones rocosas, vegetacion autoctona, flora medicinal y fauna silvestre de los canadones serranos.",
+      tips: "Recorrer a primera hora de la manana para aprovechar la sombra natural del canadon. Ideal para fotografia de paisaje.",
       coords: [-31.0700, -66.5950]
     },
     {
       id: "rio_la_junta",
-      title: "Río La Junta",
+      title: "Rio La Junta",
       category: "naturaleza",
-      categoryLabel: "Naturaleza & Ríos Serranos",
+      categoryLabel: "Naturaleza & Rios Serranos",
       tag: "Oasis del Monte",
-      localImage: "./images/rio_la_junta.jpg",
-      image: "./images/rio_la_junta.jpg",
+      localImage: "./images/rio-la-junta.jpg",
+      image: "./images/rio-la-junta.jpg",
       gallery: [
-        "./images/rio_la_junta.jpg",
-        "./images/rio_la_junta_2.jpg",
-        "./images/la junta 1.jpeg",
-        "./images/la junta 2.jpeg",
-        "./images/la junta 3.jpeg",
-        "./images/la junta 4.jpeg",
-        "./images/la junta 5.jpeg",
-        "./images/la junta 6.jpeg",
-        "./images/la junta 7.jpeg",
-        "./images/la junta 8.jpeg",
-        "./images/la junta 9.jpeg"
+        "./images/rio-la-junta.jpg",
+        "./images/rio-la-junta-2.jpg",
+        "./images/la-junta-1.jpg",
+        "./images/la-junta-4.jpg",
+        "./images/la-junta-5.jpg",
+        "./images/la-junta-6.jpg",
+        "./images/la-junta-7.jpg",
+        "./images/la-junta-8.jpg",
+        "./images/la-junta-9.jpg"
       ],
-      description: "El Río La Junta representa el pulso hídrico de la zona. Sus aguas cristalinas nacen de las sierras y alimentan el monte ribereño, creando un corredor de vida verde en medio del paisaje árido de Los Llanos riojanos.",
+      description: "El Rio La Junta representa el pulso hidrico de la zona. Sus aguas cristalinas nacen de las sierras y alimentan el monte ribereno, creando un corredor de vida verde en medio del paisaje arido de Los Llanos riojanos.",
       difficulty: "Acceso vehicular + caminata corta",
-      highlight: "Vegetación de ribera, pozas naturales, avistamiento de aves acuáticas y el sonido del agua entre piedras.",
-      tips: "En época estival (enero-febrero) puede tener caudal elevado. Consultar a los lugareños el estado del cauce antes de cruzar.",
+      highlight: "Vegetacion de ribera, pozas naturales, avistamiento de aves acuaticas y el sonido del agua entre piedras.",
+      tips: "En epoca estival (enero-febrero) puede tener caudal elevado. Consultar a los lugarenos el estado del cauce antes de cruzar.",
       coords: [-31.0750, -66.5800]
     },
     {
       id: "casas_viejas",
-      title: "Casas Viejas — Ruinas y Patrimonio Rural",
+      title: "Casas Viejas  Ruinas y Patrimonio Rural",
       category: "cultura",
       categoryLabel: "Patrimonio & Historia Rural",
-      tag: "Arqueología Criolla",
-      localImage: "./images/cartel_casas_viejas.jpg",
-      image: "./images/cartel_casas_viejas.jpg",
+      tag: "Arqueologia Criolla",
+      localImage: "./images/cartel-casas-viejas.jpg",
+      image: "./images/cartel-casas-viejas.jpg",
       gallery: [
-        "./images/cartel_casas_viejas.jpg",
-        "./images/casas viejas 1.jpeg",
-        "./images/casas viejas 2.jpeg",
-        "./images/casas viejas 3.jpeg",
-        "./images/casas viejas 4.jpeg",
-        "./images/casas_viejas_panoramica.jpg",
-        "./images/casas viejas.jpeg",
-        "./images/casas viejas 3.jpg",
-        "./images/casas viejas 4.jpg",
-        "./images/casas_viejas_4x4.jpg"
+        "./images/cartel-casas-viejas.jpg",
+        "./images/casas-viejas-1.jpg",
+        "./images/casas-viejas-2.jpg",
+        "./images/casas-viejas-3.jpg",
+        "./images/casas-viejas-4.jpg",
+        "./images/cerro-espeche-panoramica.jpg",
+        "./images/circuito-4x4.jpg"
       ],
-      description: "Un sitio histórico que guarda la memoria de los primeros pobladores de la región. Las ruinas de adobe y piedra de antiguas viviendas criollas narran silenciosamente décadas de vida rural, trabajo en el monte y comunidad serrana.",
-      difficulty: "Paseo accesible en vehículo 4x4",
-      highlight: "Arquitectura vernácula de barro y piedra, muros centenarios, objetos abandonados y el paisaje abierto de Los Llanos.",
+      description: "Un sitio historico que guarda la memoria de los primeros pobladores de la region. Las ruinas de adobe y piedra de antiguas viviendas criollas narran silenciosamente decadas de vida rural, trabajo en el monte y comunidad serrana.",
+      difficulty: "Paseo accesible en vehiculo 4x4",
+      highlight: "Arquitectura vernacula de barro y piedra, muros centenarios, objetos abandonados y el paisaje abierto de Los Llanos.",
       tips: "No remover ni llevarse objetos del sitio. Fotografiar con respeto el legado patrimonial de los primeros pobladores de la zona.",
       coords: [-31.0800, -66.5700]
     },
     {
       id: "la_batea",
-      title: "La Batea — Formaciones y Pozas Serranas",
+      title: "La Batea  Formaciones y Pozas Serranas",
       category: "naturaleza",
       categoryLabel: "Naturaleza & Pozas de Piedra",
-      tag: "Rincón Secreto",
-      localImage: "./images/la batea 1.jpeg",
-      image: "./images/la batea 1.jpeg",
+      tag: "Rincon Secreto",
+      localImage: "./images/la-batea-1.jpg",
+      image: "./images/la-batea-1.jpg",
       gallery: [
-        "./images/la batea 1.jpeg",
-        "./images/la batea 2.jpeg",
-        "./images/la batea 3.jpeg"
+        "./images/la-batea-1.jpg",
+        "./images/la-batea-2.jpg",
+        "./images/la-batea-3.jpg"
       ],
       description: "Singulares piletones y piletones de roca labrados pacientemente por el agua y el tiempo en las estribaciones de las sierras. Un refugio natural de serenidad, rocas esculpidas y monte riojano en estado puro.",
       difficulty: "Caminata y huella de monte",
-      highlight: "Ollas de piedra naturales, formaciones geológicas pulidas por agua y fauna serrana.",
+      highlight: "Ollas de piedra naturales, formaciones geologicas pulidas por agua y fauna serrana.",
       tips: "Llevar calzado con suela antideslizante para caminar con seguridad sobre las piedras. Respetar y mantener limpio el lugar.",
       coords: [-31.0520, -66.5850]
     }
   ],
 
-  // Directorio de Pobladores, Guías y Productores Locales con WhatsApp Directo
+  // Directorio de Pobladores, Guias y Productores Locales con WhatsApp Directo
   localContacts: [
     {
       id: "ventas_estefania",
-      name: "Estefanía Ávila",
+      name: "Estefania Avila",
       role: "Venta de Cosas Dulces, Saladas y Productos Regionales",
       badge: "Ventas & Sabores",
       badgeColor: "bg-amber-600/90 text-white",
-      description: "Elaboración casera y venta de cosas dulces y saladas: pan casero, tortas fritas, repostería criolla, empanadas y productos típicos de Villa Casana.",
+      description: "Elaboracion casera y venta de cosas dulces y saladas: pan casero, tortas fritas, reposteria criolla, empanadas y productos tipicos de Villa Casana.",
       phoneDisplay: "3821495845",
       whatsappNumber: "5493821495845",
-      whatsappMsg: "¡Hola Estefanía! Te contacto desde la app turística de Villa Casana para consultar por cosas dulces, saladas y productos disponibles para encargar."
+      whatsappMsg: "Hola Estefania Te contacto desde la app turistica de Villa Casana para consultar por cosas dulces, saladas y productos disponibles para encargar."
     },
     {
       id: "guia_espeche",
-      name: "Guía Baqueano - Cerro Espeche",
+      name: "Guia Baqueano - Cerro Espeche",
       role: "Trekking y Senderismo Guiado",
-      badge: "Guía Local",
+      badge: "Guia Local",
       badgeColor: "bg-emerald-600/90 text-white",
-      description: "Acompañamiento seguro en senderos serranos, conocimiento de fauna, flora medicinal y puntos de vista panorámicos.",
+      description: "Acompanamiento seguro en senderos serranos, conocimiento de fauna, flora medicinal y puntos de vista panoramicos.",
       phoneDisplay: "+54 9 3821 40-1234",
       whatsappNumber: "5493821401234",
-      whatsappMsg: "¡Hola! Vi su contacto en la app turística de Villa Casana. Quisiera consultar disponibilidad y tarifas para realizar una excursión guiada al Cerro Espeche."
+      whatsappMsg: "Hola! Vi su contacto en la app turistica de Villa Casana. Quisiera consultar disponibilidad y tarifas para realizar una excursion guiada al Cerro Espeche."
     },
     {
       id: "chivito_riojano",
@@ -314,21 +296,21 @@ const APP_DATA = {
       role: "Carnes de Monte & Dulces Caseros",
       badge: "Sabores de los Llanos",
       badgeColor: "bg-orange-600/90 text-white",
-      description: "Venta de chivito lechal de pastoreo libre en el monte, quesillos frescos de cabra y arropes tradicionales de chañar e higo.",
+      description: "Venta de chivito lechal de pastoreo libre en el monte, quesillos frescos de cabra y arropes tradicionales de chanar e higo.",
       phoneDisplay: "3821495845",
       whatsappNumber: "5493821495845",
-      whatsappMsg: "¡Hola Estefanía! Te contacto desde la app de Villa Casana para consultar y encargar chivito riojano, quesillos o productos de monte."
+      whatsappMsg: "Hola Estefania! Te contacto desde la app de Villa Casana para consultar y encargar chivito riojano, quesillos o productos de monte."
     },
     {
       id: "auxilio_4x4",
       name: "Traslados & Auxilio Rural",
       role: "Asistencia en Caminos y Huellas",
-      badge: "Logística y 4x4",
+      badge: "Logistica y 4x4",
       badgeColor: "bg-blue-600/90 text-white",
-      description: "Vehículo 4x4 para traslados desde Chepes, apoyo mecánico básico para ciclistas y orientación en huellas de tierra.",
+      description: "Vehiculo 4x4 para traslados desde Chepes, apoyo mecanico basico para ciclistas y orientacion en huellas de tierra.",
       phoneDisplay: "+54 9 3821 47-3456",
       whatsappNumber: "5493821473456",
-      whatsappMsg: "¡Hola! Vi su contacto en la app de Villa Casana. Necesito consultar por traslados / estado del camino desde Chepes."
+      whatsappMsg: "Hola! Vi su contacto en la app de Villa Casana. Necesito consultar por traslados / estado del camino desde Chepes."
     },
     {
       id: "hospedaje_rural",
@@ -336,92 +318,144 @@ const APP_DATA = {
       role: "Alojamiento Campesino y Camping",
       badge: "Hospedaje",
       badgeColor: "bg-purple-600/90 text-white",
-      description: "Habitaciones sencillas y familiares, espacio para carpas con sombra de algarrobo, sanitarios y sector de fogón nocturno para astroturismo.",
+      description: "Habitaciones sencillas y familiares, espacio para carpas con sombra de algarrobo, sanitarios y sector de fogon nocturno para astroturismo.",
       phoneDisplay: "+54 9 3821 49-7890",
       whatsappNumber: "5493821497890",
-      whatsappMsg: "¡Hola! Vi su hospedaje en la app de Villa Casana. Me gustaría saber tarifas y disponibilidad para alojarme / acampar."
+      whatsappMsg: "¡Hola! Vi su hospedaje en la app de Villa Casana. Me gustaria saber tarifas y disponibilidad para alojarme / acampar."
     }
   ],
 
-  // Historias, Orígenes y Leyendas de Villa Casana
+  // Historias, Origenes y Leyendas de Villa Casana
   historyAndLegends: [
     {
       id: "pasado_olongasta",
       title: "El Pasado Olongasta y el Santuario de la Casa de Piedra",
-      category: "Pueblos Originarios & Arqueología",
+      category: "Pueblos Originarios & Arqueologia",
       icon: "🪨",
-      image: "./images/casa_de_piedra.jpg",
-      summary: "La huella milenaria de los olongastas en una cueva natural de 4 metros de altura por 8 metros de diámetro.",
-      content: "La región de Villa Casana estuvo habitada originalmente por los olongastas, pueblo originario de Los Llanos riojanos. Su legado perdura en la 'Casa de Piedra', una imponente cueva natural donde se conservan petroglifos, arte rupestre y morteros ceremoniales. En su interior realizaban rituales sagrados dedicados al sol, la luna y sus deidades, además de utilizarla como refugio seguro y silo para el resguardo de víveres y frutos del monte."
+      image: "./images/casa-de-piedra.jpg",
+      summary: "La huella milenaria de los olongastas en una cueva natural de 4 metros de altura por 8 metros de diametro.",
+      content: "La region de Villa Casana estuvo habitada originalmente por los olongastas, pueblo originario de Los Llanos riojanos. Su legado perdura en la 'Casa de Piedra', una imponente cueva natural donde se conservan petroglifos, arte rupestre y morteros ceremoniales. En su interior realizaban rituales sagrados dedicados al sol, la luna y sus deidades, ademas de utilizarla como refugio seguro y silo para el resguardo de viveres y frutos del monte."
     },
     {
       id: "primera_escuela",
-      title: "Historia de la Educación Rural: 35 Años de Vocación",
-      category: "Educación & Comunidad",
+      title: "Historia de la Educacion Rural: 35 Anos de Vocacion",
+      category: "Educacion & Comunidad",
       icon: "📖",
-      image: "./images/rosa_oropel.jpg",
-      summary: "Los inicios de la enseñanza en casas de familia y la histórica maestra Rosa Oropel de Tapia, quien educó a generaciones.",
-      content: "La educación en Villa Casana nació del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. La recordada maestra rural Rosa Oropel de Tapia consagró más de 35 años de su vida a la enseñanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban allí hasta el séptimo grado antes de continuar sus estudios en otras localidades. Hoy la Escuela Nº 35 lleva con honor su nombre."
+      image: "./images/rosa-oropel.jpg",
+      summary: "Los inicios de la ensenanza en casas de familia y la historica maestra Rosa Oropel de Tapia, quien educo a generaciones.",
+      content: "La educacion en Villa Casana nacio del esfuerzo solidario. En sus comienzos, las clases se dictaban de manera precaria en viviendas particulares. La recordada maestra rural Rosa Oropel de Tapia consagro mas de 35 anos de su vida a la ensenanza, convirtiendo su propia casa en escuela para cerca de 60 alumnos de la comarca, quienes cursaban alli hasta el septimo grado antes de continuar sus estudios en otras localidades. Hoy la Escuela N 35 lleva con honor su nombre."
     },
     {
       id: "capilla_carmen",
-      title: "Capilla Nuestra Señora del Carmen y Fiestas Patronales",
+      title: "Capilla Nuestra Senora del Carmen y Fiestas Patronales",
       category: "Fe, Identidad y Fiestas",
       icon: "⛪",
-      image: "./images/capilla_del_carmen.jpg",
-      summary: "El centro de la devoción religiosa local y núcleo de encuentro de toda la comarca serrana.",
-      content: "La Capilla Nuestra Señora del Carmen representa el pilar espiritual y social de Villa Casana. Es el escenario central de las fiestas patronales que cada año reúnen a familias radicadas en el pueblo y a aquellos que regresan desde distintas provincias. Las celebraciones combinan misas, procesiones por las calles del pueblo con banderines festivos, destrezas gauchas, asados criollos y música popular."
+      image: "./images/iglesia-capilla.jpg",
+      summary: "El centro de la devocion religiosa local y nucleo de encuentro de toda la comarca serrana.",
+      content: "La Capilla Nuestra Senora del Carmen representa el pilar espiritual y social de Villa Casana. Es el escenario central de las fiestas patronales que cada ano reunen a familias radicadas en el pueblo y a aquellos que regresan desde distintas provincias. Las celebraciones combinan misas, procesiones por las calles del pueblo con banderines festivos, destrezas gauchas, asados criollos y musica popular."
     },
     {
       id: "vida_rural_monte",
-      title: "Tradición y Sabores de Villa Casana",
+      title: "Tradicion y Sabores de Villa Casana",
       category: "Costumbres y Oficios Criollos",
       icon: "🍞",
-      image: "./images/sabores_casana.jpg",
-      summary: "Dulces, arropes artesanales de chañar, higos, quesillos y el pan casero horneado a leña en horno de barro.",
+      image: "./images/sabores-casana.jpg",
+      summary: "Dulces, arropes artesanales de chanar, higos, quesillos y el pan casero horneado a lena en horno de barro.",
       content: "Villa Casana conserva con orgullo la esencia de la vida rural riojana: 'Revalorizar nuestros sabores es preservar nuestra identidad'. Los pobladores elaboran arropes tradicionales, dulces de membrillo e higo, miel de monte, cuidan majadas caprinas y mantienen encendidos los tradicionales hornos de barro donde se hornea el pan casero y las tortas fritas criollas."
     },
     {
       id: "cronica_expedicion",
-      title: "Crónica de Expedición: Entre Sierras y Hospitalidad",
-      category: "Bitácora de Viajeros (Lodelpampa)",
+      title: "Cronica de Expedicion: Entre Sierras y Hospitalidad",
+      category: "Bitacora de Viajeros (Lodelpampa)",
       icon: "🚙",
-      image: "./images/circuito_4x4.jpg",
+      image: "./images/circuito-4x4.jpg",
       summary: "El testimonio de aventureros 4x4 que recorrieron las huellas entre Tuani y Casana, descubriendo la cascada secreta y la amabilidad local.",
-      content: "Expedicionarios 4x4 en travesías por el sur riojano documentaron la experiencia única de ingresar a Villa Casana: un poblado prolijo y apacible custodiado por palmeras en su plaza, donde maestros y alumnos de la escuela reciben a los viajeros con genuina cordialidad, y los baqueanos guían hacia el modesto salto de agua del sur que brota milagroso entre las rocas del monte."
+      content: "Expedicionarios 4x4 en travesias por el sur riojano documentaron la experiencia unica de ingresar a Villa Casana: un poblado prolijo y apacible custodiado por palmeras en su plaza, donde maestros y alumnos de la escuela reciben a los viajeros con genuina cordialidad, y los baqueanos guian hacia el modesto salto de agua del sur que brota milagroso entre las rocas del monte."
     },
     {
       id: "esencia_tiempo_saluda",
-      title: "Donde el Tiempo Todavía Saluda por el Nombre",
+      title: "Donde el Tiempo Todavia Saluda por el Nombre",
       category: "Identidad & Alma de Pueblo (Orion FM)",
       icon: "🌅",
       image: "./images/bienvenidos.jpg",
-      summary: "La magia de un rincón riojano donde la modernidad no borró la sencillez, la cercanía y el mate compartido sin apuro.",
-      content: "Como describe la crónica de Orion FM Chepes, quien llega a Villa Casana descubre mucho más que un destino: descubre silencios que abrazan, niños jugando libres, vecinos conversando en la vereda y amaneceres anaranjados sobre las sierras. Un pueblo nacido al calor del trabajo rural y la solidaridad donde cada saludo lleva el nombre de quien lo recibe, recordándonos que el interior del interior late vivo, auténtico y con el corazón abierto."
+      summary: "La magia de un rincon riojano donde la modernidad no borro la sencillez, la cercania y el mate compartido sin apuro.",
+      content: "Como describe la cronica de Orion FM Chepes, quien llega a Villa Casana descubre mucho mas que un destino: descubre silencios que abrazan, ninos jugando libres, vecinos conversando en la vereda y amaneceres anaranjados sobre las sierras. Un pueblo nacido al calor del trabajo rural y la solidaridad donde cada saludo lleva el nombre de quien lo recibe, recordandonos que el interior del interior late vivo, autentico y con el corazon abierto."
+    }
+  ],
+
+  // Gastronomía típica de Los Llanos Riojanos
+  gastronomia: [
+    {
+      id: "cabrito-asado",
+      nombre: "Cabrito Asado a la Estaca / a la Parrilla",
+      categoria: "Plato principal",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/cabrito-asado.jpg",
+      descripcion: "El plato insignia de la región de Los Llanos Riojanos: carne tierna de cabrito lechón alimentado con pasturas naturales y cocinado lentamente a las brasas o a la estaca."
+    },
+    {
+      id: "empanadas-riojanas",
+      nombre: "Empanadas Riojanas",
+      categoria: "Entrada",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/empanadas-riojanas.jpg",
+      descripcion: "Clásicas empanadas jugosas de carne cortada a cuchillo, sazonadas con comino, ají molido, huevo duro, cebolla de verdeo y aceitunas de la región."
+    },
+    {
+      id: "locro-criollo",
+      nombre: "Locro Criollo",
+      categoria: "Guiso",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/locro-criollo.jpg",
+      descripcion: "Guiso tradicional a base de maíz blanco, porotos, zapallo anco, falda y embutidos, ideal para celebraciones y jornadas de campo."
+    },
+    {
+      id: "humita-en-chala",
+      nombre: "Humita en Chala / en Olla",
+      categoria: "Plato regional",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/humita-en-chala.jpg",
+      descripcion: "Preparación a base de choclo fresco rallado, zapallo, queso cremoso y un refrito de cebolla y pimentón, servida tradicionalmente en la propia chala del choclo."
+    },
+    {
+      id: "pan-casero-chicharrones",
+      nombre: "Pan Casero con Chicharrones y Tortas Fritas",
+      categoria: "Panadería y merienda",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/pan-casero.jpg",
+      descripcion: "Elaboración artesanal en horno de barro, ideal para acompañar el mate a la tarde."
+    },
+    {
+      id: "quesillo-arrope",
+      nombre: "Dulces Artesanales (Higo, Zapallo, Quesillo con Arrope)",
+      categoria: "Postre",
+      ubicacion: "Chepes - Villa Casana",
+      imagen: "./images/dulces-artesanales.jpg",
+      descripcion: "Postres tradicionales riojanos a base de frutas regionales en almíbar, acompañados de quesillo de cabra y arrope de chañar o tuna."
     }
   ],
 
   stars: [
-    { name: "Cruz del Sur (Crux)", type: "Constelación Guía", desc: "La brújula natural del hemisferio sur. Señala directamente hacia el Polo Sur Celeste.", brightness: "Magnitud 0.7 - Muy brillante" },
-    { name: "Alfa Centauri (Rigil Kentaurus)", type: "Estrella Puntera", desc: "La estrella más cercana a nuestro sistema solar (4.3 años luz). Es uno de los 'Punteros de la Cruz'.", brightness: "Magnitud -0.27" },
-    { name: "Beta Centauri (Hadar)", type: "Estrella Puntera", desc: "La segunda estrella puntera, gigante azul distante que corona la constelación del Centauro.", brightness: "Magnitud 0.61" },
-    { name: "Gran Nube de Magallanes", type: "Galaxia Satélite", desc: "Galaxia enana satélite de la Vía Láctea, claramente visible a simple vista como una nube lechosa flotante.", brightness: "Objeto de cielo profundo" },
-    { name: "Cinturón de Orión (Tres Marías)", type: "Asterismo", desc: "Alnitak, Alnilam y Mintaka, visibles en las noches de primavera y verano en el cenit riojano.", brightness: "Magnitud 1.7" },
-    { name: "Nebulosa Carina (NGC 3372)", type: "Nebulosa de Emisión", desc: "Cuatro veces más grande que la Nebulosa de Orión, un espectáculo fascinante con binoculares.", brightness: "Magnitud 1.0" }
+    { name: "Cruz del Sur (Crux)", type: "Constelacion Guia", desc: "La brujula natural del hemisferio sur. Senala directamente hacia el Polo Sur Celeste.", brightness: "Magnitud 0.7 - Muy brillante" },
+    { name: "Alfa Centauri (Rigil Kentaurus)", type: "Estrella Puntera", desc: "La estrella mas cercana a nuestro sistema solar (4.3 anos luz). Es uno de los 'Punteros de la Cruz'.", brightness: "Magnitud -0.27" },
+    { name: "Beta Centauri (Hadar)", type: "Estrella Puntera", desc: "La segunda estrella puntera, gigante azul distante que corona la constelacion del Centauro.", brightness: "Magnitud 0.61" },
+    { name: "Gran Nube de Magallanes", type: "Galaxia Satelite", desc: "Galaxia enana satelite de la Via Lactea, claramente visible a simple vista como una nube lechosa flotante.", brightness: "Objeto de cielo profundo" },
+    { name: "Cinturon de Orion (Tres Marias)", type: "Asterismo", desc: "Alnitak, Alnilam y Mintaka, visibles en las noches de primavera y verano en el cenit riojano.", brightness: "Magnitud 1.7" },
+    { name: "Nebulosa Carina (NGC 3372)", type: "Nebulosa de Emision", desc: "Cuatro veces mas grande que la Nebulosa de Orion, un espectaculo fascinante con binoculares.", brightness: "Magnitud 1.0" }
   ],
 
   checklistItems: [
-    { id: "agua", label: "Mínimo 3 litros de agua potable por persona por día", category: "Supervivencia", defaultChecked: true },
-    { id: "auxilio", label: "Rueda de auxilio revisada, llave de cruz y compresor 12V", category: "Vehículo", defaultChecked: true },
-    { id: "efectivo", label: "Dinero en efectivo (no hay cajeros ni cobro con tarjeta en la zona)", category: "Logística", defaultChecked: false },
+    { id: "agua", label: "Minimo 3 litros de agua potable por persona por dia", category: "Supervivencia", defaultChecked: true },
+    { id: "auxilio", label: "Rueda de auxilio revisada, llave de cruz y compresor 12V", category: "Vehiculo", defaultChecked: true },
+    { id: "efectivo", label: "Dinero en efectivo (no hay cajeros ni cobro con tarjeta en la zona)", category: "Logistica", defaultChecked: false },
     { id: "calzado", label: "Calzado de trekking con buen agarre para espinas y piedras", category: "Vestimenta", defaultChecked: false },
     { id: "solar", label: "Protector solar FPS 50+, sombrero de ala ancha y anteojos UV", category: "Salud", defaultChecked: false },
     { id: "linterna", label: "Linterna frontal con modo de luz roja para la noche", category: "Astro", defaultChecked: false },
-    { id: "abrigo", label: "Abrigo térmico / rompeviento (la temperatura desciende de noche)", category: "Vestimenta", defaultChecked: false },
+    { id: "abrigo", label: "Abrigo termico / rompeviento (la temperatura desciende de noche)", category: "Vestimenta", defaultChecked: false },
     { id: "bolsa_residuos", label: "Bolsa de residuos para traer de regreso toda la basura", category: "Eco", defaultChecked: true }
   ],
 
-  // Rutómetro y Waypoints para Navegación Offline (Chepes a Villa Casana)
+  // Rutometro y Waypoints para Navegacion Offline (Chepes a Villa Casana)
   routeWaypoints: [
     {
       km: "0.0",
@@ -429,10 +463,10 @@ const APP_DATA = {
       coords: [-31.3508, -66.5947],
       elevation: "650 msnm",
       type: "Punto de Partida",
-      badge: "Último Combustible",
+      badge: "Ultimo Combustible",
       badgeColor: "bg-blue-600/90 text-white",
       instruction: "Llenar tanque en estaciones YPF de Chepes, verificar rueda de auxilio, bidones de agua y retirar efectivo. Tomar salida norte hacia zona rural.",
-      warning: "Último punto con señal celular 4G, farmacias, gomero y cajeros automáticos.",
+      warning: "Ultimo punto con senal celular 4G, farmacias, gomero y cajeros automaticos.",
       icon: "⛽"
     },
     {
@@ -440,22 +474,22 @@ const APP_DATA = {
       title: "Fin del Asfalto / Ingreso a Camino Rural",
       coords: [-31.3120, -66.5935],
       elevation: "645 msnm",
-      type: "Transición de Calzada",
+      type: "Transicion de Calzada",
       badge: "Fin de Pavimento",
       badgeColor: "bg-amber-600/90 text-white",
       instruction: "Finaliza el pavimento. Comienza camino vecinal de tierra y ripio consolidado. Reducir velocidad a 40-50 km/h y encender luces bajas.",
-      warning: "Comienza la pérdida paulatina de señal celular. Activar modo offline de la app.",
+      warning: "Comienza la perdida paulatina de senal celular. Activar modo offline de la app.",
       icon: "🛣️"
     },
     {
       km: "11.2",
-      title: "Badén Río Seco La Aguadita",
+      title: "Baden Rio Seco La Aguadita",
       coords: [-31.2580, -66.5910],
       elevation: "640 msnm",
       type: "Paso de Agua de Temporal",
-      badge: "Badén de Arena",
+      badge: "Baden de Arena",
       badgeColor: "bg-amber-700/90 text-white",
-      instruction: "Cruce de lecho de río seco con arena y grava suelta. Mantener velocidad pareja en 2da marcha sin maniobras bruscas de frenado.",
+      instruction: "Cruce de lecho de rio seco con arena y grava suelta. Mantener velocidad pareja en 2da marcha sin maniobras bruscas de frenado.",
       warning: "En temporada de tormentas estivales (verano), verificar que no baje creciente antes de cruzar.",
       icon: "🌊"
     },
@@ -464,28 +498,28 @@ const APP_DATA = {
       title: "Puesto Campesino Los Algodones",
       coords: [-31.1890, -66.5885],
       elevation: "635 msnm",
-      type: "Bifurcación Rural",
+      type: "Bifurcacion Rural",
       badge: "Rumbo Norte Directo",
       badgeColor: "bg-emerald-600/90 text-white",
-      instruction: "Puesto campesino a la vera de la traza. Mantener siempre la huella principal consolidada que va derecho al Norte. Desestimar desvíos hacia el Este.",
-      warning: "Pobladores hospitalarios disponibles en caso de requerir auxilio mecánico o consultas.",
+      instruction: "Puesto campesino a la vera de la traza. Mantener siempre la huella principal consolidada que va derecho al Norte. Desestimar desvios hacia el Este.",
+      warning: "Pobladores hospitalarios disponibles en caso de requerir auxilio mecanico o consultas.",
       icon: "🏡"
     },
     {
       km: "27.4",
-      title: "Cañada del Espinillo - Tramo Pedregoso",
+      title: "Canada del Espinillo - Tramo Pedregoso",
       coords: [-31.1320, -66.5865],
       elevation: "630 msnm",
       type: "Paso Rocoso",
-      badge: "Precaución Piedras",
+      badge: "Precaucion Piedras",
       badgeColor: "bg-yellow-600/90 text-white",
-      instruction: "Calzada con ondulaciones y piedras lajas sueltas. Conducir a velocidad moderada para cuidar cubiertas y suspensión.",
-      warning: "Atención a animales sueltos (chivos, terneros, burros) pastando en las banquinas de monte.",
+      instruction: "Calzada con ondulaciones y piedras lajas sueltas. Conducir a velocidad moderada para cuidar cubiertas y suspension.",
+      warning: "Atencion a animales sueltos (chivos, terneros, burros) pastando en las banquinas de monte.",
       icon: "🪨"
     },
     {
       km: "34.0",
-      title: "Vista Panorámica del Cerro Espeche",
+      title: "Vista Panoramica del Cerro Espeche",
       coords: [-31.0890, -66.5845],
       elevation: "638 msnm",
       type: "Mirador Natural",
@@ -497,14 +531,14 @@ const APP_DATA = {
     },
     {
       km: "38.5",
-      title: "Desvío a Cascada del Sur (Afluente)",
+      title: "Desvio a Cascada del Sur (Afluente)",
       coords: [-31.0550, -66.5810],
       elevation: "645 msnm",
-      type: "Desvío Turístico",
+      type: "Desvio Turistico",
       badge: "Salto de Agua",
       badgeColor: "bg-cyan-600/90 text-white",
-      instruction: "A la derecha se abre la huella secundaria hacia el salto de agua (1.8 km). Apta para vehículos altos/4x4 o senderismo a pie. La ruta principal sigue al Norte.",
-      warning: "Suelo de lecho pedregoso. No ingresar con automóviles de chasis muy bajo.",
+      instruction: "A la derecha se abre la huella secundaria hacia el salto de agua (1.8 km). Apta para vehiculos altos/4x4 o senderismo a pie. La ruta principal sigue al Norte.",
+      warning: "Suelo de lecho pedregoso. No ingresar con automoviles de chasis muy bajo.",
       icon: "💧"
     },
     {
@@ -515,8 +549,8 @@ const APP_DATA = {
       type: "Casco Urbano",
       badge: "Llegada al Pueblo",
       badgeColor: "bg-emerald-600/90 text-white",
-      instruction: "Llegada al corazón del pueblo. Plaza con palmeras históricas, Capilla Ntra. Sra. del Carmen y Escuela Rural. Área comunitaria con sombra.",
-      warning: "Velocidad máxima 20 km/h. Respetar la tranquilidad y saludar con cordialidad a los vecinos.",
+      instruction: "Llegada al corazon del pueblo. Plaza con palmeras historicas, Capilla Ntra. Sra. del Carmen y Escuela Rural. Area comunitaria con sombra.",
+      warning: "Velocidad maxima 20 km/h. Respetar la tranquilidad y saludar con cordialidad a los vecinos.",
       icon: "🌴"
     },
     {
@@ -524,11 +558,11 @@ const APP_DATA = {
       title: "La Casa de Piedra - Alero Rupestre Olongasta",
       coords: [-31.0580, -66.5890],
       elevation: "670 msnm",
-      type: "Sitio Arqueológico",
+      type: "Sitio Arqueologico",
       badge: "Petroglifos Sagrados",
       badgeColor: "bg-amber-600/90 text-white",
       instruction: "Tomar calle oeste desde la plaza por 1.5 km. Estacionar y caminar 200 m hasta el alero rocoso con morteros y petroglifos milenarios.",
-      warning: "Patrimonio arqueológico protegido: estrictamente prohibido tocar dibujos rupestres o encender fuego.",
+      warning: "Patrimonio arqueologico protegido: estrictamente prohibido tocar dibujos rupestres o encender fuego.",
       icon: "🏛️"
     },
     {
@@ -537,22 +571,22 @@ const APP_DATA = {
       coords: [-31.0450, -66.5920],
       elevation: "710 msnm",
       type: "Senda de Trekking",
-      badge: "Cumbre Panorámica",
+      badge: "Cumbre Panoramica",
       badgeColor: "bg-rose-600/90 text-white",
-      instruction: "Punto de inicio de la senda hacia la cima del cerro. Sendero señalizado con pircas de piedra hacia el mirador panorámico 360° de Los Llanos.",
-      warning: "Llevar mínimo 2 litros de agua por persona, calzado de suela con dibujo y avisar en el pueblo antes de subir.",
+      instruction: "Punto de inicio de la senda hacia la cima del cerro. Sendero senalizado con pircas de piedra hacia el mirador panoramico 360 de Los Llanos.",
+      warning: "Llevar minimo 2 litros de agua por persona, calzado de suela con dibujo y avisar en el pueblo antes de subir.",
       icon: "🧗"
     },
     {
       km: "54.0",
-      title: "Travesía Serrana hacia Tuani (Exclusivo 4x4)",
+      title: "Travesia Serrana hacia Tuani (Exclusivo 4x4)",
       coords: [-30.9850, -66.6120],
       elevation: "820 msnm",
       type: "Aventura 4x4 Off-Road",
-      badge: "Solo Doble Tracción",
+      badge: "Solo Doble Traccion",
       badgeColor: "bg-red-700/90 text-white",
-      instruction: "Continuación por huella agreste hacia el paraje serrano de Tuani, remontando quebradas rocosas y cuestas con piedras.",
-      warning: "Solo para vehículos 4x4 con caja reductora y conductores experimentados. No transitar de noche.",
+      instruction: "Continuacion por huella agreste hacia el paraje serrano de Tuani, remontando quebradas rocosas y cuestas con piedras.",
+      warning: "Solo para vehiculos 4x4 con caja reductora y conductores experimentados. No transitar de noche.",
       icon: "🚙"
     }
   ]
@@ -588,6 +622,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAttractions();
   renderLocalContacts();
   renderHistoryAndLegends();
+  renderGastronomia();
+  loadGastronomiaData();
   renderStars();
   renderChecklist();
   renderRutometro();
@@ -777,6 +813,44 @@ function renderHistoryAndLegends() {
   `).join('');
 }
 
+// Carga la ficha gastronómica desde el archivo de datos compartido.
+// Si el navegador abre la app con file:// el fetch falla y se conserva
+// el contenido embebido en APP_DATA (funcionamiento 100% offline).
+function loadGastronomiaData() {
+  fetch('./data/gastronomia.json', { cache: 'no-cache' })
+    .then(response => (response.ok ? response.json() : null))
+    .then(data => {
+      if (Array.isArray(data) && data.length > 0) {
+        APP_DATA.gastronomia = data;
+        renderGastronomia();
+      }
+    })
+    .catch(() => { /* Sin conexión: se usa el contenido embebido */ });
+}
+
+// Render Gastronomia
+function renderGastronomia() {  const container = document.getElementById('gastronomia-grid');
+  if (!container || !APP_DATA || !APP_DATA.gastronomia) return;
+
+  container.innerHTML = APP_DATA.gastronomia.map(plato => `
+    <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60 shadow-lg flex flex-col hover:border-amber-500/40 transition-all">
+      <img 
+        src="${plato.imagen}" 
+        alt="${plato.nombre}" 
+        class="w-full h-48 object-cover" 
+        onerror="this.src='./images/sabores-casana.jpg'" 
+      />
+      <div class="p-5 flex-1 flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] font-bold text-amber-500 uppercase tracking-wider block mb-1">${plato.categoria || 'Gastronomía'} · ${plato.ubicacion || 'Chepes - Villa Casana'}</span>
+          <h4 class="text-lg font-bold text-slate-100 mb-2">${plato.nombre}</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">${plato.descripcion}</p>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
 // Filter attractions
 function setFilter(cat) {
   state.filter = cat;
@@ -842,7 +916,7 @@ function openAttractionModal(id) {
       <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 space-y-2">
         <h4 class="text-xs uppercase tracking-wider font-bold text-amber-400 flex items-center gap-2">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-          Lo más destacado
+          Lo mas destacado
         </h4>
         <p class="text-slate-300 text-sm">${item.highlight}</p>
       </div>
@@ -891,7 +965,6 @@ function initMap() {
   const mapElement = document.getElementById('map');
   if (!mapElement) return;
 
-  // Villa Casana coordinates: -31.0667, -66.5833
   const villaCasanaPos = [-31.0667, -66.5833];
   const chepesPos = [-31.3508, -66.5947];
 
@@ -901,13 +974,11 @@ function initMap() {
       scrollWheelZoom: true
     }).setView([-31.18, -66.59], 10);
 
-    // OpenStreetMap layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Villa Casana',
+      attribution: '&copy; OpenStreetMap contributors | Villa Casana',
       maxZoom: 18
     }).addTo(map);
 
-    // Custom Icon Maker
     const createCustomIcon = (bgColor, iconChar) => {
       return L.divIcon({
         className: 'custom-leaflet-icon',
@@ -918,13 +989,12 @@ function initMap() {
       });
     };
 
-    // Main Markers
     L.marker(villaCasanaPos, { icon: createCustomIcon('#d97706', 'VC') })
       .addTo(map)
       .bindPopup(`
         <div class="text-sm">
           <h4 class="font-bold text-amber-400 text-base">Villa Casana</h4>
-          <p class="text-slate-300">Pueblo Histórico y Rural de Los Llanos Riojanos.</p>
+          <p class="text-slate-300">Pueblo Historico y Rural de Los Llanos Riojanos.</p>
           <p class="text-xs text-slate-400 mt-1">40 km al norte de Chepes.</p>
         </div>
       `);
@@ -934,13 +1004,12 @@ function initMap() {
       .bindPopup(`
         <div class="text-sm">
           <h4 class="font-bold text-blue-400 text-base">Ciudad de Chepes</h4>
-          <p class="text-slate-300">Cabecera del departamento. Último punto para repostar combustible, compras y servicios bancarios.</p>
+          <p class="text-slate-300">Cabecera del departamento. Ultimo punto para repostar combustible, compras y servicios bancarios.</p>
         </div>
       `);
 
-    // Add attractions markers
     APP_DATA.attractions.forEach(attr => {
-      let iconColor = '#059669'; // Green default
+      let iconColor = '#059669';
       let sym = '📍';
       if (attr.id === 'casa_de_piedra') { iconColor = '#b45309'; sym = '🪨'; }
       else if (attr.id === 'capilla_del_carmen') { iconColor = '#0284c7'; sym = '⛪'; }
@@ -963,7 +1032,6 @@ function initMap() {
         `);
     });
 
-    // Adventure Route Polyline Chepes -> Villa Casana
     const routeCoords = [
       chepesPos,
       [-31.2800, -66.5920],
@@ -981,6 +1049,11 @@ function initMap() {
 
     state.mapInstance = map;
     state.mapInitialized = true;
+
+    // Si ya hay una posición GPS activa, la dibujamos al inicializar el mapa
+    if (state.userPos) {
+      updateGpsMarker(state.userPos, state.userAccuracy);
+    }
   } catch (err) {
     console.error('Error al inicializar Leaflet:', err);
   }
@@ -1065,7 +1138,7 @@ function initHeroSky() {
   animate();
 }
 
-// Planetarium Canvas (Interactive Constellation Dome)
+// Planetarium Canvas
 function initPlanetariumCanvas() {
   const canvas = document.getElementById('planetarium-canvas');
   if (!canvas) return;
@@ -1073,14 +1146,21 @@ function initPlanetariumCanvas() {
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * window.devicePixelRatio;
-    canvas.height = rect.height * window.devicePixelRatio;
-    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    if (!rect.width || !rect.height) return;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(rect.width * dpr);
+    canvas.height = Math.round(rect.height * dpr);
+    // setTransform (no scale) evita acumular la escala en cada resize
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
   resize();
   window.addEventListener('resize', resize);
 
-  // Constellation data relative points
+  // El panel puede empezar oculto: recalculamos el tamaño al mostrarse
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(resize).observe(canvas);
+  }
+
   const southernCross = [
     { name: "Acrux (Alpha Crucis)", x: 0.50, y: 0.70, r: 4.2 },
     { name: "Gacrux (Gamma Crucis)", x: 0.50, y: 0.32, r: 3.8 },
@@ -1103,7 +1183,6 @@ function initPlanetariumCanvas() {
 
     ctx.clearRect(0, 0, w, h);
 
-    // Deep Sky Gradient
     const grad = ctx.createRadialGradient(w / 2, h / 2, 20, w / 2, h / 2, Math.max(w, h));
     grad.addColorStop(0, '#0c1630');
     grad.addColorStop(0.7, '#070b16');
@@ -1111,7 +1190,6 @@ function initPlanetariumCanvas() {
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
-    // Milky Way Band representation
     ctx.save();
     ctx.translate(w / 2, h / 2);
     ctx.rotate(0.4 + rotation * 0.05);
@@ -1125,7 +1203,6 @@ function initPlanetariumCanvas() {
     ctx.fillRect(-w, -h, w * 2, h * 2);
     ctx.restore();
 
-    // Random background stars
     ctx.fillStyle = 'rgba(255,255,255,0.7)';
     for (let i = 0; i < 90; i++) {
       const sx = ((i * 137.5) % w);
@@ -1133,24 +1210,20 @@ function initPlanetariumCanvas() {
       ctx.fillRect(sx, sy, 1.2, 1.2);
     }
 
-    // Draw Cross connection lines
     ctx.strokeStyle = 'rgba(217, 119, 6, 0.45)';
     ctx.lineWidth = 1.5;
     ctx.setLineDash([4, 4]);
 
-    // Vertical beam (Acrux - Gacrux)
     ctx.beginPath();
     ctx.moveTo(w * southernCross[0].x, h * southernCross[0].y);
     ctx.lineTo(w * southernCross[1].x, h * southernCross[1].y);
     ctx.stroke();
 
-    // Horizontal beam (Mimosa - Delta)
     ctx.beginPath();
     ctx.moveTo(w * southernCross[2].x, h * southernCross[2].y);
     ctx.lineTo(w * southernCross[3].x, h * southernCross[3].y);
     ctx.stroke();
 
-    // Pointer line (Alpha - Beta Centauri)
     ctx.beginPath();
     ctx.moveTo(w * pointers[0].x, h * pointers[0].y);
     ctx.lineTo(w * pointers[1].x, h * pointers[1].y);
@@ -1158,18 +1231,15 @@ function initPlanetariumCanvas() {
 
     ctx.setLineDash([]);
 
-    // Draw Stars
     [...southernCross, ...pointers].forEach(star => {
       const sx = w * star.x;
       const sy = h * star.y;
 
-      // Glow
       ctx.beginPath();
       ctx.arc(sx, sy, star.r * 2.5, 0, Math.PI * 2);
       ctx.fillStyle = 'rgba(251, 191, 36, 0.2)';
       ctx.fill();
 
-      // Core
       ctx.beginPath();
       ctx.arc(sx, sy, star.r, 0, Math.PI * 2);
       ctx.fillStyle = '#ffffff';
@@ -1178,7 +1248,6 @@ function initPlanetariumCanvas() {
       ctx.fill();
       ctx.shadowBlur = 0;
 
-      // Label
       ctx.fillStyle = '#fef08a';
       ctx.font = '11px Plus Jakarta Sans, sans-serif';
       ctx.fillText(star.name, sx + 8, sy - 4);
@@ -1188,863 +1257,816 @@ function initPlanetariumCanvas() {
     requestAnimationFrame(drawDome);
   }
 
+  // Interacción táctil / mouse: desplazar el domo celeste
+  let dragging = false;
+  let lastPointerX = 0;
+
+  canvas.addEventListener('pointerdown', (event) => {
+    dragging = true;
+    lastPointerX = event.clientX;
+    if (canvas.setPointerCapture) canvas.setPointerCapture(event.pointerId);
+  });
+
+  canvas.addEventListener('pointermove', (event) => {
+    if (!dragging) return;
+    rotation += (event.clientX - lastPointerX) * 0.01;
+    lastPointerX = event.clientX;
+  });
+
+  const stopDragging = () => { dragging = false; };
+  canvas.addEventListener('pointerup', stopDragging);
+  canvas.addEventListener('pointercancel', stopDragging);
+  canvas.addEventListener('pointerleave', stopDragging);
+
   drawDome();
 }
 
-// Red Astro Vision Mode Toggle
-function initAstroRedModeToggle() {
-  const toggleBtn = document.getElementById('toggle-red-mode');
-  const indicator = document.getElementById('red-mode-indicator');
-  if (!toggleBtn) return;
+// ============================================================
+// Selector de visor cartográfico: Leaflet <-> Croquis vectorial
+// ============================================================
+function initMapModeSwitcher() {
+  const btnLeaflet = document.getElementById('btn-mode-leaflet');
+  const btnVector = document.getElementById('btn-mode-vector');
+  if (!btnLeaflet || !btnVector) return;
 
-  toggleBtn.addEventListener('click', () => {
-    state.astroRedMode = !state.astroRedMode;
-    document.body.classList.toggle('astro-red-mode', state.astroRedMode);
-
-    if (indicator) {
-      indicator.textContent = state.astroRedMode ? "Visión Roja Activa (Cielo Nocturno)" : "Modo Normal";
-      indicator.classList.toggle('text-rose-400', state.astroRedMode);
-      indicator.classList.toggle('text-slate-400', !state.astroRedMode);
-    }
-  });
+  btnLeaflet.addEventListener('click', () => setMapMode('leaflet'));
+  btnVector.addEventListener('click', () => setMapMode('vector'));
+  setMapMode(state.mapMode);
 }
 
-// Checklist System
-function loadChecklistState() {
-  const saved = localStorage.getItem('villa_casana_checklist');
-  if (saved) {
-    try {
-      state.checklist = JSON.parse(saved);
-    } catch(e) {
-      state.checklist = APP_DATA.checklistItems;
-    }
-  } else {
-    state.checklist = APP_DATA.checklistItems;
-  }
-}
+function setMapMode(mode) {
+  state.mapMode = mode;
 
-function saveChecklistState() {
-  localStorage.setItem('villa_casana_checklist', JSON.stringify(state.checklist));
-}
+  const btnLeaflet = document.getElementById('btn-mode-leaflet');
+  const btnVector = document.getElementById('btn-mode-vector');
+  const leafletWrapper = document.getElementById('leaflet-map-wrapper');
+  const vectorWrapper = document.getElementById('vector-croquis-wrapper');
+  if (!btnLeaflet || !btnVector || !leafletWrapper || !vectorWrapper) return;
 
-function toggleChecklistItem(id) {
-  const item = state.checklist.find(i => i.id === id);
-  if (item) {
-    item.defaultChecked = !item.defaultChecked;
-    saveChecklistState();
-    renderChecklist();
-  }
-}
+  const activeClasses = ['bg-amber-600', 'text-white', 'shadow-lg', 'font-bold'];
+  const idleClasses = ['bg-slate-800', 'text-slate-300', 'border', 'border-slate-700', 'font-semibold'];
 
-function renderChecklist() {
-  const container = document.getElementById('checklist-container');
-  const progressText = document.getElementById('checklist-progress-text');
-  const progressBar = document.getElementById('checklist-progress-bar');
-  if (!container) return;
+  const isVector = mode === 'vector';
 
-  const total = state.checklist.length;
-  const checked = state.checklist.filter(i => i.defaultChecked).length;
-  const pct = Math.round((checked / total) * 100);
+  leafletWrapper.classList.toggle('hidden', isVector);
+  vectorWrapper.classList.toggle('hidden', !isVector);
 
-  if (progressText) progressText.textContent = `${checked} de ${total} listos (${pct}%)`;
-  if (progressBar) progressBar.style.width = `${pct}%`;
+  const [activeBtn, idleBtn] = isVector ? [btnVector, btnLeaflet] : [btnLeaflet, btnVector];
+  activeBtn.classList.add(...activeClasses);
+  activeBtn.classList.remove(...idleClasses);
+  idleBtn.classList.remove(...activeClasses);
+  idleBtn.classList.add(...idleClasses);
 
-  container.innerHTML = state.checklist.map(item => `
-    <label class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-amber-500/40 cursor-pointer transition-all">
-      <input 
-        type="checkbox" 
-        ${item.defaultChecked ? 'checked' : ''} 
-        onchange="toggleChecklistItem('${item.id}')"
-        class="w-5 h-5 rounded border-slate-700 text-amber-500 focus:ring-amber-500 bg-slate-800"
-      />
-      <div class="flex-1">
-        <span class="text-sm ${item.defaultChecked ? 'line-through text-slate-500' : 'text-slate-200'}">
-          ${item.label}
-        </span>
-      </div>
-      <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-slate-800 text-slate-400">
-        ${item.category}
-      </span>
-    </label>
-  `).join('');
-}
-
-// Lunar Phase Approximation Widget
-function updateMoonPhaseWidget() {
-  const moonText = document.getElementById('moon-phase-status');
-  const moonTip = document.getElementById('moon-phase-tip');
-  if (!moonText) return;
-
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
-  const day = now.getDate();
-
-  let c = 0, e = 0, jd = 0, b = 0;
-  if (month < 3) {
-    c = year - 1;
-    e = month + 12;
-  } else {
-    c = year;
-  }
-  jd = (2 - Math.floor(c / 100) + Math.floor(Math.floor(c / 100) / 4)) + Math.floor(365.25 * (c + 4716)) + Math.floor(30.6001 * (e + 1)) + day - 1524.5;
-  b = (jd - 2451549.5) / 29.53058867;
-  const phase = (b - Math.floor(b));
-
-  let phaseName = "Luna Nueva";
-  let astroQuality = "Excelente para Astroturismo (Cielo Negro)";
-  let icon = "🌑";
-
-  if (phase > 0.03 && phase <= 0.22) {
-    phaseName = "Luna Creciente";
-    astroQuality = "Muy buena (El cielo se oscurece tras la puesta lunar)";
-    icon = "🌒";
-  } else if (phase > 0.22 && phase <= 0.28) {
-    phaseName = "Cuarto Creciente";
-    astroQuality = "Buena para observar cráteres lunares";
-    icon = "🌓";
-  } else if (phase > 0.28 && phase <= 0.47) {
-    phaseName = "Gibosa Creciente";
-    astroQuality = "Brillo moderado";
-    icon = "🌔";
-  } else if (phase > 0.47 && phase <= 0.53) {
-    phaseName = "Luna Llena";
-    astroQuality = "Noche luminosa ideal para caminata nocturna rural";
-    icon = "🌕";
-  } else if (phase > 0.53 && phase <= 0.72) {
-    phaseName = "Gibosa Menguante";
-    astroQuality = "Buena en primera mitad de la noche";
-    icon = "🌖";
-  } else if (phase > 0.72 && phase <= 0.78) {
-    phaseName = "Cuarto Menguante";
-    astroQuality = "Cielo oscuro al anochecer";
-    icon = "🌗";
-  } else if (phase > 0.78 && phase <= 0.97) {
-    phaseName = "Luna Menguante";
-    astroQuality = "Excelente al principio de la noche";
-    icon = "🌘";
-  }
-
-  moonText.innerHTML = `${icon} <span class="font-bold">${phaseName}</span>`;
-  if (moonTip) moonTip.textContent = astroQuality;
-}
-
-// PWA Install prompt handler
-let deferredPrompt;
-function initPwaInstall() {
-  const installBtn = document.getElementById('pwa-install-btn');
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    if (installBtn) installBtn.classList.remove('hidden');
-  });
-
-  if (installBtn) {
-    installBtn.addEventListener('click', async () => {
-      if (!deferredPrompt) {
-        alert('Para instalar en tu celular, usa la opción "Añadir a la pantalla de inicio" de tu navegador (Chrome o Safari).');
-        return;
-      }
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === 'accepted') {
-        installBtn.classList.add('hidden');
-      }
-      deferredPrompt = null;
-    });
-  }
-
-  // Register service worker if supported
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(reg => {
-          console.log('Service Worker registrado correctamente (PWA offline lista):', reg.scope);
-        })
-        .catch(err => {
-          navigator.serviceWorker.register('./sw.js').catch(e => console.log('SW registration note:', e));
-        });
-    });
-  }
-}
-
-/* ==========================================================================
-   OFFLINE NAVIGATION, RUTÓMETRO, SAT GPS TRACKER & VECTOR CROQUIS
-   ========================================================================== */
-
-// Helper to escape XML for GPX / KML downloads
-function escapeXml(unsafe) {
-  return (unsafe || '').toString().replace(/[<>&'"]/g, c => {
-    switch (c) {
-      case '<': return '&lt;';
-      case '>': return '&gt;';
-      case '&': return '&amp;';
-      case '\'': return '&apos;';
-      case '"': return '&quot;';
-      default: return c;
-    }
-  });
-}
-
-// Client-side Blob file downloader (100% offline)
-function downloadFileBlob(content, fileName, mimeType) {
-  const blob = new Blob([content], { type: mimeType });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = fileName;
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => {
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }, 300);
-}
-
-// 1. Export GPX Format for OsmAnd, Maps.me, Garmin, Gaia GPS
-function downloadGpxRoute() {
-  const waypointsXml = APP_DATA.routeWaypoints.map(wp => `
-  <wpt lat="${wp.coords[0]}" lon="${wp.coords[1]}">
-    <ele>${wp.elevation.replace(/[^0-9.]/g, '')}</ele>
-    <name>Km ${wp.km} - ${escapeXml(wp.title)}</name>
-    <desc>${escapeXml(wp.instruction)} [Alerta: ${escapeXml(wp.warning)}]</desc>
-    <sym>Waypoint</sym>
-    <type>${escapeXml(wp.type)}</type>
-  </wpt>`).join('');
-
-  const trackPointsXml = APP_DATA.routeWaypoints.map(wp => `
-      <trkpt lat="${wp.coords[0]}" lon="${wp.coords[1]}">
-        <ele>${wp.elevation.replace(/[^0-9.]/g, '')}</ele>
-        <name>Km ${wp.km} - ${escapeXml(wp.title)}</name>
-      </trkpt>`).join('');
-
-  const gpxContent = `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="VillaCasanaTurismo" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
-  <metadata>
-    <name>Ruta Chepes - Villa Casana (Guía Offline)</name>
-    <desc>Traza vecinal y waypoints para navegación sin cobertura celular entre Chepes y Villa Casana, Dpto. Rosario Vera Peñaloza, La Rioja, Argentina.</desc>
-    <author>
-      <name>Villa Casana Turismo</name>
-    </author>
-    <time>${new Date().toISOString()}</time>
-  </metadata>
-${waypointsXml}
-  <trk>
-    <name>Traza Chepes a Villa Casana (40 km consolidado)</name>
-    <desc>Camino vecinal de ripio y tierra. Puntos de precaución, badenes y atractivos.</desc>
-    <trkseg>
-${trackPointsXml}
-    </trkseg>
-  </trk>
-</gpx>`;
-
-  downloadFileBlob(gpxContent, 'ruta_chepes_villa_casana_offline.gpx', 'application/gpx+xml');
-}
-
-// 2. Export KML Format for Google Earth & Google Maps
-function downloadKmlRoute() {
-  const placemarksXml = APP_DATA.routeWaypoints.map(wp => `
-    <Placemark>
-      <name>Km ${wp.km} - ${escapeXml(wp.title)}</name>
-      <description><![CDATA[
-        <p><b>Tipo:</b> ${wp.type}</p>
-        <p><b>Elevación:</b> ${wp.elevation}</p>
-        <p><b>Instrucción:</b> ${wp.instruction}</p>
-        <p style="color:#d97706;"><b>Precaución:</b> ${wp.warning}</p>
-      ]]></description>
-      <Point>
-        <coordinates>${wp.coords[1]},${wp.coords[0]},${wp.elevation.replace(/[^0-9.]/g, '')}</coordinates>
-      </Point>
-    </Placemark>`).join('');
-
-  const coordsList = APP_DATA.routeWaypoints.map(wp => `${wp.coords[1]},${wp.coords[0]},0`).join(' ');
-
-  const kmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2">
-  <Document>
-    <name>Ruta Chepes - Villa Casana (Offline)</name>
-    <description>Ruta y waypoints rurales hacia Villa Casana, La Rioja</description>
-${placemarksXml}
-    <Placemark>
-      <name>Camino Vecinal Chepes - Villa Casana (Traza)</name>
-      <Style>
-        <LineStyle>
-          <color>ff10b981</color>
-          <width>5</width>
-        </LineStyle>
-      </Style>
-      <LineString>
-        <extrude>1</extrude>
-        <tessellate>1</tessellate>
-        <coordinates>
-          ${coordsList}
-        </coordinates>
-      </LineString>
-    </Placemark>
-  </Document>
-</kml>`;
-
-  downloadFileBlob(kmlContent, 'ruta_chepes_villa_casana_offline.kml', 'application/vnd.google-earth.kml+xml');
-}
-
-// 3. Mathematical Geolocation Calculations (Haversine & Bearing)
-function calculateDistanceKm(lat1, lon1, lat2, lon2) {
-  const R = 6371; // Earth radius in km
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
-  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-            Math.sin(dLon/2) * Math.sin(dLon/2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  return R * c;
-}
-
-function calculateBearing(lat1, lon1, lat2, lon2) {
-  const rad = Math.PI / 180;
-  const y = Math.sin((lon2 - lon1) * rad) * Math.cos(lat2 * rad);
-  const x = Math.cos(lat1 * rad) * Math.sin(lat2 * rad) -
-            Math.sin(lat1 * rad) * Math.cos(lat2 * rad) * Math.cos((lon2 - lon1) * rad);
-  const brng = (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
-  return Math.round(brng);
-}
-
-function getCompassDirection(deg) {
-  const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSO', 'SO', 'OSO', 'O', 'ONO', 'NO', 'NNO'];
-  const index = Math.round(deg / 22.5) % 16;
-  return directions[index];
-}
-
-// 4. Offline GPS Satellite Tracker & Live Digital Compass
-function initOfflineGpsTracker() {
-  const toggleBtn = document.getElementById('gps-toggle-btn');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', toggleGpsTracker);
-  }
-}
-
-function toggleGpsTracker() {
-  if (state.gpsWatching) {
-    stopGpsTracker();
-  } else {
-    startGpsTracker();
-  }
-}
-
-function startGpsTracker() {
-  if (!navigator.geolocation) {
-    alert("Tu dispositivo o navegador no admite geolocalización por satélite.");
+  if (isVector) {
+    initVectorCroquis();
     return;
   }
 
-  const btn = document.getElementById('gps-toggle-btn');
-  const statusBadge = document.getElementById('gps-status-badge');
-  const statusText = document.getElementById('gps-status-text');
-
-  if (statusBadge) {
-    statusBadge.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping inline-block"></span> Sincronizando con satélites GPS...';
-    statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40';
-  }
-  if (statusText) statusText.textContent = "Conectando con chip satelital del teléfono (funciona sin señal celular)...";
-
-  state.gpsWatchId = navigator.geolocation.watchPosition(
-    (position) => {
-      state.gpsWatching = true;
-      const { latitude, longitude, altitude, accuracy, speed } = position.coords;
-      state.userPos = [latitude, longitude];
-
-      if (btn) {
-        btn.innerHTML = `<svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Detener Navegación Satelital`;
-        btn.classList.add('border-rose-500/60', 'text-rose-300');
-        btn.classList.remove('border-emerald-500/40', 'text-emerald-300');
-      }
-
-      if (statusBadge) {
-        statusBadge.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse inline-block"></span> Satélites Conectados (Precisión ±${Math.round(accuracy)}m)`;
-        statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
-      }
-
-      if (statusText) {
-        statusText.textContent = "Navegación activa 100% offline por satélite.";
-      }
-
-      // Target: Villa Casana Plaza [-31.0667, -66.5833]
-      const targetLat = -31.0667;
-      const targetLon = -66.5833;
-      const distToCasana = calculateDistanceKm(latitude, longitude, targetLat, targetLon);
-      const bearingToCasana = calculateBearing(latitude, longitude, targetLat, targetLon);
-      const compassDir = getCompassDirection(bearingToCasana);
-
-      // UI readouts
-      const coordsEl = document.getElementById('gps-coords-display');
-      if (coordsEl) coordsEl.textContent = `${latitude.toFixed(5)}°, ${longitude.toFixed(5)}°`;
-
-      const distEl = document.getElementById('gps-distance-display');
-      if (distEl) distEl.textContent = `${distToCasana.toFixed(1)} km`;
-
-      const bearingEl = document.getElementById('gps-bearing-display');
-      if (bearingEl) bearingEl.textContent = `${bearingToCasana}° (${compassDir})`;
-
-      const speedEl = document.getElementById('gps-speed-display');
-      if (speedEl) {
-        const speedKmh = speed ? Math.round(speed * 3.6) : 0;
-        speedEl.textContent = `${speedKmh} km/h`;
-      }
-
-      const altEl = document.getElementById('gps-altitude-display');
-      if (altEl) {
-        altEl.textContent = altitude ? `${Math.round(altitude)} msnm` : '645 msnm (estim.)';
-      }
-
-      // Compass needle rotation towards destination
-      const needle = document.getElementById('gps-compass-needle');
-      if (needle) {
-        needle.style.transform = `rotate(${bearingToCasana}deg)`;
-      }
-
-      // Find closest upcoming waypoint
-      findClosestUpcomingWaypoint(latitude, longitude);
-
-      // Update map marker if Leaflet map exists
-      updateGpsLeafletMarker(latitude, longitude);
-
-      // Update position on vector croquis
-      updateVectorCroquisUserPos(latitude, longitude);
-    },
-    (error) => {
-      console.warn("GPS Satellite Error:", error);
-      let msg = "Buscando conexión con satélites GPS...";
-      if (error.code === 1) msg = "Permiso de ubicación denegado en tu navegador.";
-      else if (error.code === 2) msg = "Buscando satélites... Sal a cielo abierto fuera del vehículo.";
-      else if (error.code === 3) msg = "Esperando señal satelital...";
-
-      if (statusBadge) {
-        statusBadge.innerHTML = `<span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span> ${msg}`;
-        statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40';
-      }
-    },
-    {
-      enableHighAccuracy: true,
-      timeout: 20000,
-      maximumAge: 0
-    }
-  );
-
-  // Hardware Magnetic Compass sensor (phone orientation)
-  if (window.DeviceOrientationEvent) {
-    state.gpsOrientationHandler = (event) => {
-      let compassHeading = null;
-      if (event.webkitCompassHeading) {
-        compassHeading = event.webkitCompassHeading;
-      } else if (event.alpha !== null) {
-        compassHeading = 360 - event.alpha;
-      }
-      if (compassHeading !== null) {
-        state.userHeading = compassHeading;
-        const compassDial = document.getElementById('gps-compass-dial');
-        if (compassDial) {
-          compassDial.style.transform = `rotate(${-compassHeading}deg)`;
-        }
-      }
-    };
-    window.addEventListener('deviceorientation', state.gpsOrientationHandler, true);
+  // Solo inicializamos el mapa si el panel está visible para evitar tamaño 0
+  if (state.currentTab === 'mapa') {
+    initMap();
+    setTimeout(() => {
+      if (state.mapInstance) state.mapInstance.invalidateSize();
+    }, 150);
   }
 }
 
-function stopGpsTracker() {
-  if (state.gpsWatchId !== null) {
-    navigator.geolocation.clearWatch(state.gpsWatchId);
-    state.gpsWatchId = null;
-  }
-  if (state.gpsOrientationHandler) {
-    window.removeEventListener('deviceorientation', state.gpsOrientationHandler, true);
-    state.gpsOrientationHandler = null;
-  }
-  state.gpsWatching = false;
+// ============================================================
+// Croquis topográfico vectorial 100% offline (SVG)
+// ============================================================
+function initVectorCroquis() {
+  const container = document.getElementById('vector-croquis-canvas-container');
+  if (!container || container.dataset.rendered === 'true') return;
 
-  const btn = document.getElementById('gps-toggle-btn');
-  if (btn) {
-    btn.innerHTML = `<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Iniciar Navegación Satelital GPS`;
-    btn.classList.remove('border-rose-500/60', 'text-rose-300');
-    btn.classList.add('border-emerald-500/40', 'text-emerald-300');
+  const waypoints = APP_DATA.routeWaypoints || [];
+  if (!waypoints.length) return;
+
+  const W = 1000;
+  const H = 640;
+  const pad = 80;
+
+  const lats = waypoints.map(w => w.coords[0]);
+  const lngs = waypoints.map(w => w.coords[1]);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+  const minLng = Math.min(...lngs);
+  const maxLng = Math.max(...lngs);
+
+  // Proyección local en km para mantener proporciones reales
+  const kmPerLat = 110.574;
+  const kmPerLng = 111.320 * Math.cos(((minLat + maxLat) / 2) * Math.PI / 180);
+
+  const rawPoints = waypoints.map(w => ({
+    x: (w.coords[1] - minLng) * kmPerLng,
+    y: (maxLat - w.coords[0]) * kmPerLat
+  }));
+
+  const maxX = Math.max(...rawPoints.map(p => p.x)) || 1;
+  const maxY = Math.max(...rawPoints.map(p => p.y)) || 1;
+  const scale = Math.min((W - pad * 2) / maxX, (H - pad * 2) / maxY);
+  const offsetX = (W - maxX * scale) / 2;
+  const offsetY = (H - maxY * scale) / 2;
+
+  const points = rawPoints.map(p => ({
+    x: offsetX + p.x * scale,
+    y: offsetY + p.y * scale
+  }));
+
+  const routePath = points
+    .map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)} ${p.y.toFixed(1)}`)
+    .join(' ');
+
+  // Curvas de nivel decorativas (topografía serrana)
+  const contours = [];
+  for (let i = 0; i < 8; i++) {
+    const cx = 90 + ((i * 149) % 820);
+    const cy = 70 + ((i * 197) % 500);
+    const rx = 70 + ((i * 61) % 130);
+    const ry = 40 + ((i * 43) % 85);
+    contours.push(
+      `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="#166534" stroke-width="1" opacity="0.45" transform="rotate(${(i * 29) % 50 - 25} ${cx} ${cy})" />`
+    );
   }
 
-  const statusBadge = document.getElementById('gps-status-badge');
-  if (statusBadge) {
-    statusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-slate-500 inline-block"></span> GPS en Pausa`;
-    statusBadge.className = 'inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-400 border border-slate-700';
+  // Grilla de referencia
+  const grid = [];
+  for (let x = 100; x < W; x += 100) {
+    grid.push(`<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="#1e293b" stroke-width="1" opacity="0.45" />`);
   }
+  for (let y = 80; y < H; y += 100) {
+    grid.push(`<line x1="0" y1="${y}" x2="${W}" y2="${y}" stroke="#1e293b" stroke-width="1" opacity="0.45" />`);
+  }
+
+  // Escala gráfica: elegimos una longitud legible entre 60 y 170 px
+  const niceLengths = [1, 2, 5, 10, 20, 50];
+  let scaleKm = 10;
+  for (const km of niceLengths) {
+    const px = km * scale;
+    if (px >= 60 && px <= 170) { scaleKm = km; break; }
+    if (px < 60) scaleKm = km;
+  }
+  const scaleBarPx = Math.round(scaleKm * scale);
+
+  const escapeXml = (value) => String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+
+  const markers = waypoints.map((wp, i) => {
+    const { x, y } = points[i];
+    const isRight = i % 2 === 0;
+    const labelX = isRight ? x + 16 : x - 16;
+    const anchor = isRight ? 'start' : 'end';
+    const label = `Km ${wp.km}`;
+    const shortTitle = wp.title.length > 30 ? wp.title.slice(0, 30) + '…' : wp.title;
+    return `
+      <g class="cursor-pointer">
+        <title>${escapeXml(wp.title)} — Km ${escapeXml(wp.km)} · ${escapeXml(wp.elevation)}</title>
+        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" fill="#f59e0b" stroke="#0f172a" stroke-width="3" opacity="0.25" />
+        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6.5" fill="#fbbf24" stroke="#0f172a" stroke-width="2.5" />
+        <text x="${labelX.toFixed(1)}" y="${(y + 4).toFixed(1)}" text-anchor="${anchor}" font-family="ui-monospace, monospace" font-size="14" font-weight="700" fill="#fef3c7" stroke="#0a0f1d" stroke-width="4" paint-order="stroke">${escapeXml(label)}</text>
+        <text x="${labelX.toFixed(1)}" y="${(y + 19).toFixed(1)}" text-anchor="${anchor}" font-family="ui-monospace, monospace" font-size="10.5" fill="#cbd5e1" stroke="#0a0f1d" stroke-width="3.5" paint-order="stroke">${escapeXml(shortTitle)}</text>
+      </g>
+    `;
+  }).join('');
+
+  container.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="w-full h-auto block" role="img" aria-label="Croquis vectorial de la ruta Chepes - Villa Casana">
+      <defs>
+        <linearGradient id="croquis-bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0b1220" />
+          <stop offset="55%" stop-color="#0f172a" />
+          <stop offset="100%" stop-color="#1a1208" />
+        </linearGradient>
+        <radialGradient id="croquis-glow" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.16" />
+          <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+
+      <rect width="${W}" height="${H}" fill="url(#croquis-bg)" />
+      <rect width="${W}" height="${H}" fill="url(#croquis-glow)" />
+      ${grid.join('')}
+      ${contours.join('')}
+
+      <path d="${routePath}" fill="none" stroke="#78350f" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" />
+      <path d="${routePath}" fill="none" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 9" />
+      ${markers}
+
+      <!-- Rosa de los vientos -->
+      <g transform="translate(${W - 84} 84)">
+        <circle r="42" fill="#0f172a" stroke="#334155" stroke-width="1.5" opacity="0.9" />
+        <polygon points="0,-32 7,0 0,-8 -7,0" fill="#ef4444" />
+        <polygon points="0,32 7,0 0,8 -7,0" fill="#94a3b8" />
+        <text x="0" y="-36" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" font-weight="700" fill="#f87171">N</text>
+      </g>
+
+      <!-- Leyenda y escala -->
+      <g transform="translate(34 ${H - 58})">
+        <rect x="-14" y="-26" width="360" height="62" rx="12" fill="#0b1220" stroke="#1e293b" opacity="0.92" />
+        <line x1="0" y1="0" x2="${scaleBarPx}" y2="0" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" />
+        <line x1="0" y1="-6" x2="0" y2="6" stroke="#fbbf24" stroke-width="3" />
+        <line x1="${scaleBarPx}" y1="-6" x2="${scaleBarPx}" y2="6" stroke="#fbbf24" stroke-width="3" />
+        <text x="${scaleBarPx + 10}" y="4" font-family="ui-monospace, monospace" font-size="12" fill="#fcd34d">${scaleKm} km aprox.</text>
+        <text x="0" y="26" font-family="ui-monospace, monospace" font-size="11.5" fill="#94a3b8">Trazado referencial · 11 hitos · Chepes a Villa Casana</text>
+      </g>
+    </svg>
+  `;
+
+  container.dataset.rendered = 'true';
 }
 
-function findClosestUpcomingWaypoint(lat, lon) {
-  let closest = null;
-  let minDistance = Infinity;
-
-  APP_DATA.routeWaypoints.forEach(wp => {
-    const d = calculateDistanceKm(lat, lon, wp.coords[0], wp.coords[1]);
-    if (d < minDistance) {
-      minDistance = d;
-      closest = wp;
-    }
-  });
-
-  const nextWpEl = document.getElementById('gps-next-waypoint-display');
-  if (nextWpEl && closest) {
-    nextWpEl.innerHTML = `<span class="font-bold text-amber-400">${closest.title}</span> <span class="text-slate-400 text-xs">(Km ${closest.km} — a ${minDistance.toFixed(1)} km)</span>`;
-  }
-}
-
-function updateGpsLeafletMarker(lat, lon) {
-  if (!state.mapInstance) return;
-  if (!state.gpsMarker) {
-    const gpsIcon = L.divIcon({
-      className: 'gps-live-marker',
-      html: `<div class="relative flex items-center justify-center">
-              <div class="w-7 h-7 rounded-full bg-amber-500/40 animate-ping absolute"></div>
-              <div class="w-4 h-4 rounded-full bg-amber-500 border-2 border-white shadow-xl relative"></div>
-             </div>`,
-      iconSize: [28, 28],
-      iconAnchor: [14, 14]
-    });
-    state.gpsMarker = L.marker([lat, lon], { icon: gpsIcon }).addTo(state.mapInstance);
-    state.gpsMarker.bindPopup('<b>📍 Tu Posición Actual (GPS Satelital)</b>');
-  } else {
-    state.gpsMarker.setLatLng([lat, lon]);
-  }
-}
-
-// 5. Render Step-by-Step Rutómetro (Roadbook Km a Km)
+// ============================================================
+// Rutómetro Km a Km
+// ============================================================
 function renderRutometro() {
   const container = document.getElementById('rutometro-cards');
   if (!container) return;
 
-  container.innerHTML = APP_DATA.routeWaypoints.map((wp, idx) => `
-    <div id="wp-card-${wp.km.replace('.', '_')}" class="glass-card rounded-2xl p-5 border border-slate-800 hover:border-amber-500/50 transition-all relative overflow-hidden group">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0 border border-amber-500/30">
-            ${wp.icon}
-          </div>
-          <div>
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-md bg-amber-500/20 text-amber-300 text-xs font-mono font-bold border border-amber-500/30">
-                Km ${wp.km}
-              </span>
-              <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold ${wp.badgeColor}">
-                ${wp.badge}
-              </span>
-              <span class="text-xs text-slate-400 font-mono">
-                ⛰️ ${wp.elevation}
-              </span>
-            </div>
-            <h4 class="text-base font-bold text-slate-100 group-hover:text-amber-400 transition-colors mt-1">
-              ${wp.title}
-            </h4>
-          </div>
-        </div>
-        
-        <div class="flex items-center gap-2 self-start sm:self-center">
-          <button onclick="copyCoords(${wp.coords[0]}, ${wp.coords[1]}, this)" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono flex items-center gap-1.5 border border-slate-700 transition-all" title="Copiar coordenadas GPS">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-            <span>${wp.coords[0].toFixed(4)}, ${wp.coords[1].toFixed(4)}</span>
-          </button>
-          <button onclick="focusWaypointOnMap([${wp.coords[0]}, ${wp.coords[1]}], '${escapeXml(wp.title)}')" class="p-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition-all" title="Ver en Mapa">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </button>
+  container.innerHTML = APP_DATA.routeWaypoints.map((wp, index) => `
+    <div class="glass-card rounded-2xl p-5 border border-slate-800/80 flex flex-col sm:flex-row gap-4">
+      <div class="flex sm:flex-col items-center sm:items-start gap-3 shrink-0 sm:w-28">
+        <span class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-700 flex items-center justify-center text-xl shadow-inner">${wp.icon}</span>
+        <div class="text-center sm:text-left">
+          <span class="block text-lg font-black text-amber-400 font-mono leading-tight">Km ${wp.km}</span>
+          <span class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">${wp.elevation}</span>
+          <span class="block text-[10px] text-slate-500 mt-0.5">Hito ${index + 1} de ${APP_DATA.routeWaypoints.length}</span>
         </div>
       </div>
 
-      <div class="mt-3 space-y-2">
-        <p class="text-sm text-slate-300 leading-relaxed">
-          <strong class="text-slate-200">Indicación:</strong> ${wp.instruction}
-        </p>
-        <div class="p-2.5 rounded-xl bg-amber-950/30 border border-amber-600/30 text-xs text-amber-200/90 flex items-start gap-2">
-          <span class="text-amber-400 font-bold">⚠️</span>
-          <span><strong>Precaución:</strong> ${wp.warning}</span>
+      <div class="flex-1 space-y-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <h4 class="font-bold text-slate-100">${wp.title}</h4>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${wp.badgeColor}">${wp.badge}</span>
+          <span class="text-[10px] text-slate-400 bg-slate-900/80 border border-slate-800 rounded px-2 py-0.5">${wp.type}</span>
         </div>
+        <p class="text-xs text-slate-300 leading-relaxed">${wp.instruction}</p>
+        <p class="text-[11px] text-amber-200/90 bg-amber-950/20 border border-amber-800/30 rounded-lg px-3 py-2 leading-relaxed">⚠️ ${wp.warning}</p>
       </div>
     </div>
   `).join('');
 }
 
-// Copy coordinate to clipboard helper with button text response
-function copyCoords(lat, lon, btnElement) {
-  const text = `${lat}, ${lon}`;
-  navigator.clipboard.writeText(text).then(() => {
-    const originalHtml = btnElement.innerHTML;
-    btnElement.innerHTML = `<span class="text-emerald-400 font-bold">✓ ¡Copiado!</span>`;
-    setTimeout(() => {
-      btnElement.innerHTML = originalHtml;
-    }, 2000);
-  }).catch(() => {
-    prompt("Copia las coordenadas para tu GPS:", text);
+// ============================================================
+// Checklist de expedición con persistencia local
+// ============================================================
+const CHECKLIST_STORAGE_KEY = 'villacasana_checklist_v1';
+
+function loadChecklistState() {
+  let stored = null;
+  try {
+    stored = localStorage.getItem(CHECKLIST_STORAGE_KEY);
+  } catch (err) {
+    stored = null;
+  }
+
+  if (stored === null) {
+    state.checklist = APP_DATA.checklistItems
+      .filter(item => item.defaultChecked)
+      .map(item => item.id);
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(stored);
+    const validIds = new Set(APP_DATA.checklistItems.map(item => item.id));
+    state.checklist = Array.isArray(parsed)
+      ? parsed.filter(id => validIds.has(id))
+      : [];
+  } catch (err) {
+    state.checklist = [];
+  }
+}
+
+function saveChecklistState() {
+  try {
+    localStorage.setItem(CHECKLIST_STORAGE_KEY, JSON.stringify(state.checklist));
+  } catch (err) {
+    console.warn('No se pudo guardar el checklist:', err);
+  }
+}
+
+function renderChecklist() {
+  const container = document.getElementById('checklist-container');
+  if (!container) return;
+
+  container.innerHTML = APP_DATA.checklistItems.map(item => {
+    const checked = state.checklist.includes(item.id);
+    return `
+      <label class="flex items-start gap-3 bg-slate-900/70 hover:bg-slate-900 border border-slate-800 rounded-xl p-3.5 cursor-pointer transition-colors">
+        <input
+          type="checkbox"
+          data-check-item="${item.id}"
+          ${checked ? 'checked' : ''}
+          onchange="toggleChecklist('${item.id}', this.checked)"
+          class="mt-0.5 w-5 h-5 rounded border-slate-600 bg-slate-800 accent-amber-500 cursor-pointer shrink-0"
+        />
+        <span class="flex-1">
+          <span data-check-label="${item.id}" class="block text-xs font-semibold leading-relaxed ${checked ? 'text-slate-500 line-through' : 'text-slate-200'}">${item.label}</span>
+          <span class="text-[10px] uppercase tracking-wider text-amber-500/80 font-bold">${item.category}</span>
+        </span>
+      </label>
+    `;
+  }).join('');
+
+  updateChecklistProgress();
+}
+
+function toggleChecklist(id, checked) {
+  const current = new Set(state.checklist);
+  if (checked) current.add(id);
+  else current.delete(id);
+  state.checklist = [...current];
+  saveChecklistState();
+
+  const label = document.querySelector(`[data-check-label="${id}"]`);
+  if (label) {
+    label.classList.toggle('text-slate-500', checked);
+    label.classList.toggle('line-through', checked);
+    label.classList.toggle('text-slate-200', !checked);
+  }
+
+  updateChecklistProgress();
+}
+
+function updateChecklistProgress() {
+  const total = APP_DATA.checklistItems.length;
+  const done = state.checklist.length;
+  const percent = total ? Math.round((done / total) * 100) : 0;
+
+  const text = document.getElementById('checklist-progress-text');
+  const bar = document.getElementById('checklist-progress-bar');
+
+  if (text) text.textContent = `${done} de ${total} listos (${percent}%)`;
+  if (bar) bar.style.width = `${percent}%`;
+}
+
+// ============================================================
+// Fase lunar estimada
+// ============================================================
+function updateMoonPhaseWidget() {
+  const status = document.getElementById('moon-phase-status');
+  const tip = document.getElementById('moon-phase-tip');
+  if (!status || !tip) return;
+
+  const SYNODIC_MONTH = 29.530588853;
+  const KNOWN_NEW_MOON = Date.UTC(2000, 0, 6, 18, 14);
+  const daysSince = (Date.now() - KNOWN_NEW_MOON) / 86400000;
+  const age = ((daysSince % SYNODIC_MONTH) + SYNODIC_MONTH) % SYNODIC_MONTH;
+  const fraction = age / SYNODIC_MONTH;
+
+  const phases = [
+    { limit: 0.0625, emoji: '🌑', name: 'Luna Nueva' },
+    { limit: 0.1875, emoji: '🌒', name: 'Luna Creciente' },
+    { limit: 0.3125, emoji: '🌓', name: 'Cuarto Creciente' },
+    { limit: 0.4375, emoji: '🌔', name: 'Gibosa Creciente' },
+    { limit: 0.5625, emoji: '🌕', name: 'Luna Llena' },
+    { limit: 0.6875, emoji: '🌖', name: 'Gibosa Menguante' },
+    { limit: 0.8125, emoji: '🌗', name: 'Cuarto Menguante' },
+    { limit: 0.9375, emoji: '🌘', name: 'Luna Menguante' },
+    { limit: 1.0001, emoji: '🌑', name: 'Luna Nueva' }
+  ];
+
+  const phase = phases.find(p => fraction < p.limit) || phases[0];
+  const illumination = Math.round(((1 - Math.cos(2 * Math.PI * fraction)) / 2) * 100);
+
+  let quality;
+  if (illumination < 25) quality = 'Excelente para astroturismo';
+  else if (illumination < 60) quality = 'Aceptable: la Vía Láctea se aprecia parcialmente';
+  else quality = 'Poco favorable: el brillo lunar reduce la visibilidad';
+
+  status.textContent = phase.emoji;
+  tip.textContent = `${phase.name} · ${illumination}% iluminada · ${quality}`;
+}
+
+// ============================================================
+// Modo de visión nocturna roja (adaptación visual astronómica)
+// ============================================================
+function initAstroRedModeToggle() {
+  const button = document.getElementById('toggle-red-mode');
+  if (!button) return;
+
+  let storedMode = false;
+  try {
+    storedMode = localStorage.getItem('villacasana_red_mode') === 'true';
+  } catch (err) {
+    storedMode = false;
+  }
+
+  applyAstroRedMode(storedMode);
+
+  button.addEventListener('click', () => {
+    applyAstroRedMode(!state.astroRedMode);
   });
 }
 
-// Focus waypoint on map and switch mode if needed
-function focusWaypointOnMap(coords, title) {
-  switchTab('mapa');
-  if (state.mapMode === 'vector') {
-    switchMapMode('leaflet');
-  }
-  setTimeout(() => {
-    if (state.mapInstance) {
-      state.mapInstance.flyTo(coords, 14, { duration: 1.5 });
-      L.popup().setLatLng(coords).setContent(`<b>${title}</b>`).openOn(state.mapInstance);
-    }
-  }, 300);
-}
+function applyAstroRedMode(enabled) {
+  state.astroRedMode = enabled;
+  document.body.classList.toggle('astro-red-mode', enabled);
 
-// 6. Map Mode Switcher (Leaflet vs Vector Croquis Topográfico)
-function initMapModeSwitcher() {
-  const btnLeaflet = document.getElementById('btn-mode-leaflet');
-  const btnVector = document.getElementById('btn-mode-vector');
-
-  if (btnLeaflet) {
-    btnLeaflet.addEventListener('click', () => switchMapMode('leaflet'));
+  const button = document.getElementById('toggle-red-mode');
+  if (button) {
+    button.setAttribute('aria-pressed', String(enabled));
+    button.classList.toggle('border-rose-500/80', enabled);
+    button.classList.toggle('text-rose-400', enabled);
+    button.classList.toggle('bg-rose-950/40', enabled);
+    const label = button.querySelector('span:last-child');
+    if (label) label.textContent = enabled ? 'Modo Nocturno Activo' : 'Modo Nocturno';
   }
-  if (btnVector) {
-    btnVector.addEventListener('click', () => switchMapMode('vector'));
+
+  try {
+    localStorage.setItem('villacasana_red_mode', String(enabled));
+  } catch (err) {
+    // almacenamiento no disponible (modo privado / file://)
   }
 }
 
-function switchMapMode(mode) {
-  state.mapMode = mode;
-  const leafletWrapper = document.getElementById('leaflet-map-wrapper');
-  const vectorWrapper = document.getElementById('vector-croquis-wrapper');
-  const btnLeaflet = document.getElementById('btn-mode-leaflet');
-  const btnVector = document.getElementById('btn-mode-vector');
+// ============================================================
+// PWA: registro del service worker e instalación
+// ============================================================
+let deferredInstallPrompt = null;
 
-  if (mode === 'leaflet') {
-    if (leafletWrapper) leafletWrapper.classList.remove('hidden');
-    if (vectorWrapper) vectorWrapper.classList.add('hidden');
+function initPwaInstall() {
+  const installButton = document.getElementById('pwa-install-btn');
 
-    if (btnLeaflet) {
-      btnLeaflet.className = "px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 text-white shadow-lg transition-all flex items-center gap-2";
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    if (installButton) installButton.classList.remove('hidden');
+  });
+
+  if (installButton) {
+    installButton.addEventListener('click', async () => {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      try {
+        const choice = await deferredInstallPrompt.userChoice;
+        if (choice && choice.outcome === 'accepted' && installButton) {
+          installButton.classList.add('hidden');
+        }
+      } catch (err) {
+        console.warn('Instalación PWA cancelada:', err);
+      }
+      deferredInstallPrompt = null;
+    });
+  }
+
+  window.addEventListener('appinstalled', () => {
+    if (installButton) installButton.classList.add('hidden');
+  });
+
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker
+        .register('./service-worker.js')
+        .catch(err => console.warn('Service Worker no registrado:', err));
+    });
+  }
+}
+
+// ============================================================
+// GPS satelital offline, brújula y telemetría
+// ============================================================
+const VILLA_CASANA_COORDS = [-31.0667, -66.5833];
+
+function initOfflineGpsTracker() {
+  const toggleButton = document.getElementById('gps-toggle-btn');
+  if (!toggleButton) return;
+
+  toggleButton.addEventListener('click', () => {
+    if (state.gpsWatching) stopGpsTracking();
+    else startGpsTracking();
+  });
+
+  setGpsButtonState(false);
+  setGpsStatus(false, 'Activa el rastreador para calcular distancia, azimut y orientación en tiempo real hacia Villa Casana.');
+}
+
+function startGpsTracking() {
+  if (!('geolocation' in navigator)) {
+    setGpsStatus(false, 'Tu navegador no soporta geolocalización satelital.');
+    return;
+  }
+
+  state.gpsWatching = true;
+  setGpsButtonState(true);
+  setGpsStatus(true, 'Buscando señal satelital... Mantente a cielo abierto para una mejor precisión.');
+
+  state.gpsWatchId = navigator.geolocation.watchPosition(
+    handleGpsPosition,
+    handleGpsError,
+    { enableHighAccuracy: true, maximumAge: 5000, timeout: 20000 }
+  );
+
+  // Orientación del dispositivo (brújula digital), si está disponible
+  const orientationHandler = (event) => {
+    if (event.webkitCompassHeading != null) {
+      state.userHeading = event.webkitCompassHeading;
+    } else if (event.alpha != null) {
+      state.userHeading = (360 - event.alpha) % 360;
     }
-    if (btnVector) {
-      btnVector.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white border border-slate-700 transition-all flex items-center gap-2";
+    if (state.userPos) {
+      const bearing = bearingBetween(
+        state.userPos[0], state.userPos[1],
+        VILLA_CASANA_COORDS[0], VILLA_CASANA_COORDS[1]
+      );
+      updateCompass(bearing, state.userHeading);
     }
+  };
 
-    setTimeout(() => {
-      if (state.mapInstance) state.mapInstance.invalidateSize();
-    }, 100);
+  state.gpsOrientationHandler = orientationHandler;
+
+  const attachOrientation = () => {
+    window.addEventListener('deviceorientationabsolute', orientationHandler, true);
+    window.addEventListener('deviceorientation', orientationHandler, true);
+  };
+
+  if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+    DeviceOrientationEvent.requestPermission()
+      .then(permission => { if (permission === 'granted') attachOrientation(); })
+      .catch(() => { /* sin permiso de brújula: seguimos con el rumbo calculado */ });
   } else {
-    if (leafletWrapper) leafletWrapper.classList.add('hidden');
-    if (vectorWrapper) vectorWrapper.classList.remove('hidden');
+    attachOrientation();
+  }
+}
 
-    if (btnLeaflet) {
-      btnLeaflet.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white border border-slate-700 transition-all flex items-center gap-2";
+function stopGpsTracking() {
+  if (state.gpsWatchId != null && 'geolocation' in navigator) {
+    navigator.geolocation.clearWatch(state.gpsWatchId);
+  }
+  state.gpsWatchId = null;
+  state.gpsWatching = false;
+
+  if (state.gpsOrientationHandler) {
+    window.removeEventListener('deviceorientationabsolute', state.gpsOrientationHandler, true);
+    window.removeEventListener('deviceorientation', state.gpsOrientationHandler, true);
+    state.gpsOrientationHandler = null;
+  }
+
+  if (state.gpsMarker && state.mapInstance) {
+    state.mapInstance.removeLayer(state.gpsMarker);
+  }
+  state.gpsMarker = null;
+
+  if (state.gpsAccuracyCircle && state.mapInstance) {
+    state.mapInstance.removeLayer(state.gpsAccuracyCircle);
+  }
+  state.gpsAccuracyCircle = null;
+
+  state.userPos = null;
+  state.userHeading = null;
+
+  setGpsButtonState(false);
+  setGpsStatus(false, 'Rastreo detenido. Puedes reactivarlo cuando lo necesites.');
+  setText('gps-coords-display', 'Esperando GPS...');
+  setText('gps-distance-display', '-- km');
+  setText('gps-speed-display', '0 km/h');
+}
+
+function handleGpsPosition(position) {
+  const { latitude, longitude, accuracy, altitude, speed } = position.coords;
+  state.userPos = [latitude, longitude];
+  state.userAccuracy = accuracy;
+
+  const distance = haversineKm(latitude, longitude, VILLA_CASANA_COORDS[0], VILLA_CASANA_COORDS[1]);
+  const bearing = bearingBetween(latitude, longitude, VILLA_CASANA_COORDS[0], VILLA_CASANA_COORDS[1]);
+
+  setText('gps-coords-display', `${latitude.toFixed(5)}°, ${longitude.toFixed(5)}°`);
+  setText('gps-distance-display', formatDistance(distance));
+  setText('gps-speed-display', `${Math.round((speed || 0) * 3.6)} km/h`);
+  setText('gps-altitude-display', altitude != null ? `${Math.round(altitude)} m` : '-- m');
+  setGpsStatus(true, `Señal activa · precisión ±${Math.round(accuracy || 0)} m`);
+
+  updateCompass(bearing, state.userHeading);
+  updateNextWaypoint(latitude, longitude);
+  updateGpsMarker(state.userPos, accuracy);
+}
+
+function handleGpsError(error) {
+  let message = 'No se pudo obtener la posición GPS.';
+  if (error.code === error.PERMISSION_DENIED) {
+    message = 'Permiso de ubicación denegado. Habilítalo en tu navegador para navegar.';
+  } else if (error.code === error.POSITION_UNAVAILABLE) {
+    message = 'Señal GPS no disponible. Sal a cielo abierto e inténtalo de nuevo.';
+  } else if (error.code === error.TIMEOUT) {
+    message = 'Tiempo de espera agotado buscando satélites. Reintentando...';
+  }
+  setGpsStatus(false, message);
+}
+
+function updateCompass(bearing, heading) {
+  const needle = document.getElementById('gps-compass-needle');
+  const dial = document.getElementById('gps-compass-dial');
+  const label = document.getElementById('gps-bearing-display');
+  const deviceHeading = heading == null ? 0 : heading;
+
+  if (needle) needle.style.transform = `rotate(${((bearing - deviceHeading) % 360 + 360) % 360}deg)`;
+  if (dial) dial.style.transform = `rotate(${-deviceHeading}deg)`;
+  if (label) label.textContent = `${Math.round(bearing)}° (${compassLabel(bearing)})`;
+}
+
+function updateNextWaypoint(latitude, longitude) {
+  let nearest = null;
+  let nearestDistance = Infinity;
+
+  APP_DATA.routeWaypoints.forEach(waypoint => {
+    const distance = haversineKm(latitude, longitude, waypoint.coords[0], waypoint.coords[1]);
+    if (distance < nearestDistance) {
+      nearestDistance = distance;
+      nearest = waypoint;
     }
-    if (btnVector) {
-      btnVector.className = "px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 text-white shadow-lg transition-all flex items-center gap-2";
+  });
+
+  const display = document.getElementById('gps-next-waypoint-display');
+  if (display && nearest) {
+    display.innerHTML = `<span class="font-bold text-amber-400">${nearest.icon} ${nearest.title} (Km ${nearest.km})</span> · a ${formatDistance(nearestDistance)}`;
+  }
+}
+
+function updateGpsMarker(position, accuracy) {
+  if (!state.mapInstance || typeof L === 'undefined') return;
+
+  const icon = L.divIcon({
+    className: 'gps-live-marker',
+    html: `
+      <div style="position: relative; width: 24px; height: 24px;">
+        <span class="radar-ping" style="position: absolute; inset: 0; border-radius: 50%; background: rgba(16, 185, 129, 0.55); display: block;"></span>
+        <span style="position: absolute; inset: 5px; border-radius: 50%; background: #10b981; border: 2px solid #ffffff; box-shadow: 0 0 10px rgba(16,185,129,0.9); display: block;"></span>
+      </div>`,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12]
+  });
+
+  if (!state.gpsMarker) {
+    state.gpsMarker = L.marker(position, { icon, zIndexOffset: 1000 })
+      .addTo(state.mapInstance)
+      .bindPopup('<strong>Tu posición GPS</strong><br>Actualizada en tiempo real.');
+  } else {
+    state.gpsMarker.setLatLng(position);
+  }
+
+  if (accuracy && accuracy > 0) {
+    if (!state.gpsAccuracyCircle) {
+      state.gpsAccuracyCircle = L.circle(position, {
+        radius: accuracy,
+        color: '#10b981',
+        weight: 1,
+        fillColor: '#10b981',
+        fillOpacity: 0.08
+      }).addTo(state.mapInstance);
+    } else {
+      state.gpsAccuracyCircle.setLatLng(position);
+      state.gpsAccuracyCircle.setRadius(accuracy);
     }
   }
 }
 
-// 7. Interactive Vector Topographic Croquis (SVG)
-function initVectorCroquis() {
-  const container = document.getElementById('vector-croquis-canvas-container');
-  if (!container) return;
+function setGpsButtonState(active) {
+  const button = document.getElementById('gps-toggle-btn');
+  if (!button) return;
 
-  // Render high-fidelity SVG Croquis
-  container.innerHTML = `
-    <svg viewBox="0 0 760 620" class="w-full h-auto select-none bg-slate-950 rounded-2xl border border-slate-800/80 shadow-2xl">
-      <defs>
-        <!-- Gradients -->
-        <linearGradient id="roadGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-          <stop offset="0%" stop-color="#3b82f6" />
-          <stop offset="12%" stop-color="#d97706" />
-          <stop offset="85%" stop-color="#f59e0b" />
-          <stop offset="100%" stop-color="#10b981" />
-        </linearGradient>
-        <radialGradient id="beaconGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9" />
-          <stop offset="60%" stop-color="#3b82f6" stop-opacity="0.3" />
-          <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
-        </radialGradient>
-        <pattern id="contourGrid" width="60" height="60" patternUnits="userSpaceOnUse">
-          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-        </pattern>
-      </defs>
+  button.className = active
+    ? 'px-5 py-2.5 rounded-xl text-xs font-bold bg-rose-600/20 hover:bg-rose-600/30 text-rose-300 border border-rose-500/40 transition-all flex items-center gap-2 self-start sm:self-center shadow-lg'
+    : 'px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 transition-all flex items-center gap-2 self-start sm:self-center shadow-lg';
 
-      <!-- Background Grid & Topography -->
-      <rect width="760" height="620" fill="#090d16" />
-      <rect width="760" height="620" fill="url(#contourGrid)" />
+  const icon = active
+    ? '<svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10h6v4H9z"/></svg>'
+    : '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
 
-      <!-- Topographic Contour Lines (Sierras de Los Llanos & Cerro Espeche) -->
-      <g stroke="rgba(217, 119, 6, 0.12)" stroke-width="1.5" fill="none">
-        <!-- Cerro Espeche Elevation Outlines (Top Left) -->
-        <ellipse cx="250" cy="110" rx="90" ry="50" />
-        <ellipse cx="250" cy="110" rx="65" ry="36" />
-        <ellipse cx="250" cy="110" rx="40" ry="22" stroke="rgba(217, 119, 6, 0.25)" />
-        <ellipse cx="250" cy="110" rx="18" ry="10" stroke="rgba(217, 119, 6, 0.45)" fill="rgba(217, 119, 6, 0.05)" />
-        <text x="250" y="113" font-size="9" fill="#f59e0b" text-anchor="middle" font-weight="bold">Cerro Espeche 710m</text>
-
-        <!-- Serranías Orientales (Top Right) -->
-        <path d="M 520,60 Q 580,120 540,240 T 600,380" stroke="rgba(255,255,255,0.05)" />
-        <path d="M 550,80 Q 610,140 570,260 T 630,400" stroke="rgba(255,255,255,0.04)" />
-
-        <!-- Río Seco La Aguadita Bed -->
-        <path d="M 120,440 Q 280,455 450,445 T 700,430" stroke="#0284c7" stroke-width="2" stroke-dasharray="6,6" opacity="0.4" />
-        <text x="560" y="440" font-size="10" fill="#38bdf8" opacity="0.7">Río Seco La Aguadita (Cruce Badén)</text>
-      </g>
-
-      <!-- Side Trails (Huellas Secundarias) -->
-      <!-- Trail to Tuani (4x4) -->
-      <path d="M 370,165 Q 310,120 220,50" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="5,5" fill="none" opacity="0.85" />
-      <text x="225" y="42" font-size="10" fill="#f87171" font-weight="bold">🚙 Travesía a Tuani (Solo 4x4)</text>
-
-      <!-- Trail to Casa de Piedra -->
-      <path d="M 370,170 L 290,150" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" fill="none" />
-      <circle cx="290" cy="150" r="4" fill="#f59e0b" />
-      <text x="280" y="145" font-size="10" fill="#fbbf24" font-weight="bold" text-anchor="end">🪨 Casa de Piedra (Olongastas)</text>
-
-      <!-- Trail to Cascada del Sur -->
-      <path d="M 370,210 Q 430,215 470,230" stroke="#06b6d4" stroke-width="2" stroke-dasharray="4,4" fill="none" />
-      <circle cx="470" cy="230" r="4" fill="#06b6d4" />
-      <text x="480" y="234" font-size="10" fill="#22d3ee" font-weight="bold">💧 Cascada del Sur</text>
-
-      <!-- Main Road Corridor (Chepes -> Villa Casana) -->
-      <!-- Road Outer Glow -->
-      <path d="M 370,550 Q 370,480 375,445 T 365,340 T 375,250 L 370,170" 
-            stroke="rgba(245, 158, 11, 0.2)" stroke-width="12" stroke-linecap="round" fill="none" />
-      <!-- Road Main Line -->
-      <path id="svg-main-route" d="M 370,550 Q 370,480 375,445 T 365,340 T 375,250 L 370,170" 
-            stroke="url(#roadGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-
-      <!-- Distance Scale / Kilometers on Road -->
-      <g fill="#94a3b8" font-size="9" font-family="monospace">
-        <text x="390" y="555">Km 0 (Chepes)</text>
-        <text x="395" y="495">Km 4.5 (Fin Asfalto)</text>
-        <text x="395" y="445">Km 11.2 (Badén)</text>
-        <text x="385" y="345">Km 19.8 (Los Algodones)</text>
-        <text x="395" y="275">Km 27.4 (Piedras)</text>
-        <text x="395" y="215">Km 38.5 (Desvío Cascada)</text>
-        <text x="395" y="175" font-weight="bold" fill="#34d399">Km 40 (Villa Casana)</text>
-      </g>
-
-      <!-- Waypoint Node Markers on Vector Croquis -->
-      <!-- Chepes (Km 0) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('0.0')">
-        <circle cx="370" cy="550" r="8" fill="#2563eb" stroke="#ffffff" stroke-width="2" />
-        <text x="350" y="555" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="end">⛽ CHEPES</text>
-      </g>
-
-      <!-- Fin Asfalto (Km 4.5) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('4.5')">
-        <circle cx="370" cy="495" r="5" fill="#d97706" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Badén La Aguadita (Km 11.2) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('11.2')">
-        <circle cx="375" cy="445" r="5" fill="#0284c7" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Puesto Los Algodones (Km 19.8) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('19.8')">
-        <circle cx="365" cy="340" r="5" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Cañada del Espinillo (Km 27.4) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('27.4')">
-        <circle cx="370" cy="275" r="5" fill="#ca8a04" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Vista Cerro Espeche (Km 34.0) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('34.0')">
-        <circle cx="375" cy="235" r="5" fill="#9333ea" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Desvío Cascada (Km 38.5) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('38.5')">
-        <circle cx="372" cy="210" r="5" fill="#0891b2" stroke="#ffffff" stroke-width="1.5" />
-      </g>
-
-      <!-- Villa Casana Casco (Km 40.0) -->
-      <g class="cursor-pointer" onclick="highlightCroquisWaypoint('40.0')">
-        <circle cx="370" cy="170" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2.5" />
-        <text x="370" y="150" font-size="12" font-weight="900" fill="#34d399" text-anchor="middle">🌴 VILLA CASANA</text>
-        <text x="370" y="135" font-size="9" fill="#a7f3d0" text-anchor="middle">Plaza, Capilla & Escuela</text>
-      </g>
-
-      <!-- Live GPS Satellital Beacon (Moves dynamically when tracking) -->
-      <g id="croquis-user-beacon" class="hidden">
-        <circle id="croquis-beacon-ping" cx="370" cy="550" r="16" fill="url(#beaconGlow)">
-          <animate attributeName="r" values="8;24;8" dur="2s" repeatCount="indefinite" />
-          <animate attributeName="opacity" values="0.8;0.1;0.8" dur="2s" repeatCount="indefinite" />
-        </circle>
-        <circle id="croquis-beacon-center" cx="370" cy="550" r="6" fill="#3b82f6" stroke="#ffffff" stroke-width="2" />
-        <text id="croquis-beacon-label" x="370" y="535" font-size="9" font-weight="bold" fill="#93c5fd" text-anchor="middle">📍 TU POSICIÓN</text>
-      </g>
-
-      <!-- Compass Rose & Scale in Croquis -->
-      <g transform="translate(680, 70)">
-        <circle cx="0" cy="0" r="24" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(245, 158, 11, 0.4)" stroke-width="1.5" />
-        <path d="M 0,-18 L 5,0 L 0,-4 L -5,0 Z" fill="#ef4444" />
-        <path d="M 0,18 L 5,0 L 0,4 L -5,0 Z" fill="#94a3b8" />
-        <text x="0" y="-22" font-size="9" font-weight="bold" fill="#ef4444" text-anchor="middle">N</text>
-        <text x="0" y="30" font-size="8" fill="#94a3b8" text-anchor="middle">S</text>
-      </g>
-
-      <!-- Legend Footer inside SVG -->
-      <g transform="translate(30, 585)" font-size="9" fill="#94a3b8">
-        <circle cx="10" cy="5" r="4" fill="#3b82f6" />
-        <text x="20" y="8">Asfalto</text>
-        <circle cx="85" cy="5" r="4" fill="#d97706" />
-        <text x="95" y="8">Camino Ripio</text>
-        <circle cx="185" cy="5" r="4" fill="#ef4444" />
-        <text x="195" y="8">Huella 4x4</text>
-        <circle cx="275" cy="5" r="4" fill="#0284c7" />
-        <text x="285" y="8">Badén Río Seco</text>
-        <text x="500" y="8" fill="#f59e0b">🧭 100% Vectorial (No requiere internet)</text>
-      </g>
-    </svg>
-  `;
+  button.innerHTML = `${icon} ${active ? 'Detener Navegación GPS' : 'Iniciar Navegación Satelital GPS'}`;
 }
 
-// Highlight waypoint card from croquis click
-function highlightCroquisWaypoint(km) {
-  const cardId = `wp-card-${km.replace('.', '_')}`;
-  const el = document.getElementById(cardId);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    el.classList.add('ring-2', 'ring-amber-400', 'bg-amber-950/20');
-    setTimeout(() => {
-      el.classList.remove('ring-2', 'ring-amber-400', 'bg-amber-950/20');
-    }, 2500);
+function setGpsStatus(active, text) {
+  const badge = document.getElementById('gps-status-badge');
+  const statusText = document.getElementById('gps-status-text');
+
+  if (badge) {
+    badge.className = active
+      ? 'inline-flex items-center gap-2 px-3 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/40'
+      : 'inline-flex items-center gap-2 px-3 py-0.5 rounded-full text-xs font-semibold bg-slate-800 text-slate-400 border border-slate-700';
+    badge.innerHTML = `<span class="w-2 h-2 rounded-full ${active ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'} inline-block"></span> ${active ? 'GPS Activo' : 'GPS en Pausa'}`;
   }
+
+  if (statusText && text) statusText.textContent = text;
 }
 
-// Update user marker coordinates on Vector Croquis
-function updateVectorCroquisUserPos(lat, lon) {
-  const beacon = document.getElementById('croquis-user-beacon');
-  const beaconCenter = document.getElementById('croquis-beacon-center');
-  const beaconPing = document.getElementById('croquis-beacon-ping');
-  const beaconLabel = document.getElementById('croquis-beacon-label');
-
-  if (!beacon || !beaconCenter || !beaconPing || !beaconLabel) return;
-
-  beacon.classList.remove('hidden');
-
-  // Interpolation: Chepes lat: -31.3508 -> Y: 550, Villa Casana lat: -31.0667 -> Y: 170
-  const latStart = -31.3508;
-  const latEnd = -31.0667;
-  const yStart = 550;
-  const yEnd = 170;
-
-  let progress = (lat - latStart) / (latEnd - latStart);
-  progress = Math.max(0, Math.min(1.2, progress)); // Clamp
-
-  const currentY = yStart - (progress * (yStart - yEnd));
-  // Curvature of road in X
-  const currentX = 370 + Math.sin(progress * Math.PI) * 5;
-
-  beaconCenter.setAttribute('cx', currentX);
-  beaconCenter.setAttribute('cy', currentY);
-  beaconPing.setAttribute('cx', currentX);
-  beaconPing.setAttribute('cy', currentY);
-  beaconLabel.setAttribute('x', currentX);
-  beaconLabel.setAttribute('y', currentY - 14);
+function setText(elementId, value) {
+  const element = document.getElementById(elementId);
+  if (element) element.textContent = value;
 }
 
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const earthRadiusKm = 6371;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function bearingBetween(lat1, lon1, lat2, lon2) {
+  const toRad = deg => (deg * Math.PI) / 180;
+  const toDeg = rad => (rad * 180) / Math.PI;
+  const dLon = toRad(lon2 - lon1);
+  const y = Math.sin(dLon) * Math.cos(toRad(lat2));
+  const x = Math.cos(toRad(lat1)) * Math.sin(toRad(lat2)) -
+    Math.sin(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.cos(dLon);
+  return (toDeg(Math.atan2(y, x)) + 360) % 360;
+}
+
+function compassLabel(bearing) {
+  const labels = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSO', 'SO', 'OSO', 'O', 'ONO', 'NO', 'NNO'];
+  return labels[Math.round(bearing / 22.5) % 16];
+}
+
+function formatDistance(km) {
+  if (km < 1) return `${Math.round(km * 1000)} m`;
+  return `${km.toFixed(1)} km`;
+}
+
+// ============================================================
+// Exportación de la ruta offline (GPX / KML)
+// ============================================================
+function xmlEscape(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function downloadFile(filename, content, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+}
+
+function downloadGpxRoute() {
+  const waypoints = APP_DATA.routeWaypoints;
+  const wptXml = waypoints.map(wp => `
+  <wpt lat="${wp.coords[0]}" lon="${wp.coords[1]}">
+    <name>${xmlEscape('Km ' + wp.km + ' - ' + wp.title)}</name>
+    <desc>${xmlEscape(wp.instruction)}</desc>
+    <sym>${xmlEscape(wp.type)}</sym>
+  </wpt>`).join('');
+
+  const trkpts = waypoints.map(wp => `
+      <trkpt lat="${wp.coords[0]}" lon="${wp.coords[1]}">
+        <ele>${parseInt(wp.elevation, 10) || 650}</ele>
+        <name>${xmlEscape(wp.title)}</name>
+      </trkpt>`).join('');
+
+  const gpx = `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Villa Casana Turismo PWA" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Ruta Chepes - Villa Casana (Los Llanos, La Rioja)</name>
+    <desc>Rutometro de 11 hitos entre Chepes y Villa Casana. Uso offline en OsmAnd, Organic Maps, Garmin o Gaia GPS.</desc>
+  </metadata>${wptXml}
+  <trk>
+    <name>Chepes - Villa Casana</name>
+    <trkseg>${trkpts}
+    </trkseg>
+  </trk>
+</gpx>`;
+
+  downloadFile('villa-casana-ruta-chepes.gpx', gpx, 'application/gpx+xml');
+}
+
+function downloadKmlRoute() {
+  const waypoints = APP_DATA.routeWaypoints;
+  const placemarks = waypoints.map(wp => `
+    <Placemark>
+      <name>${xmlEscape('Km ' + wp.km + ' - ' + wp.title)}</name>
+      <description>${xmlEscape(wp.instruction + ' | ' + wp.warning)}</description>
+      <Point><coordinates>${wp.coords[1]},${wp.coords[0]},0</coordinates></Point>
+    </Placemark>`).join('');
+
+  const lineCoords = waypoints.map(wp => `${wp.coords[1]},${wp.coords[0]},0`).join(' ');
+
+  const kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ruta Chepes - Villa Casana</name>
+    <description>Rutometro turistico de Villa Casana, Dpto. Rosario Vera Penaloza, La Rioja, Argentina.</description>${placemarks}
+    <Placemark>
+      <name>Trazado Chepes - Villa Casana</name>
+      <LineString>
+        <tessellate>1</tessellate>
+        <coordinates>${lineCoords}</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>`;
+
+  downloadFile('villa-casana-ruta-chepes.kml', kml, 'application/vnd.google-earth.kml+xml');
+}

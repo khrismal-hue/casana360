@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v7';
+const CACHE_NAME = 'casana360-pwa-v8';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -90,7 +90,8 @@ const CORE_ASSETS = [
   // Cielos nocturnos y oficios artesanales
   './images/cielo-nocturno-2.jpg',
   './images/cielo-nocturno-3.jpg',
-  './images/artesano.jpg',
+  './images/ignacio-ruarte.jpg',
+  './images/ignacio-y-jesus-ruarte.jpg',
   './images/vicenta-pereyra.jpg'
 ];
 

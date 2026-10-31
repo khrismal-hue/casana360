@@ -43,9 +43,10 @@ Diseñada para turistas, aventureros, senderistas y amantes de la naturaleza y e
 - **Relatos Fundacionales:** El pasado Olongasta en la Casa de Piedra, la historia de la primera escuela rural (35 años de vocación docente), la devoción a la Virgen del Carmen y la botica natural del monte (jarilla, tusca, chañar y algarroba).
 - **Directorio de Servicios & Medios:** Policía, hospital, bomberos, turismo y enlace directo a Radio Orion FM 98.7 Chepes.
 
-### 7. 🎬 Video Documental: Vicenta Pereyra, Artesana de Villa Casana
-- **Oficios que perduran:** Sección dedicada a Vicenta Pereyra con su retrato, una miniatura enlazada al video de YouTube y el enlace al canal de la **Secretaría de Culturas de La Rioja**.
-- **Memoria artesanal:** Texto de presentación sobre la rueca, las fibras naturales y el telar criollo como parte de la identidad del pueblo.
+### 7. 🎬 Videos Documentales: Artesanos de Villa Casana
+- **Serie "Gestos del oficio":** Sección dedicada a los artesanos reconocidos del pueblo, con retrato, miniatura enlazada a YouTube y ficha informativa.
+- **Vicenta Pereyra:** Artesana de Villa Casana; su video retrata la rueca, las fibras naturales y el telar criollo como parte de la identidad del pueblo.
+- **Ignacio y Jesús Ruarte:** Ignacio Ruarte, reconocido artesano de Villa Casana, junto a Jesús Ruarte, protagonizan el segundo capítulo de la serie.
 - **Galería del cielo nocturno:** Nuevas fotografías del firmamento de Villa Casana integradas en la pestaña de Astroturismo.
 
 ---
@@ -64,8 +65,9 @@ una foto, copiala dentro de `images/` con el mismo nombre del archivo actual:
 * `cielo-nocturno.jpg` -> Foto del cielo estrellado
 * `cielo-nocturno-2.jpg` / `cielo-nocturno-3.jpg` -> Galería del cielo nocturno
 * `cabrito-1.jpg` / `cabrito-2.jpg` -> Galería del cabrito asado
-* `artesano.jpg` -> Retrato de Vicenta Pereyra
-* `vicenta-pereyra.jpg` -> Miniatura del video documental
+* `ignacio-ruarte.jpg` -> Retrato de Ignacio Ruarte
+* `ignacio-y-jesus-ruarte.jpg` -> Miniatura del video de Ignacio y Jesús Ruarte
+* `vicenta-pereyra.jpg` -> Miniatura y retrato de Vicenta Pereyra
 
 Si una foto falta, la app usa una imagen local de respaldo (no depende de
 internet). Los créditos y licencias de las fotos de gastronomía están en

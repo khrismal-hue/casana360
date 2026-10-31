@@ -388,18 +388,35 @@ const APP_DATA = {
     }
   ],
 
-  // Video documental: Vicenta Pereyra, artesana de Villa Casana
-  artesanaVideo: {
-    title: "Vicenta Pereyra. Artesana de Villa Casana",
-    author: "Secretaría de Culturas La Rioja",
-    authorUrl: "https://www.youtube.com/@secretariadeculturaslarioj9257",
-    videoUrl: "https://youtu.be/GF2daJKgbQ4",
-    embedUrl: "https://www.youtube.com/embed/GF2daJKgbQ4",
-    thumbnail: "./images/vicenta-pereyra.jpg",
-    portrait: "./images/artesano.jpg",
-    resumen: "Un registro audiovisual de la Secretaría de Culturas de La Rioja que retrata a Vicenta Pereyra, artesana de Villa Casana, y el valor de los oficios que se transmiten de mano en mano.",
-    descripcion: "En el corazón de Los Llanos riojanos, Vicenta Pereyra mantiene vivo el saber artesanal de Villa Casana. La rueca, las fibras naturales y el telar criollo son parte de una memoria familiar que se aprende mirando y haciendo, y que hoy sigue dando forma a mantas, ponchos y piezas únicas. Este video invita a conocer su taller, su historia y el orgullo de un oficio que sostiene la identidad del pueblo."
-  },
+  // Serie documental "Gestos del oficio": artesanos de Villa Casana
+  artesanos: [
+    {
+      id: "vicenta-pereyra",
+      nombre: "Vicenta Pereyra",
+      role: "Artesana de Villa Casana",
+      title: "Vicenta Pereyra. Artesana de Villa Casana",
+      author: "Secretaría de Culturas La Rioja",
+      authorUrl: "https://www.youtube.com/@secretariadeculturaslarioj9257",
+      videoUrl: "https://youtu.be/GF2daJKgbQ4",
+      thumbnail: "./images/vicenta-pereyra.jpg",
+      portrait: "./images/vicenta-pereyra.jpg",
+      resumen: "Un registro audiovisual de la Secretaría de Culturas de La Rioja que retrata a Vicenta Pereyra, artesana de Villa Casana, y el valor de los oficios que se transmiten de mano en mano.",
+      descripcion: "En el corazón de Los Llanos riojanos, Vicenta Pereyra mantiene vivo el saber artesanal de Villa Casana. La rueca, las fibras naturales y el telar criollo son parte de una memoria familiar que se aprende mirando y haciendo, y que hoy sigue dando forma a mantas, ponchos y piezas únicas. Este video invita a conocer su taller, su historia y el orgullo de un oficio que sostiene la identidad del pueblo."
+    },
+    {
+      id: "ignacio-jesus-ruarte",
+      nombre: "Ignacio Ruarte",
+      role: "Artesano de Villa Casana",
+      title: "Ignacio y Jesús Ruarte. Artesanos de Villa Casana",
+      author: "Secretaría de Culturas La Rioja",
+      authorUrl: "https://www.youtube.com/@secretariadeculturaslarioj9257",
+      videoUrl: "https://youtu.be/HVSGEuszpuQ",
+      thumbnail: "./images/ignacio-y-jesus-ruarte.jpg",
+      portrait: "./images/ignacio-ruarte.jpg",
+      resumen: "Ignacio Ruarte, reconocido artesano de Villa Casana, junto a Jesús Ruarte, protagonizan este capítulo del ciclo «Gestos del oficio» de la Secretaría de Culturas de La Rioja.",
+      descripcion: "Desde Villa Casana, Ignacio y Jesús Ruarte comparten el orgullo de un oficio aprendido en familia. Sus manos conservan gestos ancestrales que forman parte de la identidad del pueblo y que merecen ser conocidos, valorados y transmitidos a las nuevas generaciones."
+    }
+  ],
 
   // Gastronomía típica de Los Llanos Riojanos
   gastronomia: [
@@ -645,7 +662,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAttractions();
   renderLocalContacts();
   renderHistoryAndLegends();
-  renderArtesanaVideo();
+  renderArtesanos();
   renderGastronomia();
   loadGastronomiaData();
   renderStars();
@@ -837,14 +854,13 @@ function renderHistoryAndLegends() {
   `).join('');
 }
 
-// Render the artisan documentary section (Vicenta Pereyra)
-function renderArtesanaVideo() {
+// Render the artisan documentary section ("Gestos del oficio")
+function renderArtesanos() {
   const container = document.getElementById('artesana-video-section');
   if (!container) return;
-  const v = APP_DATA.artesanaVideo;
-  if (!v) return;
+  if (!Array.isArray(APP_DATA.artesanos) || APP_DATA.artesanos.length === 0) return;
 
-  container.innerHTML = `
+  container.innerHTML = APP_DATA.artesanos.map(v => `
     <div class="glass-panel rounded-3xl overflow-hidden border border-amber-500/20">
       <div class="grid grid-cols-1 lg:grid-cols-5">
         <a href="${v.videoUrl}" target="_blank" rel="noopener noreferrer" class="relative block lg:col-span-3 group bg-slate-950 min-h-[260px] lg:min-h-[360px]" title="Ver el video en YouTube">
@@ -865,18 +881,18 @@ function renderArtesanaVideo() {
             </span>
           </span>
           <span class="absolute bottom-4 left-4 right-4 text-white">
-            <span class="block text-[10px] font-bold uppercase tracking-wider text-amber-300">Documental &middot; Secretaría de Culturas</span>
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-amber-300">Gestos del oficio &middot; Secretaría de Culturas</span>
             <span class="block text-lg sm:text-xl font-bold leading-tight mt-0.5">${v.title}</span>
           </span>
         </a>
 
         <div class="lg:col-span-2 p-6 sm:p-8 space-y-4 flex flex-col">
           <div class="flex items-center gap-3">
-            <img src="${v.portrait}" alt="Vicenta Pereyra, artesana de Villa Casana" class="w-14 h-14 rounded-full object-cover ring-2 ring-amber-500/50" loading="lazy" />
+            <img src="${v.portrait}" alt="${v.nombre}, ${v.role}" class="w-14 h-14 rounded-full object-cover ring-2 ring-amber-500/50" loading="lazy" />
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 block">Oficios que perduran</span>
-              <h3 class="text-xl font-black text-slate-100 leading-tight">Vicenta Pereyra</h3>
-              <span class="text-xs text-slate-400">Artesana de Villa Casana</span>
+              <h3 class="text-xl font-black text-slate-100 leading-tight">${v.nombre}</h3>
+              <span class="text-xs text-slate-400">${v.role}</span>
             </div>
           </div>
           <p class="text-sm text-slate-300 leading-relaxed">${v.resumen}</p>
@@ -893,7 +909,7 @@ function renderArtesanaVideo() {
         </div>
       </div>
     </div>
-  `;
+  `).join('');
 }
 
 // Carga la ficha gastronómica desde el archivo de datos compartido.

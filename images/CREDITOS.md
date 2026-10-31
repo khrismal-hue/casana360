@@ -31,11 +31,13 @@ del proyecto.
 
 | Recurso | Obra | Autor | Uso |
 | --- | --- | --- | --- |
-| `vicenta-pereyra.jpg` | Miniatura de "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Miniatura enlazada al video original |
-| Video | "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Enlace y ficha informativa |
-| `artesano.jpg` | Retrato de la artesana | Aportada por el proyecto | Sección "Oficios que perduran" |
+| `vicenta-pereyra.jpg` | Miniatura de "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Miniatura, retrato y enlace al video original |
+| `ignacio-y-jesus-ruarte.jpg` | Miniatura de "Ignacio y Jesús Ruarte. Artesanos de Villa Casana" | Secretaría de Culturas La Rioja | Miniatura y enlace al video original |
+| Video | "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Ficha informativa de la serie "Gestos del oficio" |
+| Video | "Ignacio y Jesús Ruarte. Artesanos de Villa Casana" | Secretaría de Culturas La Rioja | Ficha informativa de la serie "Gestos del oficio" |
+| `ignacio-ruarte.jpg` | Retrato de Ignacio Ruarte | Aportada por el proyecto | Sección "Oficios que perduran" |
 | `cabrito-1.jpg`, `cabrito-2.jpg` | Cabrito asado | Aportadas por el proyecto | Galería gastronómica |
 | `cielo-nocturno-2.jpg`, `cielo-nocturno-3.jpg` | Cielos nocturnos de Villa Casana | Aportadas por el proyecto | Galería de astroturismo |
 
-Video original: https://youtu.be/GF2daJKgbQ4  
+Videos originales: https://youtu.be/GF2daJKgbQ4 y https://youtu.be/HVSGEuszpuQ  
 Canal: https://www.youtube.com/@secretariadeculturaslarioj9257

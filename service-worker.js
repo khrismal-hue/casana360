@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v8';
+const CACHE_NAME = 'casana360-pwa-v11';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -106,11 +106,16 @@ const CDN_ASSETS = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
-      // Primero cacheamos los recursos locales esenciales de forma garantizada
-      try {
-        await cache.addAll(CORE_ASSETS);
-      } catch (err) {
-        console.warn('Advertencia precacheando assets locales:', err);
+      // Primero cacheamos los recursos locales esenciales de forma garantizada.
+      // Se agregan uno por uno para que un recurso faltante no invalide todo el precache.
+      const localResults = await Promise.allSettled(
+        CORE_ASSETS.map((asset) => cache.add(asset))
+      );
+      const localFailures = localResults
+        .map((result, index) => (result.status === 'rejected' ? CORE_ASSETS[index] : null))
+        .filter(Boolean);
+      if (localFailures.length) {
+        console.warn('Advertencia precacheando assets locales:', localFailures);
       }
 
       // Intentamos cachear los CDN de forma tolerante a fallos

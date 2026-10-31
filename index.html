@@ -6,6 +6,26 @@
   <title>Villa Casana Turismo - La Rioja | Naturaleza, 4x4 y Astroturismo</title>
   
   <meta name="description" content="Guía turística de Villa Casana, departamento Rosario Vera Peñaloza, La Rioja. Descubre el Cerro Espeche, circuitos 4x4, cielos estrellados de clase Bortle 1 y auténtica vida rural.">
+  <meta name="author" content="Villa Casana Turismo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khrismal-hue.github.io/casana360/">
+
+  <!-- Open Graph / Redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Villa Casana Turismo">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Villa Casana · Naturaleza, 4x4 y astroturismo en La Rioja">
+  <meta property="og:description" content="Sierras, huellas 4x4, sabores de horno de barro y cielos Bortle 1. La guía completa de Villa Casana, La Rioja.">
+  <meta property="og:url" content="https://khrismal-hue.github.io/casana360/">
+  <meta property="og:image" content="https://khrismal-hue.github.io/casana360/images/cerro-espeche-nuevo.jpg">
+  <meta property="og:image:alt" content="Vista panorámica del Cerro Espeche en Villa Casana">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Villa Casana · Naturaleza, 4x4 y astroturismo en La Rioja">
+  <meta name="twitter:description" content="Sierras, huellas 4x4, sabores de horno de barro y cielos Bortle 1. La guía completa de Villa Casana, La Rioja.">
+  <meta name="twitter:image" content="https://khrismal-hue.github.io/casana360/images/cerro-espeche-nuevo.jpg">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preload" as="image" href="./images/cerro-espeche-nuevo.jpg" fetchpriority="high">
   <meta name="theme-color" content="#d97706">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -44,30 +64,54 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="./styles.css">
+
+  <!-- Datos estructurados para buscadores -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    "name": "Villa Casana",
+    "description": "Pueblo rural de Los Llanos riojanos con sierras, circuitos 4x4, patrimonio olongasta y cielos de escala Bortle 1.",
+    "url": "https://khrismal-hue.github.io/casana360/",
+    "image": "https://khrismal-hue.github.io/casana360/images/cerro-espeche-nuevo.jpg",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -31.0667,
+      "longitude": -66.5833
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villa Casana",
+      "addressRegion": "La Rioja",
+      "addressCountry": "AR"
+    },
+    "touristType": ["Naturaleza", "Astroturismo", "Aventura 4x4", "Turismo rural"],
+    "includesAttraction": [
+      { "@type": "TouristAttraction", "name": "Cerro Espeche" },
+      { "@type": "TouristAttraction", "name": "La Casa de Piedra y Aleros Olongastas" },
+      { "@type": "TouristAttraction", "name": "Capilla Nuestra Señora del Carmen" },
+      { "@type": "TouristAttraction", "name": "Río La Junta" }
+    ]
+  }
+  </script>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-slate-950 pb-20 md:pb-0">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-slate-950 pb-20 lg:pb-0">
 
   <!-- TOP HEADER / NAVBAR -->
   <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
-      <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('explorar')">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-600/30 text-slate-950 font-black text-xl">
-          VC
-        </div>
-        <div>
-          <span class="text-lg font-black tracking-tight bg-gradient-to-r from-amber-400 via-amber-200 to-orange-400 bg-clip-text text-transparent">
-            Villa Casana
-          </span>
-          <span class="block text-[11px] font-semibold text-amber-300/90 tracking-wide -mt-0.5">
-            Donde el tiempo todavía saluda por el nombre
-          </span>
-        </div>
-      </div>
+      <button type="button" class="brand" onclick="switchTab('explorar')">
+        <img src="./icon.svg" alt="" width="40" height="40" class="brand-mark" />
+        <span class="brand-text">
+          <span class="brand-name">Villa Casana</span>
+          <span class="brand-tag">Donde el tiempo todavía saluda por el nombre</span>
+        </span>
+      </button>
 
       <!-- Desktop Nav Tabs -->
-      <nav class="hidden md:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold">
+      <nav class="hidden lg:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold">
         <button data-tab="explorar" class="nav-tab-btn px-3 py-2 rounded-lg text-amber-500 border-b-2 border-amber-500 transition-all flex items-center gap-1.5">
           <span>🌄</span> Atractivos
         </button>
@@ -110,106 +154,157 @@
     <!-- ========================================== -->
     <section id="tab-explorar" class="tab-panel space-y-10">
 
-      <!-- Hero Section with Canvas Starry Background -->
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 p-6 sm:p-12 shadow-2xl">
-        <canvas id="sky-canvas"></canvas>
-        
-        <div class="relative z-10 max-w-3xl space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-            Interior Riojano • Dpto. Rosario Vera Peñaloza
+      <!-- Hero Section: photo-led premium -->
+      <div class="hero-shell">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <canvas id="sky-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <div class="hero-badge reveal">
+              <span class="hero-badge-dot"></span>
+              Interior riojano · Dpto. Rosario Vera Peñaloza
+            </div>
+
+            <h1 class="hero-title reveal" style="transition-delay:80ms">
+              <span class="hero-title-eyebrow">Descubrí</span>
+              <span class="hero-title-name">Villa Casana</span>
+              <span class="hero-title-sub">«Donde el tiempo todavía saluda por el nombre»</span>
+            </h1>
+
+            <p class="hero-lede reveal" style="transition-delay:160ms">
+              Un remanso de paz entre sierras, palmeras y cielos imposibles. Pasado olongasta,
+              trekking al <strong>Cerro Espeche</strong>, huellas <strong>4x4</strong>,
+              sabores de horno de barro y uno de los cielos más limpios del planeta.
+            </p>
+
+            <div class="hero-actions reveal" style="transition-delay:240ms">
+              <button onclick="switchTab('mapa')" class="btn-primary">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                Cómo llegar desde Chepes
+              </button>
+              <button onclick="switchTab('astroturismo')" class="btn-ghost">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                Explorar el cielo
+              </button>
+            </div>
+
+            <div class="hero-stats reveal" style="transition-delay:320ms">
+              <div class="hero-stat">
+                <span class="hero-stat-value"><span data-count-to="40">40</span><small>km</small></span>
+                <span class="hero-stat-label">Desde Chepes</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value"><span data-count-to="1">1</span><small>Bortle</small></span>
+                <span class="hero-stat-label">Cielo prístino</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value"><span data-count-to="680">680</span><small>m</small></span>
+                <span class="hero-stat-label">Altitud media</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value"><span data-count-to="100">100</span><small>%</small></span>
+                <span class="hero-stat-label">Vida auténtica</span>
+              </div>
+            </div>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl font-black text-slate-50 tracking-tight leading-tight">
-            Descubre <span class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-500 bg-clip-text text-transparent">Villa Casana</span>
-            <span class="block text-xl sm:text-2xl font-serif italic text-amber-200/90 font-normal mt-1">«Donde el tiempo todavía saluda por el nombre»</span>
-          </h1>
-
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Un remanso de paz en las sierras del sur riojano donde el tiempo camina despacio. Descubre el pasado olongasta en la milenaria 
-            <strong class="text-amber-300">Casa de Piedra</strong>, senderismo hacia el imponente 
-            <strong class="text-amber-300">Cerro Espeche</strong>, la fe comunitaria en la <strong class="text-amber-300">Capilla Ntra. Sra. del Carmen</strong>, travesías <strong class="text-amber-300">4x4 y cicloturismo</strong> por huellas del monte, 
-            el aroma a pan casero en horno de barro y uno de los <strong class="text-amber-300">cielos más limpios del planeta</strong>.
-          </p>
-
-          <!-- Quick Metrics Bar -->
-          <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <div class="glass-card p-3 rounded-xl">
-              <span class="text-xs text-slate-400 block">Distancia</span>
-              <span class="text-base font-bold text-amber-400">40 km de Chepes</span>
+          <aside class="hero-card reveal" style="transition-delay:220ms" aria-label="Ficha rápida del destino">
+            <div class="hero-card-head">
+              <span class="hero-card-kicker">Ficha del destino</span>
+              <span class="hero-live"><span></span> En línea</span>
             </div>
-            <div class="glass-card p-3 rounded-xl">
-              <span class="text-xs text-slate-400 block">Calidad de Cielo</span>
-              <span class="text-base font-bold text-amber-400">Bortle Clase 1</span>
-            </div>
-            <div class="glass-card p-3 rounded-xl">
-              <span class="text-xs text-slate-400 block">Altitud Media</span>
-              <span class="text-base font-bold text-amber-400">~680 m.s.n.m.</span>
-            </div>
-            <div class="glass-card p-3 rounded-xl">
-              <span class="text-xs text-slate-400 block">Experiencia</span>
-              <span class="text-base font-bold text-amber-400">100% Auténtica</span>
-            </div>
-          </div>
-
-          <div class="pt-2 flex flex-wrap gap-3">
-            <button onclick="switchTab('mapa')" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-600/25 flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-              Cómo llegar desde Chepes
+            <h2>Un pueblo, cuatro mundos</h2>
+            <ul class="hero-card-list">
+              <li><span>⛰️</span><div><strong>Sierras y quebradas</strong><small>Cerro Espeche, Vallecito y La Batea</small></div></li>
+              <li><span>🚙</span><div><strong>4x4 y cicloturismo</strong><small>40 km de huellas y badenes</small></div></li>
+              <li><span>✨</span><div><strong>Astroturismo Bortle 1</strong><small>Vía Láctea a simple vista</small></div></li>
+              <li><span>🏛️</span><div><strong>Memoria olongasta</strong><small>Casa de Piedra y petroglifos</small></div></li>
+            </ul>
+            <button onclick="switchTab('planificador')" class="hero-card-cta">
+              Planificar mi viaje <span aria-hidden="true">→</span>
             </button>
-            <button onclick="switchTab('astroturismo')" class="bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-500/40 font-semibold px-5 py-2.5 rounded-xl transition-all flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-              Modo Cielos Limpios
-            </button>
-          </div>
+          </aside>
         </div>
+
+        <div class="hero-scroll-cue" aria-hidden="true"><span></span> Deslizá para explorar</div>
       </div>
 
       <!-- Category Filter Pills -->
-      <div class="space-y-4">
-        <div class="flex items-center justify-between flex-wrap gap-2">
+      <div class="space-y-5">
+        <div class="section-heading reveal">
           <div>
-            <h2 class="text-2xl font-bold text-slate-100">Circuitos y Experiencias</h2>
-            <p class="text-sm text-slate-400">Selecciona una categoría para explorar los puntos clave de la villa</p>
+            <span class="section-kicker">Qué hacer</span>
+            <h2>Circuitos y experiencias</h2>
+            <p>Elegí una categoría y descubrí los puntos clave de Villa Casana.</p>
           </div>
-          <div class="flex items-center gap-2 overflow-x-auto pb-2">
-            <button onclick="setFilter('todos')" data-cat="todos" class="filter-pill bg-amber-600 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all shadow">
-              Todos
-            </button>
-            <button onclick="setFilter('naturaleza')" data-cat="naturaleza" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
-              ⛰️ Naturaleza & Trekking
-            </button>
-            <button onclick="setFilter('aventura')" data-cat="aventura" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
-              🚙 4x4 y Cicloturismo
-            </button>
-            <button onclick="setFilter('astronomia')" data-cat="astronomia" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
-              ✨ Astroturismo
-            </button>
-            <button onclick="setFilter('cultura')" data-cat="cultura" class="filter-pill bg-slate-800 text-slate-300 hover:text-white px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all">
-              🏛️ Olongastas, Historia & Sabores
-            </button>
-          </div>
+          <span id="attractions-count" class="section-count">13 experiencias</span>
+        </div>
+
+        <div class="filter-row reveal" role="group" aria-label="Filtrar atractivos por categoría">
+          <button onclick="setFilter('todos')" data-cat="todos" class="filter-pill is-active" aria-pressed="true">Todos</button>
+          <button onclick="setFilter('naturaleza')" data-cat="naturaleza" class="filter-pill" aria-pressed="false">⛰️ Naturaleza</button>
+          <button onclick="setFilter('aventura')" data-cat="aventura" class="filter-pill" aria-pressed="false">🚙 4x4 y cicloturismo</button>
+          <button onclick="setFilter('astronomia')" data-cat="astronomia" class="filter-pill" aria-pressed="false">✨ Astroturismo</button>
+          <button onclick="setFilter('cultura')" data-cat="cultura" class="filter-pill" aria-pressed="false">🏛️ Historia y sabores</button>
         </div>
 
         <!-- Dynamic Attractions Grid -->
-        <div id="attractions-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="attractions-grid" class="attractions-grid">
           <!-- Populated dynamically via app.js -->
         </div>
       </div>
 
-      <!-- Rural Life Quote Banner from Orion FM Chepes -->
-      <div class="glass-panel p-6 sm:p-8 rounded-2xl border-l-4 border-amber-500 flex flex-col sm:flex-row items-center gap-6">
-        <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-3xl">
-          🌾
+      <!-- POSTALES DE VILLA CASANA -->
+      <div class="space-y-5">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">Galería</span>
+            <h2>Postales de Villa Casana</h2>
+            <p>Ocho imágenes para entender por qué este rincón de La Rioja se queda en la memoria.</p>
+          </div>
+          <span class="section-count">Tocá una foto para ampliarla</span>
         </div>
-        <div class="space-y-1 text-center sm:text-left">
-          <h3 class="text-lg font-bold text-slate-100 italic">"Donde el mate se comparte sin mirar la hora y el saludo es obligatorio"</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Entre caminos de tierra, amaneceres pintados de naranja y el aroma del pan recién horneado a leña, Villa Casana conserva la magia 
-            de los pueblos donde todos se conocen. Silencios que abrazan, burros caminando tranquilos por las calles, huertas familiares que 
-            alimentan con verduras frescas cultivadas por manos locales y cielos capaces de emocionar.
+        <div id="postcards-grid" class="postcard-grid reveal"></div>
+      </div>
+
+      <!-- QUICK ACCESS -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <button onclick="switchTab('mapa')" class="quick-card reveal">
+          <span class="quick-card-icon">🧭</span>
+          <span class="quick-card-kicker">Sin señal, sin problema</span>
+          <span class="quick-card-title">Rutas GPS offline</span>
+          <span class="quick-card-desc">Rutómetro km a km, brújula satelital y descarga GPX/KML.</span>
+          <span class="quick-card-link">Abrir mapa <span aria-hidden="true">→</span></span>
+        </button>
+        <button onclick="switchTab('astroturismo')" class="quick-card reveal" style="transition-delay:80ms">
+          <span class="quick-card-icon">✨</span>
+          <span class="quick-card-kicker">Cielo Bortle 1</span>
+          <span class="quick-card-title">Astroturismo</span>
+          <span class="quick-card-desc">Simulador del domo celeste, guía de la Cruz del Sur y fotografía nocturna.</span>
+          <span class="quick-card-link">Mirar el cielo <span aria-hidden="true">→</span></span>
+        </button>
+        <button onclick="switchTab('planificador')" class="quick-card reveal" style="transition-delay:160ms">
+          <span class="quick-card-icon">🎒</span>
+          <span class="quick-card-kicker">Antes de salir</span>
+          <span class="quick-card-title">Planificador de viaje</span>
+          <span class="quick-card-desc">Checklist interactivo, clima, distancias y código de convivencia rural.</span>
+          <span class="quick-card-link">Preparar el viaje <span aria-hidden="true">→</span></span>
+        </button>
+      </div>
+
+      <!-- Rural Life Quote Banner from Orion FM Chepes -->
+      <div class="quote-band reveal">
+        <div class="quote-icon" aria-hidden="true">🌾</div>
+        <div class="space-y-2">
+          <p class="quote-text">«Donde el mate se comparte sin mirar la hora y el saludo es obligatorio»</p>
+          <p class="quote-copy">
+            Entre caminos de tierra, amaneceres pintados de naranja y el aroma del pan recién horneado a leña,
+            Villa Casana conserva la magia de los pueblos donde todos se conocen. Silencios que abrazan,
+            burros caminando tranquilos por las calles y cielos capaces de emocionar.
           </p>
-          <span class="text-[11px] text-amber-400 font-semibold block pt-1">— Crónica especial de Orion FM Chepes</span>
+          <span class="quote-source">Crónica especial de Orion FM Chepes</span>
         </div>
       </div>
 
@@ -887,15 +982,43 @@
 
   </main>
 
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
   <!-- MODAL FOR ATTRACTION DETAILS -->
-  <div id="item-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden transition-opacity">
-    <div id="item-modal-content" class="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+  <div id="item-modal" class="item-modal hidden" aria-hidden="true">
+    <div id="item-modal-content" class="item-modal-panel" role="document">
       <!-- Injected dynamically via openAttractionModal(id) -->
     </div>
   </div>
 
+  <!-- FULLSCREEN PHOTO LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Galería de postales de Villa Casana">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar galería">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" onclick="stepLightbox(-1)" aria-label="Foto anterior">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" alt="" />
+      <figcaption class="lightbox-caption">
+        <span id="lightbox-title"></span>
+        <span id="lightbox-counter" class="lightbox-counter"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" onclick="stepLightbox(1)" aria-label="Foto siguiente">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Volver arriba">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
   <!-- MOBILE BOTTOM NAVIGATION BAR -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-lg border-t border-slate-800/80 px-2 py-2 flex items-center justify-around">
+  <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-lg border-t border-slate-800/80 px-2 py-2 flex items-center justify-around">
     
     <button data-tab="explorar" class="mobile-nav-btn nav-tab-btn flex flex-col items-center gap-1 py-1 px-2 text-amber-400 text-[10px] font-semibold">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -925,12 +1048,48 @@
   </nav>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500 space-y-2">
-    <div class="flex items-center justify-center gap-2">
-      <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-      <span class="font-bold text-slate-400">Villa Casana • Departamento Rosario Vera Peñaloza • La Rioja</span>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-brand">
+        <div class="flex items-center gap-3">
+          <img src="./icon.svg" alt="" width="44" height="44" class="brand-mark" />
+          <div>
+            <span class="brand-name">Villa Casana</span>
+            <span class="brand-tag">La Rioja, Argentina</span>
+          </div>
+        </div>
+        <p>Turismo rural comunitario, circuitos serranos y conservación de cielos nocturnos en el corazón de Los Llanos riojanos.</p>
+      </div>
+
+      <nav class="site-footer-col" aria-label="Secciones">
+        <h3>Explorar</h3>
+        <button onclick="switchTab('explorar')">Atractivos</button>
+        <button onclick="switchTab('mapa')">Rutas y mapa offline</button>
+        <button onclick="switchTab('astroturismo')">Astroturismo</button>
+        <button onclick="switchTab('planificador')">Planificador</button>
+        <button onclick="switchTab('cultura')">Tradición y servicios</button>
+      </nav>
+
+      <div class="site-footer-col">
+        <h3>Información útil</h3>
+        <a href="https://es.wikiloc.com/rutas-todo-terreno/casa-de-piedra-villa-casana-15673850" target="_blank" rel="noopener noreferrer">Track 4x4 en Wikiloc</a>
+        <a href="https://maps.google.com/?q=-31.0667,-66.5833" target="_blank" rel="noopener noreferrer">Ubicación en Google Maps</a>
+        <a href="https://orionfmchepes.com.ar" target="_blank" rel="noopener noreferrer">Radio Orion FM 98.7</a>
+        <a href="./images/CREDITOS.md">Créditos de imágenes</a>
+      </div>
+
+      <div class="site-footer-col">
+        <h3>Contacto local</h3>
+        <a href="https://wa.me/5493821495845" target="_blank" rel="noopener noreferrer">Estefanía Ávila · 3821 495845</a>
+        <span>Emergencias: 101 · 107 · 100</span>
+        <span>Chepes · Dpto. Rosario Vera Peñaloza</span>
+      </div>
     </div>
-    <p>Turismo Rural Comunitario, Circuitos Serranos y Conservación de Cielos Nocturnos.</p>
+
+    <div class="site-footer-bottom">
+      <span>© 2026 Villa Casana · La Rioja, Argentina</span>
+      <span>Hecho con orgullo en el interior del interior.</span>
+    </div>
   </footer>
 
   <!-- Application Script -->

@@ -4,6 +4,34 @@ Aplicación web turística interactiva y Progressive Web App (PWA) dedicada a **
 
 Diseñada para turistas, aventureros, senderistas y amantes de la naturaleza y el astroturismo.
 
+> **Sitio publicado:** https://khrismal-hue.github.io/casana360/
+
+---
+
+## 🎨 Experiencia Visual (rediseño 2026)
+
+La app recibió un rediseño integral con una estética premium, pensada para mostrar
+la fotografía de Villa Casana como protagonista:
+
+- **Hero fotográfico:** portada con imagen del Cerro Espeche, ficha lateral de
+  acceso rápido, animación de estrellas en canvas y contadores animados
+  (distancia, cielo Bortle 1, altitud y % de noches despejadas).
+- **Tarjetas de atractivos renovadas:** miniatura propia por lugar, kicker de
+  categoría, hover 3D suave y botón de acceso a la ficha completa.
+- **Galería "Postales":** selección curada de 8 fotografías en grilla editorial
+  con **lightbox** a pantalla completa (navegación con flechas, teclado y Esc).
+- **Modal de atractivo:** imagen principal, galería de miniaturas, datos
+  destacados, consejo baqueano, botón de compartir y **deep links**
+  (`/#atractivo-cerro_espeche`) que abren la ficha directamente.
+- **Detalles de navegación:** barra de progreso de lectura, scroll reveal,
+  botón "volver arriba", notificaciones toast y footer de 4 columnas.
+- **Accesibilidad y SEO:** jerarquía de encabezados correcta, foco visible,
+  `aria-*` en modal/lightbox, `prefers-reduced-motion`, Open Graph/Twitter Cards,
+  JSON-LD (`TouristDestination` + `TouristAttraction`) y metadatos por pestaña.
+  Lighthouse: **Accesibilidad 100 · Buenas prácticas 100 · SEO 100**.
+- **Rendimiento:** imágenes reoptimizadas a un máximo de 1920 px y JPEG q82
+  (varias pasaron de 2–3 MB a menos de 500 KB) sin pérdida visual apreciable.
+
 ---
 
 ## 🌟 Funcionalidades Principales
@@ -73,6 +101,21 @@ Si una foto falta, la app usa una imagen local de respaldo (no depende de
 internet). Los créditos y licencias de las fotos de gastronomía están en
 [images/CREDITOS.md](images/CREDITOS.md).
 
+### 🖼️ Miniaturas de las tarjetas (`cardImage`)
+
+Cada atractivo de `APP_DATA.attractions` en [app.js](file:///c:/Users/khris/Desktop/proyecto%20turismo/app.js)
+tiene tres campos de imagen con roles distintos:
+
+| Campo | Dónde se usa |
+| --- | --- |
+| `cardImage` | Miniatura de la tarjeta en la grilla de "Explorar" |
+| `localImage` | Imagen principal del modal y primera miniatura de su galería |
+| `image` / `gallery` | Respaldo y fotos adicionales de la ficha |
+
+Para cambiar la portada de una tarjeta, apuntá `cardImage` a la foto que mejor
+represente el lugar (horizontal, buen contraste y al menos 1200 px de ancho).
+Si `cardImage` no existe, la app usa `localImage` automáticamente.
+
 ### 📱 2. Cambiar Teléfonos y Números de WhatsApp
 Abre el archivo [app.js](file:///c:/Users/khris/Desktop/proyecto%20turismo/app.js) en tu editor y busca la sección `localContacts`:
 ```javascript
@@ -121,10 +164,22 @@ proyecto turismo/
 │   └── CREDITOS.md  # Atribución y licencias de las fotos de comida
 ├── data/
 │   └── gastronomia.json  # Fichas de comidas típicas (nombre, categoría, imagen, descripción)
-├── index.html       # Estructura principal y pestañas interactivas
-├── styles.css       # Estilos visuales, modo nocturno rojo y efectos
-├── app.js           # Base de datos local (atractivos, contactos WhatsApp, historias)
+├── index.html       # Estructura principal, hero, postales, modal y lightbox
+├── styles.css       # Sistema visual, responsive, modo nocturno rojo y animaciones
+├── app.js           # Datos de atractivos, galería, modal, scroll y deep links
 ├── manifest.json    # Manifiesto para instalación como App PWA
-├── service-worker.js # Service worker para funcionamiento offline
+├── service-worker.js # Service worker (precache tolerante a fallos y offline)
 └── README.md        # Esta guía de uso y personalización
 ```
+
+### ♻️ Actualizar el caché tras cambiar archivos
+
+El service worker usa una versión de caché (`CACHE_NAME = 'casana360-pwa-v11'`).
+Cuando modifiques `index.html`, `styles.css`, `app.js` o agregues imágenes:
+
+1. Subí el número de versión en `service-worker.js` (por ejemplo `v12`).
+2. Si agregaste fotos nuevas usadas por la app, sumalas a `CORE_ASSETS`.
+3. Recargá dos veces el sitio para que el nuevo service worker tome el control.
+
+El precache se hace recurso por recurso con `Promise.allSettled`, de modo que una
+imagen faltante no invalida el resto de la aplicación offline.

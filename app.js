@@ -15,6 +15,7 @@ const APP_DATA = {
       tag: "Imperdible",
       localImage: "./images/cerro-espeche-nuevo.jpg",
       image: "./images/cerro-espeche-nuevo.jpg",
+      cardImage: "./images/cerro-espeche-nuevo.jpg",
       gallery: [
         "./images/cerro-espeche-nuevo.jpg",
         "./images/cerro-espeche-2.jpg"
@@ -33,6 +34,7 @@ const APP_DATA = {
       tag: "Adrenalina & Monte",
       localImage: "./images/circuito-4x4.jpg",
       image: "./images/circuito-4x4.jpg",
+      cardImage: "./images/circuito-4x4.jpg",
       gallery: [
         "./images/circuito-4x4.jpg",
         "./images/cerro-espeche-panoramica.jpg"
@@ -52,6 +54,7 @@ const APP_DATA = {
       tag: "Deporte Rural",
       localImage: "./images/bike-y-mountainbike.jpg",
       image: "./images/bike-y-mountainbike.jpg",
+      cardImage: "./images/bike-y-mountainbike.jpg",
       gallery: [
         "./images/bike-y-mountainbike.jpg",
         "./images/mountain-bike-1.jpg",
@@ -72,6 +75,7 @@ const APP_DATA = {
       tag: "Cielo Pristino Bortle 1",
       localImage: "./images/cielo-nocturno.jpg",
       image: "./images/cielo-nocturno.jpg",
+      cardImage: "./images/cielo-nocturno-2.jpg",
       gallery: [
         "./images/cielo-nocturno.jpg",
         "./images/cielo-nocturno-2.jpg",
@@ -91,6 +95,7 @@ const APP_DATA = {
       tag: "Oasis Oculto",
       localImage: "./images/pozos-arroyos.jpg",
       image: "./images/pozos-arroyos.jpg",
+      cardImage: "./images/pozos-arroyos.jpg",
       description: "Rincon singular ubicado al sur de Villa Casana: un modesto y preciado salto de agua que brota entre formaciones rocosas. En una region arida como Los Llanos, este hilo de agua fresca representa un verdadero tesoro natural celebrado por los pobladores.",
       difficulty: "Caminata corta (4x4 + senderismo)",
       highlight: "Vegetacion serrana, rumor de agua entre piedras y descanso reparador en pleno monte.",
@@ -105,6 +110,7 @@ const APP_DATA = {
       tag: "Sitio Sagrado Milenario",
       localImage: "./images/casa-de-piedra.jpg",
       image: "./images/casa-de-piedra.jpg",
+      cardImage: "./images/casa-de-piedra-3.jpg",
       gallery: [
         "./images/casa-de-piedra.jpg",
         "./images/casa-de-piedra-interior.jpg",
@@ -125,6 +131,7 @@ const APP_DATA = {
       tag: "Corazon del Pueblo",
       localImage: "./images/plaza-nueva-1.jpg",
       image: "./images/plaza-nueva-1.jpg",
+      cardImage: "./images/plaza-nueva-1.jpg",
       gallery: [
         "./images/plaza-nueva-1.jpg",
         "./images/plaza-nueva-2.jpg",
@@ -145,6 +152,7 @@ const APP_DATA = {
       tag: "Devocion Rural",
       localImage: "./images/iglesia-capilla.jpg",
       image: "./images/iglesia-capilla.jpg",
+      cardImage: "./images/iglesia-capilla.jpg",
       gallery: [
         "./images/iglesia-capilla.jpg",
         "./images/capilla-del-carmen.jpg",
@@ -166,6 +174,7 @@ const APP_DATA = {
       tag: "Hospitalidad Rural",
       localImage: "./images/escuela-frente.jpg",
       image: "./images/escuela-frente.jpg",
+      cardImage: "./images/escuela-villa-casana.jpg",
       gallery: [
         "./images/escuela-frente.jpg",
         "./images/escuela-villa-casana.jpg",
@@ -185,10 +194,11 @@ const APP_DATA = {
       category: "naturaleza",
       categoryLabel: "Naturaleza & Quebradas",
       tag: "Paisaje Serrano",
-      localImage: "./images/pozos-arroyos.jpg",
-      image: "./images/pozos-arroyos.jpg",
+      localImage: "./images/quebrada-vallecito-3.jpg",
+      image: "./images/quebrada-vallecito-3.jpg",
+      cardImage: "./images/quebrada-vallecito-3.jpg",
       gallery: [
-        "./images/pozos-arroyos.jpg",
+        "./images/quebrada-vallecito-3.jpg",
         "./images/quebrada-vallecito-1.jpg",
         "./images/quebrada-vallecito-2.jpg",
         "./images/quebrada-vallecito-3.jpg",
@@ -210,6 +220,7 @@ const APP_DATA = {
       tag: "Oasis del Monte",
       localImage: "./images/rio-la-junta.jpg",
       image: "./images/rio-la-junta.jpg",
+      cardImage: "./images/rio-la-junta.jpg",
       gallery: [
         "./images/rio-la-junta.jpg",
         "./images/rio-la-junta-2.jpg",
@@ -235,6 +246,7 @@ const APP_DATA = {
       tag: "Arqueologia Criolla",
       localImage: "./images/cartel-casas-viejas.jpg",
       image: "./images/cartel-casas-viejas.jpg",
+      cardImage: "./images/casas-viejas-2.jpg",
       gallery: [
         "./images/cartel-casas-viejas.jpg",
         "./images/casas-viejas-1.jpg",
@@ -258,6 +270,7 @@ const APP_DATA = {
       tag: "Rincon Secreto",
       localImage: "./images/la-batea-1.jpg",
       image: "./images/la-batea-1.jpg",
+      cardImage: "./images/la-batea-2.jpg",
       gallery: [
         "./images/la-batea-1.jpg",
         "./images/la-batea-2.jpg",
@@ -268,6 +281,66 @@ const APP_DATA = {
       highlight: "Ollas de piedra naturales, formaciones geologicas pulidas por agua y fauna serrana.",
       tips: "Llevar calzado con suela antideslizante para caminar con seguridad sobre las piedras. Respetar y mantener limpio el lugar.",
       coords: [-31.0520, -66.5850]
+    }
+  ],
+
+  // Postal gallery: the most representative photographs of Villa Casana
+  gallery: [
+    {
+      src: "./images/cerro-espeche-nuevo.jpg",
+      alt: "Vista panorámica del Cerro Espeche en Villa Casana",
+      kicker: "Naturaleza",
+      title: "El Cerro Espeche, centinela de Los Llanos",
+      span: "postcard--wide"
+    },
+    {
+      src: "./images/la-batea-2.jpg",
+      alt: "Pozas y formaciones de piedra en La Batea",
+      kicker: "Rincón secreto",
+      title: "La Batea y sus piletones de piedra",
+      span: ""
+    },
+    {
+      src: "./images/quebrada-vallecito-3.jpg",
+      alt: "Quebrada de Vallecito entre sierras riojanas",
+      kicker: "Quebradas",
+      title: "La Quebrada de Vallecito",
+      span: ""
+    },
+    {
+      src: "./images/casa-de-piedra-3.jpg",
+      alt: "La Casa de Piedra, alero olongasta de Villa Casana",
+      kicker: "Patrimonio",
+      title: "La Casa de Piedra olongasta",
+      span: "postcard--wide"
+    },
+    {
+      src: "./images/plaza-nueva-1.jpg",
+      alt: "Plaza Virgen del Carmen con sus palmeras históricas",
+      kicker: "Casco urbano",
+      title: "La plaza y sus palmeras históricas",
+      span: "postcard--wide"
+    },
+    {
+      src: "./images/iglesia-capilla.jpg",
+      alt: "Capilla Nuestra Señora del Carmen de Villa Casana",
+      kicker: "Fe y comunidad",
+      title: "Capilla Nuestra Señora del Carmen",
+      span: ""
+    },
+    {
+      src: "./images/rio-la-junta.jpg",
+      alt: "Aguas cristalinas del Río La Junta",
+      kicker: "Aguas serranas",
+      title: "El Río La Junta",
+      span: ""
+    },
+    {
+      src: "./images/cielo-nocturno-2.jpg",
+      alt: "Cielo nocturno estrellado sobre Villa Casana",
+      kicker: "Astroturismo",
+      title: "Un cielo Bortle 1, único en el país",
+      span: "postcard--wide"
     }
   ],
 
@@ -646,7 +719,11 @@ const state = {
   userHeading: null,
   gpsOrientationHandler: null,
   gpsMarker: null,
-  checklist: []
+  checklist: [],
+  lightboxIndex: 0,
+  modalLastFocus: null,
+  revealObserver: null,
+  scrollTicking: false
 };
 
 // Fallback helper for local images
@@ -665,6 +742,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderArtesanos();
   renderGastronomia();
   loadGastronomiaData();
+  renderGallery();
   renderStars();
   renderChecklist();
   renderRutometro();
@@ -676,6 +754,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initAstroRedModeToggle();
   initPwaInstall();
   updateMoonPhaseWidget();
+  initScrollEffects();
+  initModalUX();
+  initCounters();
+  handleInitialHash();
 });
 
 // Tab Navigation
@@ -691,6 +773,15 @@ function initTabs() {
 
 function switchTab(tabId) {
   state.currentTab = tabId;
+
+  const TAB_TITLES = {
+    explorar: 'Villa Casana Turismo | Atractivos, 4x4 y Astroturismo en La Rioja',
+    mapa: 'Rutas y Mapa Offline | Villa Casana Turismo',
+    astroturismo: 'Astroturismo y Cielos Bortle 1 | Villa Casana',
+    planificador: 'Planificador de Viaje y Checklist | Villa Casana',
+    cultura: 'Tradición, Artesanos y Servicios | Villa Casana'
+  };
+  if (TAB_TITLES[tabId]) document.title = TAB_TITLES[tabId];
 
   // Update tab buttons UI
   document.querySelectorAll('.nav-tab-btn').forEach(btn => {
@@ -724,57 +815,268 @@ function switchTab(tabId) {
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  observeReveals();
+}
+
+// Scroll progress, back-to-top button, hero parallax and reveal-on-scroll
+function initScrollEffects() {
+  const bar = document.getElementById('scroll-progress');
+  const topButton = document.getElementById('back-to-top');
+  const hero = document.querySelector('.hero-shell');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const onScroll = () => {
+    if (state.scrollTicking) return;
+    state.scrollTicking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = `${max > 0 ? Math.min(100, (y / max) * 100) : 0}%`;
+      if (topButton) topButton.classList.toggle('is-visible', y > 620);
+      if (hero && !reduceMotion) {
+        hero.style.setProperty('--hero-shift', `${Math.min(y * 0.12, 90)}px`);
+      }
+      state.scrollTicking = false;
+    });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (topButton) {
+    topButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+
+  initRevealObserver();
+  observeReveals();
+}
+
+function initRevealObserver() {
+  if (state.revealObserver) return true;
+  if (!('IntersectionObserver' in window)) return false;
+  state.revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        state.revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+  return true;
+}
+
+function observeReveals() {
+  if (!initRevealObserver()) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => state.revealObserver.observe(el));
+}
+
+// Animated hero counters
+function initCounters() {
+  const counters = document.querySelectorAll('[data-count-to]');
+  if (!counters.length) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const animate = (el) => {
+    const target = parseFloat(el.dataset.countTo);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    if (Number.isNaN(target)) return;
+    if (reduceMotion) {
+      el.textContent = target.toFixed(decimals);
+      return;
+    }
+    const duration = 1500;
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (target * eased).toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(animate);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(el => observer.observe(el));
+}
+
+// Keyboard support and backdrop dismissal for modal and lightbox
+function initModalUX() {
+  const modal = document.getElementById('item-modal');
+  if (modal) {
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeAttractionModal();
+    });
+  }
+
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    const lightboxOpen = document.getElementById('lightbox')?.classList.contains('is-open');
+    if (lightboxOpen) {
+      if (event.key === 'Escape') { event.preventDefault(); closeLightbox(); }
+      else if (event.key === 'ArrowRight') { event.preventDefault(); stepLightbox(1); }
+      else if (event.key === 'ArrowLeft') { event.preventDefault(); stepLightbox(-1); }
+      return;
+    }
+    if (event.key === 'Escape' && !document.getElementById('item-modal')?.classList.contains('hidden')) {
+      event.preventDefault();
+      closeAttractionModal();
+    }
+  });
+}
+
+// Deep links: #atractivo-id or #tab
+function handleInitialHash() {
+  const hash = decodeURIComponent(location.hash || '');
+  const attractionMatch = hash.match(/^#atractivo-(.+)$/);
+  if (attractionMatch) {
+    switchTab('explorar');
+    setTimeout(() => openAttractionModal(attractionMatch[1]), 250);
+    return;
+  }
+  const tabMatch = hash.match(/^#(explorar|mapa|astroturismo|planificador|cultura)$/);
+  if (tabMatch) switchTab(tabMatch[1]);
 }
 
 // Render Attractions with Local Image priority & fallback
+const CATEGORY_ICONS = {
+  naturaleza: '⛰️',
+  aventura: '🚙',
+  astronomia: '✨',
+  cultura: '🏛️'
+};
+
 function renderAttractions() {
   const container = document.getElementById('attractions-grid');
   if (!container) return;
 
-  const filtered = state.filter === 'todos' 
-    ? APP_DATA.attractions 
+  const filtered = state.filter === 'todos'
+    ? APP_DATA.attractions
     : APP_DATA.attractions.filter(item => item.category === state.filter);
 
-  container.innerHTML = filtered.map(item => `
-    <article class="glass-card rounded-2xl overflow-hidden flex flex-col group cursor-pointer" onclick="openAttractionModal('${item.id}')">
-      <div class="relative h-56 overflow-hidden bg-slate-900">
-        <img 
-          src="${item.localImage || item.image}" 
+  container.innerHTML = filtered.map((item, index) => `
+    <article
+      class="attraction-card reveal"
+      style="transition-delay:${Math.min(index * 60, 360)}ms"
+      role="button"
+      tabindex="0"
+      aria-label="Ver ficha de ${item.title}"
+      onclick="openAttractionModal('${item.id}')"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openAttractionModal('${item.id}');}"
+    >
+      <div class="attraction-media">
+        <img
+          src="${item.cardImage || item.localImage || item.image}"
           onerror="handleImageError(this, '${item.image}')"
-          alt="${item.title}" 
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          alt="${item.title}"
+          class="attraction-img"
           loading="lazy"
+          decoding="async"
         />
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
-        <span class="absolute top-3 left-3 bg-amber-600/90 backdrop-blur-md text-amber-50 text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
-          ${item.tag}
-        </span>
-        <span class="absolute bottom-3 left-3 text-xs font-medium text-amber-300 bg-slate-900/80 px-2.5 py-0.5 rounded-md backdrop-blur-sm">
-          ${item.categoryLabel}
+        <span class="attraction-tag">${item.tag}</span>
+        <span class="attraction-cat">${CATEGORY_ICONS[item.category] || '📍'} ${item.categoryLabel}</span>
+        <span class="attraction-cta">
+          Abrir ficha
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </span>
       </div>
-      <div class="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 class="text-xl font-bold text-slate-100 group-hover:text-amber-400 transition-colors">
-            ${item.title}
-          </h3>
-          <p class="text-slate-300 text-sm mt-2 line-clamp-2 leading-relaxed">
-            ${item.description}
-          </p>
-        </div>
-        <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-          <span class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            ${item.difficulty.split('(')[0]}
+      <div class="attraction-body">
+        <h3>${item.title}</h3>
+        <p class="attraction-desc">${item.description}</p>
+        <div class="attraction-meta">
+          <span class="attraction-diff">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            ${item.difficulty.split('(')[0].trim()}
           </span>
-          <span class="text-amber-400 font-semibold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-            Ver detalle &rarr;
-          </span>
+          <span class="attraction-arrow">Ver m&aacute;s &rarr;</span>
         </div>
       </div>
     </article>
   `).join('');
+
+  const countEl = document.getElementById('attractions-count');
+  if (countEl) countEl.textContent = `${filtered.length} ${filtered.length === 1 ? 'experiencia' : 'experiencias'}`;
+
+  observeReveals();
 }
+
+// Postal gallery: curated selection of the best photographs
+function renderGallery() {
+  const container = document.getElementById('postcards-grid');
+  if (!container || !Array.isArray(APP_DATA.gallery)) return;
+
+  container.innerHTML = APP_DATA.gallery.map((photo, index) => `
+    <figure class="postcard ${photo.span || ''}" onclick="openLightbox(${index})" tabindex="0" role="button" aria-label="${photo.kicker}: ${photo.title}. Ampliar foto" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(${index});}">
+      <img src="${photo.src}" alt="${photo.alt}" loading="lazy" decoding="async" />
+      <figcaption>
+        <span class="postcard-kicker">${photo.kicker}</span>
+        <span class="postcard-title">${photo.title}</span>
+      </figcaption>
+      <span class="postcard-zoom" aria-hidden="true">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zM11 8v6M8 11h6"/></svg>
+      </span>
+    </figure>
+  `).join('');
+}
+
+// Fullscreen photo lightbox
+function openLightbox(index) {
+  const items = APP_DATA.gallery || [];
+  if (!items.length) return;
+  state.lightboxIndex = (index + items.length) % items.length;
+  const photo = items[state.lightboxIndex];
+  const box = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  const title = document.getElementById('lightbox-title');
+  const counter = document.getElementById('lightbox-counter');
+  if (!box || !img) return;
+
+  img.src = photo.src;
+  img.alt = photo.alt;
+  if (title) title.textContent = photo.title;
+  if (counter) counter.textContent = `${state.lightboxIndex + 1} / ${items.length}`;
+  box.classList.add('is-open');
+  box.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeLightbox() {
+  const box = document.getElementById('lightbox');
+  if (!box) return;
+  box.classList.remove('is-open');
+  box.setAttribute('aria-hidden', 'true');
+  if (!document.getElementById('item-modal')?.classList.contains('hidden')) return;
+  document.body.classList.remove('modal-open');
+}
+
+function stepLightbox(delta) {
+  const items = APP_DATA.gallery || [];
+  if (!items.length) return;
+  openLightbox((state.lightboxIndex || 0) + delta);
+}
+
 
 // Render Local Contacts & Baqueanos with WhatsApp buttons
 function renderLocalContacts() {
@@ -970,10 +1272,8 @@ function setFilter(cat) {
   state.filter = cat;
   document.querySelectorAll('.filter-pill').forEach(pill => {
     const isSelected = pill.getAttribute('data-cat') === cat;
-    pill.classList.toggle('bg-amber-600', isSelected);
-    pill.classList.toggle('text-white', isSelected);
-    pill.classList.toggle('bg-slate-800', !isSelected);
-    pill.classList.toggle('text-slate-300', !isSelected);
+    pill.classList.toggle('is-active', isSelected);
+    pill.setAttribute('aria-pressed', String(isSelected));
   });
   renderAttractions();
 }
@@ -985,62 +1285,80 @@ function openAttractionModal(id) {
 
   const modalContainer = document.getElementById('item-modal');
   const modalContent = document.getElementById('item-modal-content');
+  state.modalLastFocus = document.activeElement;
+
+  const gallery = Array.isArray(item.gallery) && item.gallery.length ? item.gallery : [item.image];
 
   modalContent.innerHTML = `
-    <div class="relative bg-slate-900">
-      <img 
-        src="${item.localImage || item.image}" 
+    <div class="modal-hero">
+      <img
+        src="${item.localImage || item.image}"
         onerror="handleImageError(this, '${item.image}')"
-        alt="${item.title}" 
-        class="w-full h-64 sm:h-80 object-cover rounded-t-2xl"
+        alt="${item.title}"
+        class="modal-hero-img"
         id="modal-main-img"
       />
-      <button onclick="closeAttractionModal()" class="absolute top-4 right-4 bg-slate-900/80 hover:bg-slate-900 text-slate-200 p-2 rounded-full backdrop-blur-md transition-all">
+      <div class="modal-hero-shade"></div>
+      <button id="modal-close-btn" onclick="closeAttractionModal()" class="modal-close" aria-label="Cerrar ficha">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-        <span class="bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-          ${item.tag}
-        </span>
-        <span class="bg-slate-900/90 text-amber-300 text-xs px-3 py-1 rounded-full backdrop-blur-md">
-          ${item.categoryLabel}
-        </span>
+      <div class="modal-hero-top">
+        <span class="modal-tag">${item.tag}</span>
+        <span class="modal-cat">${CATEGORY_ICONS[item.category] || '📍'} ${item.categoryLabel}</span>
+      </div>
+      <div class="modal-hero-bottom">
+        <span class="modal-photo-count"><span id="modal-photo-current">1</span> / ${gallery.length} fotos</span>
+        <button onclick="shareAttraction('${item.id}')" class="modal-share" aria-label="Compartir este atractivo">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342A6.006 6.006 0 006 18a6 6 0 006-6c0-.35-.03-.694-.088-1.03m-3.228-3.114A6.006 6.006 0 0114 6a6 6 0 016 6m-9.316 1.342l4.632-2.684M18 8a2 2 0 11-4 0 2 2 0 014 0zm0 10a2 2 0 11-4 0 2 2 0 014 0zM6 16a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          Compartir
+        </button>
       </div>
     </div>
-    ${item.gallery && item.gallery.length > 1 ? `
-    <div class="px-4 pt-3 flex gap-2 overflow-x-auto pb-2 scrollbar-thin">
-      ${item.gallery.map((src, i) => `
-        <img 
-          src="${src}" 
-          alt="${item.title} - foto ${i+1}"
-          class="h-16 w-24 object-cover rounded-lg cursor-pointer opacity-70 hover:opacity-100 transition-opacity shrink-0 border-2 ${i===0 ? 'border-amber-500' : 'border-transparent'}"
-          onclick="document.getElementById('modal-main-img').src='${src}'; this.parentElement.querySelectorAll('img').forEach(el=>el.classList.remove('opacity-100','border-amber-500')); this.classList.add('opacity-100','border-amber-500');"
-          loading="lazy"
-        />
+    ${gallery.length > 1 ? `
+    <div class="modal-thumbs" id="modal-thumbs">
+      ${gallery.map((src, i) => `
+        <button
+          type="button"
+          class="modal-thumb ${i === 0 ? 'is-active' : ''}"
+          onclick="setModalImage('${src}', this)"
+          aria-label="Ver foto ${i + 1} de ${item.title}"
+        >
+          <img src="${src}" alt="${item.title} - foto ${i + 1}" loading="lazy" />
+        </button>
       `).join('')}
     </div>
     ` : ''}
     <div class="p-6 sm:p-8 space-y-5">
       <div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-100">${item.title}</h2>
-        <p class="text-amber-500 font-semibold text-sm mt-1">Dificultad: ${item.difficulty}</p>
-      </div>
-      <p class="text-slate-300 text-base leading-relaxed">${item.description}</p>
-      
-      <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 space-y-2">
-        <h4 class="text-xs uppercase tracking-wider font-bold text-amber-400 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-          Lo mas destacado
-        </h4>
-        <p class="text-slate-300 text-sm">${item.highlight}</p>
+        <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-slate-50 tracking-tight">${item.title}</h2>
+        <div class="modal-chips">
+          <span class="modal-chip">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            ${item.difficulty}
+          </span>
+          <span class="modal-chip">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            ${item.coords[0].toFixed(4)}, ${item.coords[1].toFixed(4)}
+          </span>
+        </div>
       </div>
 
-      <div class="bg-amber-950/30 border border-amber-800/40 rounded-xl p-4 space-y-2">
-        <h4 class="text-xs uppercase tracking-wider font-bold text-amber-300 flex items-center gap-2">
+      <p class="text-slate-300 text-base leading-relaxed">${item.description}</p>
+
+      <div class="modal-info-card">
+        <h3 class="modal-info-title">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          Lo más destacado
+        </h3>
+        <p class="text-slate-300 text-sm leading-relaxed">${item.highlight}</p>
+      </div>
+
+      <div class="modal-tip-card">
+        <h3 class="modal-info-title text-amber-300">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           Consejo baqueano para tu visita
-        </h4>
-        <p class="text-amber-100 text-sm">${item.tips}</p>
+        </h3>
+        <p class="text-amber-100/95 text-sm leading-relaxed">${item.tips}</p>
       </div>
 
       ${item.wikilocUrl ? `
@@ -1065,11 +1383,103 @@ function openAttractionModal(id) {
   `;
 
   modalContainer.classList.remove('hidden');
+  modalContainer.setAttribute('aria-hidden', 'false');
+  modalContainer.setAttribute('role', 'dialog');
+  modalContainer.setAttribute('aria-modal', 'true');
+  modalContainer.setAttribute('aria-labelledby', 'modal-title');
+  document.body.classList.add('modal-open');
+  setTimeout(() => document.getElementById('modal-close-btn')?.focus(), 60);
+}
+
+function setModalImage(src, button) {
+  const main = document.getElementById('modal-main-img');
+  if (!main) return;
+  main.src = src;
+  const thumbs = document.querySelectorAll('#modal-thumbs .modal-thumb');
+  thumbs.forEach(t => t.classList.remove('is-active'));
+  if (button) button.classList.add('is-active');
+  const current = document.getElementById('modal-photo-current');
+  if (current && button) {
+    const index = Array.from(button.parentElement.children).indexOf(button);
+    current.textContent = String(index + 1);
+  }
 }
 
 function closeAttractionModal() {
   const modalContainer = document.getElementById('item-modal');
-  if (modalContainer) modalContainer.classList.add('hidden');
+  if (modalContainer) {
+    modalContainer.classList.add('hidden');
+    modalContainer.setAttribute('aria-hidden', 'true');
+  }
+  if (!document.getElementById('lightbox')?.classList.contains('is-open')) {
+    document.body.classList.remove('modal-open');
+  }
+  if (state.modalLastFocus && typeof state.modalLastFocus.focus === 'function') {
+    state.modalLastFocus.focus({ preventScroll: true });
+    state.modalLastFocus = null;
+  }
+}
+
+// Copy text with a graceful fallback for older browsers
+function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    const area = document.createElement('textarea');
+    area.value = text;
+    area.style.position = 'fixed';
+    area.style.opacity = '0';
+    document.body.appendChild(area);
+    area.select();
+    try {
+      document.execCommand('copy') ? resolve() : reject(new Error('copy failed'));
+    } catch (error) {
+      reject(error);
+    } finally {
+      area.remove();
+    }
+  });
+}
+
+// Share an attraction using the native sheet or clipboard
+function shareAttraction(id) {
+  const item = APP_DATA.attractions.find(a => a.id === id);
+  if (!item) return;
+  const url = `${location.origin}${location.pathname}#atractivo-${item.id}`;
+  const payload = {
+    title: `${item.title} · Villa Casana`,
+    text: item.description,
+    url
+  };
+
+  if (navigator.share) {
+    navigator.share(payload).catch(() => {});
+    return;
+  }
+
+  copyText(url)
+    .then(() => showToast('Enlace copiado. ¡Compartí Villa Casana!'))
+    .catch(() => showToast('No se pudo copiar el enlace.', 'error'));
+}
+
+// Small accessible toast notifications
+let toastTimer = null;
+function showToast(message, type = 'success') {
+  let toast = document.getElementById('app-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'app-toast';
+    toast.className = 'app-toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.toggle('is-error', type === 'error');
+  toast.classList.add('is-visible');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 3200);
 }
 
 // Leaflet Map Implementation
@@ -1210,11 +1620,11 @@ function initHeroSky() {
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
-  let width = canvas.width = window.innerWidth;
+  let width = canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
   let height = canvas.height = canvas.parentElement.clientHeight || 500;
 
   window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
+    width = canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
     height = canvas.height = canvas.parentElement.clientHeight || 500;
   });
 

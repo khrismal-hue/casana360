@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v11';
+const CACHE_NAME = 'casana360-pwa-v12';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -108,8 +108,10 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME).then(async (cache) => {
       // Primero cacheamos los recursos locales esenciales de forma garantizada.
       // Se agregan uno por uno para que un recurso faltante no invalide todo el precache.
+      // cache: 'reload' evita que el HTTP cache (GitHub Pages: max-age=600) guarde
+      // versiones viejas de index.html, app.js o styles.css dentro del nuevo caché.
       const localResults = await Promise.allSettled(
-        CORE_ASSETS.map((asset) => cache.add(asset))
+        CORE_ASSETS.map((asset) => cache.add(new Request(asset, { cache: 'reload' })))
       );
       const localFailures = localResults
         .map((result, index) => (result.status === 'rejected' ? CORE_ASSETS[index] : null))
@@ -188,7 +190,7 @@ self.addEventListener('fetch', (event) => {
       if (cachedResponse) {
         // En segundo plano intentamos actualizar la caché si estamos online (Stale-While-Revalidate selectivo)
         if (navigator.onLine && (url.origin === location.origin)) {
-          fetch(request).then((freshResponse) => {
+          fetch(request, { cache: 'no-cache' }).then((freshResponse) => {
             if (freshResponse && freshResponse.status === 200) {
               caches.open(CACHE_NAME).then((cache) => cache.put(request, freshResponse));
             }

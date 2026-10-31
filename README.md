@@ -174,10 +174,10 @@ proyecto turismo/
 
 ### ♻️ Actualizar el caché tras cambiar archivos
 
-El service worker usa una versión de caché (`CACHE_NAME = 'casana360-pwa-v11'`).
+El service worker usa una versión de caché (`CACHE_NAME = 'casana360-pwa-v12'`).
 Cuando modifiques `index.html`, `styles.css`, `app.js` o agregues imágenes:
 
-1. Subí el número de versión en `service-worker.js` (por ejemplo `v12`).
+1. Subí el número de versión en `service-worker.js` (por ejemplo `v13`).
 2. Si agregaste fotos nuevas usadas por la app, sumalas a `CORE_ASSETS`.
 3. Recargá dos veces el sitio para que el nuevo service worker tome el control.
 

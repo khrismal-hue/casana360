@@ -72,6 +72,11 @@ const APP_DATA = {
       tag: "Cielo Pristino Bortle 1",
       localImage: "./images/cielo-nocturno.jpg",
       image: "./images/cielo-nocturno.jpg",
+      gallery: [
+        "./images/cielo-nocturno.jpg",
+        "./images/cielo-nocturno-2.jpg",
+        "./images/cielo-nocturno-3.jpg"
+      ],
       description: "Lejos de cualquier contaminacion luminica urbana, Villa Casana posee uno de los cielos mas puros del Cono Sur, donde la Via Lactea se proyecta con textura y sombras en el suelo.",
       difficulty: "Baja (Acceso vehicular directo)",
       highlight: "Visibilidad a simple vista de las Nubes de Magallanes, Nebulosa de Orion, Carina y cumulos globulares.",
@@ -383,6 +388,19 @@ const APP_DATA = {
     }
   ],
 
+  // Video documental: Vicenta Pereyra, artesana de Villa Casana
+  artesanaVideo: {
+    title: "Vicenta Pereyra. Artesana de Villa Casana",
+    author: "Secretaría de Culturas La Rioja",
+    authorUrl: "https://www.youtube.com/@secretariadeculturaslarioj9257",
+    videoUrl: "https://youtu.be/GF2daJKgbQ4",
+    embedUrl: "https://www.youtube.com/embed/GF2daJKgbQ4",
+    thumbnail: "./images/vicenta-pereyra.jpg",
+    portrait: "./images/artesano.jpg",
+    resumen: "Un registro audiovisual de la Secretaría de Culturas de La Rioja que retrata a Vicenta Pereyra, artesana de Villa Casana, y el valor de los oficios que se transmiten de mano en mano.",
+    descripcion: "En el corazón de Los Llanos riojanos, Vicenta Pereyra mantiene vivo el saber artesanal de Villa Casana. La rueca, las fibras naturales y el telar criollo son parte de una memoria familiar que se aprende mirando y haciendo, y que hoy sigue dando forma a mantas, ponchos y piezas únicas. Este video invita a conocer su taller, su historia y el orgullo de un oficio que sostiene la identidad del pueblo."
+  },
+
   // Gastronomía típica de Los Llanos Riojanos
   gastronomia: [
     {
@@ -391,6 +409,11 @@ const APP_DATA = {
       categoria: "Plato principal",
       ubicacion: "Chepes - Villa Casana",
       imagen: "./images/cabrito-asado.jpg",
+      galeria: [
+        "./images/cabrito-asado.jpg",
+        "./images/cabrito-2.jpg",
+        "./images/cabrito-1.jpg"
+      ],
       descripcion: "El plato insignia de la región de Los Llanos Riojanos: carne tierna de cabrito lechón alimentado con pasturas naturales y cocinado lentamente a las brasas o a la estaca."
     },
     {
@@ -622,6 +645,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAttractions();
   renderLocalContacts();
   renderHistoryAndLegends();
+  renderArtesanaVideo();
   renderGastronomia();
   loadGastronomiaData();
   renderStars();
@@ -813,6 +837,65 @@ function renderHistoryAndLegends() {
   `).join('');
 }
 
+// Render the artisan documentary section (Vicenta Pereyra)
+function renderArtesanaVideo() {
+  const container = document.getElementById('artesana-video-section');
+  if (!container) return;
+  const v = APP_DATA.artesanaVideo;
+  if (!v) return;
+
+  container.innerHTML = `
+    <div class="glass-panel rounded-3xl overflow-hidden border border-amber-500/20">
+      <div class="grid grid-cols-1 lg:grid-cols-5">
+        <a href="${v.videoUrl}" target="_blank" rel="noopener noreferrer" class="relative block lg:col-span-3 group bg-slate-950 min-h-[260px] lg:min-h-[360px]" title="Ver el video en YouTube">
+          <img
+            src="${v.thumbnail}"
+            alt="Miniatura del video ${v.title}"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-slate-950/10"></div>
+          <span class="absolute top-4 left-4 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            Ver video
+          </span>
+          <span class="absolute inset-0 flex items-center justify-center">
+            <span class="w-16 h-16 rounded-full bg-red-600/90 group-hover:bg-red-500 text-white flex items-center justify-center shadow-2xl ring-4 ring-white/20 transition-transform group-hover:scale-110">
+              <svg class="w-8 h-8 ml-1 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </span>
+          <span class="absolute bottom-4 left-4 right-4 text-white">
+            <span class="block text-[10px] font-bold uppercase tracking-wider text-amber-300">Documental &middot; Secretaría de Culturas</span>
+            <span class="block text-lg sm:text-xl font-bold leading-tight mt-0.5">${v.title}</span>
+          </span>
+        </a>
+
+        <div class="lg:col-span-2 p-6 sm:p-8 space-y-4 flex flex-col">
+          <div class="flex items-center gap-3">
+            <img src="${v.portrait}" alt="Vicenta Pereyra, artesana de Villa Casana" class="w-14 h-14 rounded-full object-cover ring-2 ring-amber-500/50" loading="lazy" />
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 block">Oficios que perduran</span>
+              <h3 class="text-xl font-black text-slate-100 leading-tight">Vicenta Pereyra</h3>
+              <span class="text-xs text-slate-400">Artesana de Villa Casana</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-300 leading-relaxed">${v.resumen}</p>
+          <p class="text-xs text-slate-400 leading-relaxed">${v.descripcion}</p>
+          <div class="mt-auto pt-3 flex flex-wrap gap-2">
+            <a href="${v.videoUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-red-700/20">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              Ver en YouTube
+            </a>
+            <a href="${v.authorUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs px-4 py-2 rounded-xl transition-all">
+              Secretaría de Culturas La Rioja &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 // Carga la ficha gastronómica desde el archivo de datos compartido.
 // Si el navegador abre la app con file:// el fetch falla y se conserva
 // el contenido embebido en APP_DATA (funcionamiento 100% offline).
@@ -829,13 +912,26 @@ function loadGastronomiaData() {
 }
 
 // Render Gastronomia
-function renderGastronomia() {  const container = document.getElementById('gastronomia-grid');
+function renderGastronomia() {
+  const container = document.getElementById('gastronomia-grid');
   if (!container || !APP_DATA || !APP_DATA.gastronomia) return;
 
-  container.innerHTML = APP_DATA.gastronomia.map(plato => `
+  container.innerHTML = APP_DATA.gastronomia.map(plato => {
+    const galeria = Array.isArray(plato.galeria) ? plato.galeria : [];
+    const galeriaHtml = galeria.length > 1 ? `
+          <div class="mt-4 grid grid-cols-3 gap-1.5">
+            ${galeria.map((src, i) => `
+              <button type="button" onclick="document.getElementById('gastro-img-${plato.id}').src='${src}'" class="relative h-16 rounded-lg overflow-hidden border-2 ${i === 0 ? 'border-amber-500' : 'border-slate-700'} hover:border-amber-400 transition-colors" title="Ver foto ${i + 1} de ${plato.nombre}">
+                <img src="${src}" alt="${plato.nombre} - foto ${i + 1}" class="w-full h-full object-cover" loading="lazy" />
+              </button>
+            `).join('')}
+          </div>` : '';
+
+    return `
     <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/60 shadow-lg flex flex-col hover:border-amber-500/40 transition-all">
       <img 
         src="${plato.imagen}" 
+        id="gastro-img-${plato.id}"
         alt="${plato.nombre}" 
         class="w-full h-48 object-cover" 
         onerror="this.src='./images/sabores-casana.jpg'" 
@@ -846,9 +942,11 @@ function renderGastronomia() {  const container = document.getElementById('gastr
           <h4 class="text-lg font-bold text-slate-100 mb-2">${plato.nombre}</h4>
           <p class="text-xs text-slate-300 leading-relaxed">${plato.descripcion}</p>
         </div>
+        ${galeriaHtml}
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 // Filter attractions

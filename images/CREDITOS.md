@@ -26,3 +26,16 @@ realizada sobre los originales.
 Las licencias CC BY-SA exigen conservar la atribución y compartir las obras
 derivadas bajo la misma licencia. Este archivo cumple la función de atribución
 del proyecto.
+
+## Video documental y nuevas fotografías
+
+| Recurso | Obra | Autor | Uso |
+| --- | --- | --- | --- |
+| `vicenta-pereyra.jpg` | Miniatura de "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Miniatura enlazada al video original |
+| Video | "Vicenta Pereyra. Artesana de Villa Casana" | Secretaría de Culturas La Rioja | Enlace y ficha informativa |
+| `artesano.jpg` | Retrato de la artesana | Aportada por el proyecto | Sección "Oficios que perduran" |
+| `cabrito-1.jpg`, `cabrito-2.jpg` | Cabrito asado | Aportadas por el proyecto | Galería gastronómica |
+| `cielo-nocturno-2.jpg`, `cielo-nocturno-3.jpg` | Cielos nocturnos de Villa Casana | Aportadas por el proyecto | Galería de astroturismo |
+
+Video original: https://youtu.be/GF2daJKgbQ4  
+Canal: https://www.youtube.com/@secretariadeculturaslarioj9257

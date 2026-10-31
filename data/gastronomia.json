@@ -5,6 +5,11 @@
     "categoria": "Plato principal",
     "ubicacion": "Chepes - Villa Casana",
     "imagen": "./images/cabrito-asado.jpg",
+    "galeria": [
+      "./images/cabrito-asado.jpg",
+      "./images/cabrito-2.jpg",
+      "./images/cabrito-1.jpg"
+    ],
     "descripcion": "El plato insignia de la región de Los Llanos Riojanos: carne tierna de cabrito lechón alimentado con pasturas naturales y cocinado lentamente a las brasas o a la estaca."
   },
   {

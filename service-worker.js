@@ -4,7 +4,7 @@
  * en zonas rurales de montaña sin señal celular (Los Llanos riojanos).
  */
 
-const CACHE_NAME = 'casana360-pwa-v6';
+const CACHE_NAME = 'casana360-pwa-v7';
 
 // Recursos esenciales que se guardan de inmediato en la instalación (App Shell)
 const CORE_ASSETS = [
@@ -81,10 +81,17 @@ const CORE_ASSETS = [
   './images/mountain-bike-2.jpg',
   // Gastronomía típica de Los Llanos Riojanos
   './images/cabrito-asado.jpg',
+  './images/cabrito-1.jpg',
+  './images/cabrito-2.jpg',
   './images/empanadas-riojanas.jpg',
   './images/locro-criollo.jpg',
   './images/humita-en-chala.jpg',
-  './images/dulces-artesanales.jpg'
+  './images/dulces-artesanales.jpg',
+  // Cielos nocturnos y oficios artesanales
+  './images/cielo-nocturno-2.jpg',
+  './images/cielo-nocturno-3.jpg',
+  './images/artesano.jpg',
+  './images/vicenta-pereyra.jpg'
 ];
 
 // Librerías CDN críticas para el mapa y estilos offline
